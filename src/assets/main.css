@@ -1,0 +1,19 @@
+@import './base.css';
+
+#app {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-weight: normal;
+}
+
+.button {
+	margin: auto;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
+
+.button:hover {
+	cursor: pointer;
+}
