@@ -10,6 +10,10 @@ export default {};
 
 <style lang="scss" scoped>
 .tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	max-width: 80vw;
 	width: 100%;
 	max-height: 80vh;

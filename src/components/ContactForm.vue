@@ -54,7 +54,6 @@ export default {
 	width: 100%;
 	background: #fff;
 	border-radius: 10px;
-	box-shadow: 0px 0px 40px 10px rgb(41, 146, 207);
 }
 .contact--formContainer {
 	display: flex;
@@ -73,31 +72,44 @@ export default {
 	font-size: 1.2rem;
 	color: #1f1f1f;
 }
-
+.contact--message:focus-visible,
+.contact--email:focus-visible {
+	outline: unset;
+}
 .contact--message,
 .contact--email {
 	padding: 10px;
-	border: 1px solid rgb(41, 146, 207);
+
 	border-radius: 5px;
+	border: 1px solid #1f1f1f;
 }
 
-.contact--message:focus-visible,
-.contact--email:focus-visible {
-	border: 1px solid rgb(41, 146, 207);
-	box-shadow: 0px 0px 5px 0px rgb(41, 146, 207);
-	outline: unset;
-}
 .contact--message {
 	min-height: 100px;
 }
-
 .button--contact {
 	width: 100px;
-	box-shadow: 0px 0px 10px 0px rgb(41, 146, 207);
 }
-.button--contact:hover {
-	box-shadow: 0px 0px 20px 0px rgb(41, 146, 207);
+.dark {
+	.contact {
+		box-shadow: 0px 0px 40px 10px rgb(41, 146, 207);
+	}
+	.button--contact {
+		box-shadow: 0px 0px 10px 0px rgb(41, 146, 207);
+	}
+	.button--contact:hover {
+		box-shadow: 0px 0px 20px 0px rgb(41, 146, 207);
+	}
+	.contact--message:focus-visible,
+	.contact--email:focus-visible {
+		border: 1px solid rgb(41, 146, 207);
+		box-shadow: 0px 0px 5px 0px rgb(41, 146, 207);
+	}
+	.contact--email {
+		border: 1px solid rgb(41, 146, 207);
+	}
 }
+
 @media (min-width: 1200px) {
 	.contact--imageContainer {
 		width: 40%;

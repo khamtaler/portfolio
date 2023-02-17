@@ -9,7 +9,7 @@ import MenuItem from './MenuItem.vue';
 export default {
 	data() {
 		return {
-			tabs: ['Home', 'Biography', 'Projects', 'Skills', 'Contact'],
+			tabs: ['Home', 'About me', 'Projects', 'Skills', 'Contact'],
 		};
 	},
 	components: {

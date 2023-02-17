@@ -42,6 +42,11 @@ export default {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 0px;
+	left: 10px;
+}
+@media (min-width: 1320px) {
+	.colorMenu {
+		left: -15px;
+	}
 }
 </style>

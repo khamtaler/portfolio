@@ -17,6 +17,7 @@ export default {};
 	border-radius: 0px;
 	text-align: center;
 	border: none;
+	opacity: 0.9;
 }
 
 .menuItem--button::before {
@@ -30,6 +31,11 @@ export default {};
 }
 .menuItem--button:hover {
 	margin-bottom: 5px;
+	text-shadow: 0px 1px #fff;
+	opacity: 1;
+}
+.menuItem--button:hover::before {
+	box-shadow: 0px 0px 1px 1px #fff;
 }
 .light {
 	.menuItem--button {
