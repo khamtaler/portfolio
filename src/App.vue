@@ -1,8 +1,10 @@
 <script setup>
 import ContactForm from './components/ContactForm.vue';
+import ColorsAside from './components/ColorsAside.vue';
 </script>
 
 <template>
+	<ColorsAside />
 	<main>
 		<ContactForm />
 	</main>
@@ -12,6 +14,7 @@ import ContactForm from './components/ContactForm.vue';
 export default {
 	components: {
 		ContactForm,
+		ColorsAside,
 	},
 };
 </script>
