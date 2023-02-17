@@ -40,8 +40,8 @@ export default {
 	flex-direction: column;
 	gap: 20px;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 50px;
+
 	left: 10px;
 }
 @media (min-width: 1320px) {

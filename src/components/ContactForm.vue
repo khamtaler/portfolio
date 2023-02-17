@@ -52,7 +52,7 @@ export default {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	background: #fff;
+
 	border-radius: 10px;
 }
 .contact--formContainer {
@@ -107,6 +107,9 @@ export default {
 	}
 	.contact--email {
 		border: 1px solid rgb(41, 146, 207);
+	}
+	.contact {
+		background: #fff;
 	}
 }
 

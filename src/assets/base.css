@@ -82,6 +82,10 @@ body.colorful {
 	background: red;
 }
 
+b {
+	font-weight: 700;
+}
+
 .dark p {
 	color: #1f1f1f;
 }

@@ -1,6 +1,6 @@
 <template>
 	<div class="menu">
-		<MenuItem v-for="tab in tabs">{{ tab }}</MenuItem>
+		<MenuItem v-for="tab in tabs" @click="$emit('changeTile', tab)" :key="tab">{{ tab }}</MenuItem>
 	</div>
 </template>
 
@@ -15,6 +15,11 @@ export default {
 	components: {
 		MenuItem,
 	},
+	// 	methods: {
+	// 		emitToggle(tab) {
+	// 			this.$emit('toggleTile', tab);
+	// 		},
+	// 	},
 };
 </script>
 
