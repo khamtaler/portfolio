@@ -28,9 +28,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.projectTile {
-	width: 30%;
-}
 .projectTile--desc {
 	font-size: 18px;
 	text-align: center;
@@ -57,6 +54,17 @@ export default {
 	.projectTile::before {
 		background: #471564;
 		box-shadow: 0px 0px 3px 1px #471564;
+	}
+}
+
+@media (min-width: 801px) {
+	.projectTile {
+		width: 30%;
+	}
+}
+@media (max-width: 800px) {
+	.projectTile {
+		margin-bottom: 10px;
 	}
 }
 </style>

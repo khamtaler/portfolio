@@ -136,10 +136,7 @@ export default {
 	border-radius: 10px;
 	padding: 20px;
 }
-.homepage--sectionText,
-.homepage--sectionImage {
-	width: 50%;
-}
+
 .homepage--sectionImage {
 	mix-blend-mode: multiply;
 }
@@ -206,5 +203,47 @@ export default {
 }
 .projects--image:hover {
 	transform: scale(1.05);
+}
+@media (min-width: 801px) {
+	.homepage--sectionText,
+	.homepage--sectionImage {
+		width: 50%;
+	}
+}
+@media (max-width: 800px) {
+	.projects {
+		flex-direction: column;
+	}
+	.section--contact {
+		flex-direction: column;
+	}
+	.contact {
+		gap: 20px;
+	}
+	.contact--information {
+		padding: 0px;
+	}
+	.contact--link {
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+	.contact--city {
+		padding: 0;
+	}
+	.projects--image {
+		aspect-ratio: 1;
+		height: unset;
+		margin-bottom: 15px;
+	}
+	.homepage--sectionImage {
+		width: 100%;
+	}
+	.homepage--section {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 20px;
+	}
 }
 </style>

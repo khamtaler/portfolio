@@ -1,10 +1,10 @@
 <template>
 	<div class="contact">
-		<div class="contact--imageContainer">
+		<div class="contact--imageContainer hideMobile">
 			<img class="contact--image" src="../assets/images/avatar.jpg" />
 		</div>
 		<div class="contact--formContainer">
-			<h4 class="contact--formHeader">
+			<h4 class="">
 				Do You need any further information? <br />
 
 				Write your message bellow and send it directly to me &#128512;
@@ -119,6 +119,16 @@ export default {
 	}
 	.contact--formContainer {
 		width: 60%;
+	}
+}
+@media (max-width: 1000px) {
+	.contact--formHeader {
+		font-size: 1rem;
+	}
+}
+@media (min-width: 801px) {
+	.contact {
+		gap: 20px;
 	}
 }
 </style>

@@ -37,7 +37,7 @@ import HobbyTile from './HobbyTile.vue';
 		</TabItem>
 	</Tab>
 	<Tab class="tab--content" v-if="currentTab === 'Experience'"
-		><TabItem class="tab--experience tabItem---vertical">
+		><TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/Lively.webp" />
 			<div class="tab--desc">
 				<h3>Cracow University of Technology</h3>
@@ -47,14 +47,14 @@ import HobbyTile from './HobbyTile.vue';
 				<p>Spec: Data Science</p>
 			</div>
 		</TabItem>
-		<TabItem class="tab--experience tabItem---vertical">
+		<TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/TuOglosLogo.webp" />
 			<div class="tab--desc">
 				<h3>Grupa 133 portali łącząca Polaków w Polsce i na całym świecie</h3>
 			</div>
 		</TabItem></Tab
 	>
-	<Tab class="tab--content tabItem---vertical" v-if="currentTab === 'Hobbies'">
+	<Tab class="tab--content tabItem---layout" v-if="currentTab === 'Hobbies'">
 		<HobbyTile title="Snowboard">
 			<img class="hobbyTile--image" src="../assets/images/Snowboard.webp"
 		/></HobbyTile>
@@ -96,10 +96,10 @@ export default {
 <style lang="scss" scoped>
 .tabs {
 	display: flex;
-	width: 90%;
-	margin: 0px auto 15px auto;
 	align-items: baseline;
 	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 30px;
 }
 .tab {
 	flex-shrink: 1;
@@ -125,9 +125,9 @@ export default {
 	padding: 20px 0px;
 }
 .tab--desc {
-	width: 50%;
+	padding: 0px 10px;
 }
-.tabItem---vertical {
+.tabItem---layout {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -138,13 +138,12 @@ export default {
 	text-decoration: underline;
 }
 .tab--contentImage {
-	max-width: 30%;
+	max-width: 60%;
 }
 .hobbyTile--image {
 	width: 100%;
-	max-height: 200px;
 	object-fit: cover;
-	border-radius: 50px;
+	border-radius: 20px;
 }
 .light {
 	.active::before {
@@ -156,6 +155,32 @@ export default {
 	.active::before {
 		background: #471564;
 		box-shadow: 0px 0px 3px 1px #471564;
+	}
+}
+@media (max-width: 1200px) {
+	.hobbyTile--image {
+		aspect-ratio: 1;
+	}
+}
+@media (min-width: 800px) {
+	.tabs {
+		width: 90%;
+		margin: 0px auto 15px auto;
+	}
+	.hobbyTile--image {
+		max-height: 200px;
+		border-radius: 50px;
+	}
+	.tab--contentImage {
+		max-width: 30%;
+	}
+	.tab--desc {
+		width: 50%;
+	}
+}
+@media (max-width: 600px) {
+	.tabItem---layout {
+		flex-direction: column;
 	}
 }
 </style>

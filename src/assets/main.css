@@ -19,3 +19,14 @@
 .button:hover {
 	cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+	#app {
+		max-height: unset;
+	}
+}
+@media (max-width: 800px) {
+	#app {
+		padding: 1rem;
+	}
+}

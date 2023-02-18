@@ -17,10 +17,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hobbyTile {
-	width: 30%;
-}
 .hobbyTile--desc {
 	text-align: center;
+}
+@media (min-width: 801px) {
+	.hobbyTile {
+		width: 30%;
+	}
 }
 </style>

@@ -27,4 +27,10 @@ export default {};
 		background: #d1d0d0;
 	}
 }
+
+@media (max-width: 800px) {
+	.tile {
+		padding: 20px 15px;
+	}
+}
 </style>
