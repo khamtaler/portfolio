@@ -30,9 +30,9 @@ export default {};
 	background: #fff;
 }
 .menuItem--button:hover {
-	margin-bottom: 5px;
-	text-shadow: 0px 1px #fff;
+	transform: translateY(-6px);
 	opacity: 1;
+	transition: 0.5s ease-in-out;
 }
 .menuItem--button:hover::before {
 	box-shadow: 0px 0px 1px 1px #fff;
@@ -43,6 +43,14 @@ export default {};
 	}
 	.menuItem--button::before {
 		background: #000;
+	}
+}
+.dark {
+	.active {
+		.menuItem--button::before {
+			background: #944bbe;
+			box-shadow: 0px 0px 2px 1px #944bbe;
+		}
 	}
 }
 </style>

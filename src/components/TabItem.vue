@@ -14,6 +14,14 @@ export default {};
 	padding: 10px;
 	margin: 10px 0px;
 	border-radius: 10px;
-	// margin: 20px 10px;
+}
+.light {
+	.tabItem {
+		background-color: #fff;
+		padding: 10px;
+		margin: 10px 0px;
+		border-radius: 10px;
+		border: 1px solid #000;
+	}
 }
 </style>

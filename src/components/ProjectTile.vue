@@ -8,7 +8,7 @@ import GithubIcon from './icons/GithubIcon.vue';
 			<slot />
 			<p class="projectTile--desc">{{ desc }}</p>
 		</a>
-		<a class="projectTile--github" :href="github" target="blank">
+		<a v-if="github" class="projectTile--github" :href="github" target="blank">
 			<GithubIcon class="githubIcon" /> Github</a
 		>
 	</div>

@@ -1,6 +1,12 @@
 <template>
 	<div class="menu">
-		<MenuItem v-for="tab in tabs" @click="$emit('changeTile', tab)" :key="tab">{{ tab }}</MenuItem>
+		<MenuItem
+			:class="{ active: active === tab }"
+			v-for="tab in tabs"
+			@click="$emit('changeTile', tab), (active = tab)"
+			:key="tab"
+			>{{ tab }}</MenuItem
+		>
 	</div>
 </template>
 
@@ -10,6 +16,7 @@ export default {
 	data() {
 		return {
 			tabs: ['Home', 'About me', 'Projects', 'Skills', 'Contact'],
+			active: 'Home',
 		};
 	},
 	components: {

@@ -55,6 +55,9 @@ import LinkedinIcon from './components/icons/LinkedinIcon.vue';
 			>
 				<img class="projects--image" src="./assets/images/TuOglos.webp" />
 			</ProjectTile>
+			<ProjectTile desc="Ecocalculator in Vanilla JS" link="https://lively.pl/ekokalkulator/">
+				<img class="projects--image" src="./assets/images/Kalkulator.webp" />
+			</ProjectTile>
 		</Tile>
 		<Tile v-if="show === `Skills`" id="Skills" class="skills"> <ContactForm /></Tile>
 		<Tile v-if="show === `Contact`" id="Contact" class="contact">
@@ -126,6 +129,11 @@ export default {
 .homepage--section {
 	display: flex;
 }
+.homepage--sectionText {
+	background: #fff;
+	border-radius: 10px;
+	padding: 20px;
+}
 .homepage--sectionText,
 .homepage--sectionImage {
 	width: 50%;
@@ -192,6 +200,7 @@ export default {
 	object-fit: cover;
 	overflow: hidden;
 	border-radius: 5px;
+	transition: 1s;
 }
 .projects--image:hover {
 	transform: scale(1.05);

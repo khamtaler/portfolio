@@ -1,8 +1,19 @@
 <template>
 	<aside class="colorMenu">
-		<ColorButton colorClass="button--color---light" title="light" @click="changeColor(`light`)" />
-		<ColorButton colorClass="button--color---dark" title="dark" @click="changeColor(`dark`)" />
 		<ColorButton
+			:class="{ active: active === 'light' }"
+			colorClass="button--color---light"
+			title="light"
+			@click="changeColor(`light`)"
+		/>
+		<ColorButton
+			:class="{ active: active === 'dark' }"
+			colorClass="button--color---dark"
+			title="dark"
+			@click="changeColor(`dark`)"
+		/>
+		<ColorButton
+			:class="{ active: active === 'colorful' }"
 			colorClass="button--color---colorful"
 			title="colorful"
 			@click="changeColor(`colorful`)"
@@ -16,6 +27,7 @@ export default {
 	data() {
 		return {
 			color: 'dark',
+			active: 'dark',
 		};
 	},
 	methods: {
@@ -23,6 +35,7 @@ export default {
 			document.body.classList.remove(this.color);
 			this.color = title;
 			document.body.classList.add(this.color);
+			this.active = title;
 		},
 	},
 	mounted() {
@@ -41,8 +54,10 @@ export default {
 	gap: 20px;
 	position: absolute;
 	top: 50px;
-
 	left: 10px;
+}
+.colorMenu .active {
+	left: 15px;
 }
 @media (min-width: 1320px) {
 	.colorMenu {

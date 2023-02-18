@@ -146,6 +146,12 @@ export default {
 	object-fit: cover;
 	border-radius: 50px;
 }
+.light {
+	.active::before {
+		background: #000;
+		box-shadow: 0px 0px 3px 1px #000;
+	}
+}
 .dark {
 	.active::before {
 		background: #471564;
