@@ -12,12 +12,12 @@
 			title="dark"
 			@click="changeColor(`dark`)"
 		/>
-		<ColorButton
+		<!-- <ColorButton
 			:class="{ active: active === 'colorful' }"
 			colorClass="button--color---colorful"
 			title="colorful"
 			@click="changeColor(`colorful`)"
-		/>
+		/> -->
 	</aside>
 </template>
 

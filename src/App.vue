@@ -10,6 +10,7 @@ import PhoneIcon from './components/icons/PhoneIcon.vue';
 import EnvelopeIcon from './components/icons/EnvelopeIcon.vue';
 import GithubIcon from './components/icons/GithubIcon.vue';
 import LinkedinIcon from './components/icons/LinkedinIcon.vue';
+import Skills from './components/Skills.vue';
 </script>
 
 <template>
@@ -59,7 +60,7 @@ import LinkedinIcon from './components/icons/LinkedinIcon.vue';
 				<img class="projects--image" src="./assets/images/Kalkulator.webp" />
 			</ProjectTile>
 		</Tile>
-		<Tile v-if="show === `Skills`" id="Skills" class="skills"> <ContactForm /></Tile>
+		<Tile v-if="show === `Skills`" id="Skills" class="skills"> <Skills /></Tile>
 		<Tile v-if="show === `Contact`" id="Contact" class="contact">
 			<Section class="section--contact">
 				<div class="contact--information">
@@ -109,6 +110,7 @@ export default {
 		ColorsAside,
 		ProjectTile,
 		Tabs,
+		Skills,
 	},
 	methods: {
 		toggleTile(tile) {
