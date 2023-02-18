@@ -37,7 +37,7 @@ export default {
 			console.log(this.message);
 		},
 		textGo() {
-			this.buttonText = 'Go!';
+			this.buttonText = 'Lets Go!';
 		},
 		textReady() {
 			this.buttonText = 'Ready?';
@@ -88,11 +88,11 @@ export default {
 	min-height: 100px;
 }
 .button--contact {
-	width: 100px;
+	width: 130px;
 }
 .dark {
 	.contact {
-		box-shadow: 0px 0px 40px 10px rgb(41, 146, 207);
+		box-shadow: 0px 0px 15px 5px rgb(41, 146, 207);
 	}
 	.button--contact {
 		box-shadow: 0px 0px 10px 0px rgb(41, 146, 207);

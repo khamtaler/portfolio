@@ -4,6 +4,7 @@ import ColorsAside from './components/ColorsAside.vue';
 import Section from './components/Section.vue';
 import Tile from './components/Tile.vue';
 import ContactForm from './components/ContactForm.vue';
+import ProjectTile from './components/ProjectTile.vue';
 import PhoneIcon from './components/icons/PhoneIcon.vue';
 import EnvelopeIcon from './components/icons/EnvelopeIcon.vue';
 import GithubIcon from './components/icons/GithubIcon.vue';
@@ -14,6 +15,33 @@ import LinkedinIcon from './components/icons/LinkedinIcon.vue';
 	<ColorsAside />
 	<Menu @changeTile="toggleTile"></Menu>
 	<main class="main">
+		<Tile v-if="show === `Home`" id="Homepage" class="homepage"> <ContactForm /></Tile>
+		<Tile v-if="show === `About me`" id="About" class="about"> <ContactForm /></Tile>
+		<Tile v-if="show === `Projects`" id="Projects" class="projects">
+			<ProjectTile
+				desc="Quizz in React"
+				link="https://clever-khapse-9eeb96.netlify.app/"
+				github="https://github.com/khamtaler/React_ts_quizz"
+			>
+				<img class="projects--image" src="./assets/images/Quizz.webp" />
+			</ProjectTile>
+
+			<ProjectTile
+				desc="Landing in Nuxt.js"
+				link="https://creative-souffle-842769.netlify.app/"
+				github="https://github.com/khamtaler/nuxt_landing"
+			>
+				<img class="projects--image" src="./assets/images/ProductFactory.webp" />
+			</ProjectTile>
+			<ProjectTile
+				desc="Landing in Vue.js"
+				link="https://sunny-mochi-22e9b8.netlify.app/"
+				github="https://github.com/khamtaler/vue_landing"
+			>
+				<img class="projects--image" src="./assets/images/TuOglos.webp" />
+			</ProjectTile>
+		</Tile>
+		<Tile v-if="show === `Skills`" id="Skills" class="skills"> <ContactForm /></Tile>
 		<Tile v-if="show === `Contact`" id="Contact" class="contact">
 			<Section class="section--contact">
 				<div class="contact--information">
@@ -46,7 +74,6 @@ import LinkedinIcon from './components/icons/LinkedinIcon.vue';
 			</Section>
 			<ContactForm />
 		</Tile>
-		<Tile v-if="show === `Home`" id="Homepage" class="homepage"> <ContactForm /></Tile>
 	</main>
 </template>
 
@@ -62,6 +89,7 @@ export default {
 		Section,
 		ContactForm,
 		ColorsAside,
+		ProjectTile,
 	},
 	methods: {
 		toggleTile(tile) {
@@ -82,7 +110,6 @@ export default {
 .section--contact {
 	display: flex;
 	width: 100%;
-	margin-bottom: 50px;
 }
 .contact--header {
 	color: #1f1f1f;
@@ -123,5 +150,21 @@ export default {
 	height: auto;
 	border-radius: 10px;
 	object-fit: cover;
+}
+.projects {
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.projects--image {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+.projects--image:hover {
+	transform: scale(1.05);
 }
 </style>

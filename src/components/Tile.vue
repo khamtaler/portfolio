@@ -18,5 +18,8 @@ export default {};
 	width: 100%;
 	max-height: 80vh;
 	height: 100%;
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
 }
 </style>
