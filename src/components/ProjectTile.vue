@@ -42,17 +42,19 @@ export default {
 .githubIcon {
 	width: 16px;
 }
+.projectTile::before {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	width: 100%;
+	height: 1px;
+}
 .dark {
 	.projectTile--github {
 		margin-top: 5px;
 		color: #471564;
 	}
 	.projectTile::before {
-		content: '';
-		position: absolute;
-		bottom: -5px;
-		width: 100%;
-		height: 1px;
 		background: #471564;
 		box-shadow: 0px 0px 3px 1px #471564;
 	}

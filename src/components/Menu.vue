@@ -15,11 +15,6 @@ export default {
 	components: {
 		MenuItem,
 	},
-	// 	methods: {
-	// 		emitToggle(tab) {
-	// 			this.$emit('toggleTile', tab);
-	// 		},
-	// 	},
 };
 </script>
 

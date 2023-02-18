@@ -74,11 +74,11 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 body.dark {
-	color: var(--color-text);
-	background: var(--color-background);
+	color: #1f1f1f;
+	background: #181818;
 }
 body.colorful {
-	color: var(--color-text);
+	color: #1f1f1f;
 	background: red;
 }
 

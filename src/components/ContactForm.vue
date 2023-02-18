@@ -91,22 +91,22 @@ export default {
 	width: 130px;
 }
 .dark {
-	.contact {
-		box-shadow: 0px 0px 15px 5px rgb(41, 146, 207);
-	}
+	// .contact {
+	// 	box-shadow: 0px 0px 15px 5px #471564;
+	// }
 	.button--contact {
-		box-shadow: 0px 0px 10px 0px rgb(41, 146, 207);
+		box-shadow: 0px 0px 10px 0px #471564;
 	}
 	.button--contact:hover {
-		box-shadow: 0px 0px 20px 0px rgb(41, 146, 207);
+		box-shadow: 0px 0px 20px 0px #471564;
 	}
 	.contact--message:focus-visible,
 	.contact--email:focus-visible {
-		border: 1px solid rgb(41, 146, 207);
-		box-shadow: 0px 0px 5px 0px rgb(41, 146, 207);
+		border: 1px solid #471564;
+		box-shadow: 0px 0px 5px 0px #471564;
 	}
 	.contact--email {
-		border: 1px solid rgb(41, 146, 207);
+		border: 1px solid #471564;
 	}
 	.contact {
 		background: #fff;

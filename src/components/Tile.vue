@@ -13,13 +13,18 @@ export default {};
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	max-width: 80vw;
 	width: 100%;
-	max-height: 80vh;
 	height: 100%;
-	background: #fff;
+	min-height: 78vh;
+
 	padding: 20px;
 	border-radius: 10px;
+}
+.dark {
+	.tile {
+		background: #d1d0d0;
+	}
 }
 </style>

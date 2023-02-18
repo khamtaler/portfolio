@@ -3,6 +3,7 @@ import Menu from './components/Menu.vue';
 import ColorsAside from './components/ColorsAside.vue';
 import Section from './components/Section.vue';
 import Tile from './components/Tile.vue';
+import Tabs from './components/Tabs.vue';
 import ContactForm from './components/ContactForm.vue';
 import ProjectTile from './components/ProjectTile.vue';
 import PhoneIcon from './components/icons/PhoneIcon.vue';
@@ -15,8 +16,22 @@ import LinkedinIcon from './components/icons/LinkedinIcon.vue';
 	<ColorsAside />
 	<Menu @changeTile="toggleTile"></Menu>
 	<main class="main">
-		<Tile v-if="show === `Home`" id="Homepage" class="homepage"> <ContactForm /></Tile>
-		<Tile v-if="show === `About me`" id="About" class="about"> <ContactForm /></Tile>
+		<Tile v-if="show === `Home`" id="Homepage" class="homepage">
+			<div class="homepage--section">
+				<img class="homepage--sectionImage" src="./assets/images/avatar.jpg" />
+				<div class="homepage--sectionText">
+					<h2>Welcome!</h2>
+					<p>
+						My name is <b>Tomasz Sroka</b> and this is my website. The idea behind the project was
+						to make a simple single page website I could describe myself on. You can toggle
+						different colors in left menu if You wish. Projects are available to be viewed in
+						projects tab. You can contact me via links included in contact tab. Enjoy your stay
+						&#128512;
+					</p>
+				</div>
+			</div></Tile
+		>
+		<Tile v-if="show === `About me`" id="About" class="about"> <Tabs /></Tile>
 		<Tile v-if="show === `Projects`" id="Projects" class="projects">
 			<ProjectTile
 				desc="Quizz in React"
@@ -81,7 +96,7 @@ import LinkedinIcon from './components/icons/LinkedinIcon.vue';
 export default {
 	data() {
 		return {
-			show: 'Contact',
+			show: 'Home',
 		};
 	},
 	components: {
@@ -90,6 +105,7 @@ export default {
 		ContactForm,
 		ColorsAside,
 		ProjectTile,
+		Tabs,
 	},
 	methods: {
 		toggleTile(tile) {
@@ -106,6 +122,16 @@ export default {
 	justify-content: center;
 	height: 100%;
 	width: 100%;
+}
+.homepage--section {
+	display: flex;
+}
+.homepage--sectionText,
+.homepage--sectionImage {
+	width: 50%;
+}
+.homepage--sectionImage {
+	mix-blend-mode: multiply;
 }
 .section--contact {
 	display: flex;
@@ -124,9 +150,11 @@ export default {
 }
 .mediaIcon {
 	width: 16px;
+	height: auto;
 }
 .contact--link {
 	display: flex;
+	align-items: center;
 	gap: 6px;
 	font-size: 18px;
 	text-decoration: none;
@@ -163,6 +191,7 @@ export default {
 	width: 100%;
 	object-fit: cover;
 	overflow: hidden;
+	border-radius: 5px;
 }
 .projects--image:hover {
 	transform: scale(1.05);
