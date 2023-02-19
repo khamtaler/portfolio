@@ -126,7 +126,7 @@ export default {
 		font-size: 1rem;
 	}
 }
-@media (min-width: 801px) {
+@media (min-width: 841px) {
 	.contact {
 		gap: 20px;
 	}

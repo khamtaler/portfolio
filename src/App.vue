@@ -6,16 +6,28 @@ import Tile from './components/Tile.vue';
 import Tabs from './components/Tabs.vue';
 import ContactForm from './components/ContactForm.vue';
 import ProjectTile from './components/ProjectTile.vue';
+import Skills from './components/Skills.vue';
 import PhoneIcon from './components/icons/PhoneIcon.vue';
 import EnvelopeIcon from './components/icons/EnvelopeIcon.vue';
 import GithubIcon from './components/icons/GithubIcon.vue';
 import LinkedinIcon from './components/icons/LinkedinIcon.vue';
-import Skills from './components/Skills.vue';
+import CloseIcon from './components/icons/CloseIcon.vue';
+import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 </script>
 
 <template>
 	<ColorsAside />
-	<Menu @changeTile="toggleTile"></Menu>
+	<HamburgerIcon
+		class="mobileMenuButton mobileMenuButton--open"
+		@click="toggleMobileMenu"
+	></HamburgerIcon>
+	<CloseIcon
+		class="mobileMenuButton mobileMenuButton--close"
+		@click="toggleMobileMenu"
+		:class="{ buttonVisible: mobile }"
+	></CloseIcon>
+	<Menu @changeTile="toggleTile" :class="{ mobile: mobile }"></Menu>
+
 	<main class="main">
 		<Tile v-if="show === `Home`" id="Homepage" class="homepage">
 			<div class="homepage--section">
@@ -101,26 +113,45 @@ export default {
 	data() {
 		return {
 			show: 'Home',
+			mobile: false,
 		};
 	},
 	components: {
 		Menu,
-		Section,
-		ContactForm,
 		ColorsAside,
-		ProjectTile,
+		Section,
+		Tile,
 		Tabs,
+		ContactForm,
+		ProjectTile,
 		Skills,
+		PhoneIcon,
+		EnvelopeIcon,
+		GithubIcon,
+		LinkedinIcon,
+		CloseIcon,
+		HamburgerIcon,
 	},
 	methods: {
 		toggleTile(tile) {
 			this.show = tile;
+			console.log(window.innerWidth);
+			if (window.innerWidth <= 840) {
+				this.mobile = !this.mobile;
+			}
+		},
+		toggleMobileMenu() {
+			this.mobile = !this.mobile;
 		},
 	},
 };
 </script>
 
 <style lang="scss" scoped>
+.mobileMenuButton {
+	display: none;
+}
+
 .main {
 	display: flex;
 	align-items: center;
@@ -204,16 +235,60 @@ export default {
 .projects--image:hover {
 	transform: scale(1.05);
 }
-@media (min-width: 801px) {
+
+.light {
+}
+.dark {
+	.mobileMenuButton {
+		filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(29deg) brightness(107%) contrast(100%);
+	}
+}
+
+@media (min-width: 841px) {
 	.homepage--sectionText,
 	.homepage--sectionImage {
 		width: 50%;
 	}
 }
-@media (max-width: 800px) {
+
+@media (min-width: 601px) {
+	.projects {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 600px) {
 	.projects {
 		flex-direction: column;
 	}
+}
+@media (max-width: 840px) {
+	.mobileMenuButton {
+		display: block;
+		width: 25px;
+		height: auto;
+		position: absolute;
+		left: 10px;
+	}
+	.mobileMenuButton:hover {
+		cursor: pointer;
+	}
+	.mobileMenuButton--open {
+		top: 15px;
+	}
+	.mobileMenuButton--close {
+		top: 12px;
+		display: none;
+	}
+
+	.buttonVisible {
+		display: block;
+		z-index: 5;
+	}
+	.main {
+		margin-top: 50px;
+	}
+
 	.section--contact {
 		flex-direction: column;
 	}

@@ -20,7 +20,7 @@ export default {
 .hobbyTile--desc {
 	text-align: center;
 }
-@media (min-width: 801px) {
+@media (min-width: 841px) {
 	.hobbyTile {
 		width: 30%;
 	}

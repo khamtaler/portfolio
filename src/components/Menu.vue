@@ -37,4 +37,33 @@ export default {
 	margin-bottom: 30px;
 	padding: 10px 0px;
 }
+@media (max-width: 840px) {
+	.menu {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		z-index: 2;
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.light {
+		.mobile {
+			background: #fff;
+		}
+	}
+	.dark {
+		.mobile {
+			background: #000;
+		}
+	}
+}
 </style>

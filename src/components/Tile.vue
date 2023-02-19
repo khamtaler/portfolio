@@ -28,7 +28,7 @@ export default {};
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
 	.tile {
 		padding: 20px 15px;
 	}

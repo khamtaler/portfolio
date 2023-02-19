@@ -52,6 +52,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	z-index: 2;
 	position: absolute;
 	top: 50px;
 	left: 10px;
@@ -64,4 +65,16 @@ export default {
 		left: -15px;
 	}
 }
+@media (max-width: 840px) {
+	.colorMenu {
+		top: 70px;
+	}
+}
+// 	.colorMenu {
+// 		top: 10px;
+// 		right: 20px;
+// 		left: unset;
+// 		flex-direction: row;
+// 	}
+// }
 </style>

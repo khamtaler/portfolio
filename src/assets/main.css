@@ -25,8 +25,8 @@
 		max-height: unset;
 	}
 }
-@media (max-width: 800px) {
+@media (max-width: 840px) {
 	#app {
-		padding: 1rem;
+		padding: 1.5rem;
 	}
 }

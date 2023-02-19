@@ -162,7 +162,7 @@ export default {
 		aspect-ratio: 1;
 	}
 }
-@media (min-width: 800px) {
+@media (min-width: 840px) {
 	.tabs {
 		width: 90%;
 		margin: 0px auto 15px auto;

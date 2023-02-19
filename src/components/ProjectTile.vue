@@ -8,7 +8,12 @@ import GithubIcon from './icons/GithubIcon.vue';
 			<slot />
 			<p class="projectTile--desc">{{ desc }}</p>
 		</a>
-		<a v-if="github" class="projectTile--github" :href="github" target="blank">
+		<a
+			class="projectTile--github"
+			:class="{ crossed: !github, disabled: !github }"
+			:href="{ github }"
+			target="blank"
+		>
 			<GithubIcon class="githubIcon" /> Github</a
 		>
 	</div>
@@ -46,6 +51,13 @@ export default {
 	width: 100%;
 	height: 1px;
 }
+.crossed {
+	text-decoration: line-through;
+}
+.disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}
 .dark {
 	.projectTile--github {
 		margin-top: 5px;
@@ -57,12 +69,17 @@ export default {
 	}
 }
 
-@media (min-width: 801px) {
+@media (min-width: 841px) {
 	.projectTile {
 		width: 30%;
 	}
 }
-@media (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 840px) {
+	.projectTile {
+		width: 45%;
+	}
+}
+@media (max-width: 840px) {
 	.projectTile {
 		margin-bottom: 10px;
 	}
