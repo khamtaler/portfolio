@@ -11,8 +11,8 @@ import GithubIcon from './icons/GithubIcon.vue';
 		<a
 			class="projectTile--github"
 			:class="{ crossed: !github, disabled: !github }"
-			:href="{ github }"
-			target="blank"
+			:href="github"
+			target="_blank"
 		>
 			<GithubIcon class="githubIcon" /> Github</a
 		>
