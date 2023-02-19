@@ -4,7 +4,7 @@ import GithubIcon from './icons/GithubIcon.vue';
 
 <template>
 	<div class="projectTile">
-		<a :href="link" target="blank">
+		<a :href="link" target="_blank">
 			<slot />
 			<p class="projectTile--desc">{{ desc }}</p>
 		</a>
