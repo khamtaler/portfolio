@@ -12,6 +12,7 @@
 			<textarea class="contact--message" v-model="message" placeholder="input your message" />
 			<input class="contact--email" v-model="email" placeholder="Your email" />
 			<button
+				type="button"
 				class="button button--contact"
 				@click="send()"
 				@mouseover="textGo"

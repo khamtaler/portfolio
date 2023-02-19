@@ -38,7 +38,7 @@ import HobbyTile from './HobbyTile.vue';
 	</Tab>
 	<Tab class="tab--content" v-if="currentTab === 'Experience'"
 		><TabItem class="tab--experience tabItem---layout">
-			<img class="tab--contentImage" src="../assets/images/Lively.webp" />
+			<img class="tab--contentImage" src="../assets/images/Lively.webp" alt="Logo" />
 			<div class="tab--desc">
 				<h3>Cracow University of Technology</h3>
 				<p>February 2021 - September 2022</p>
@@ -48,7 +48,7 @@ import HobbyTile from './HobbyTile.vue';
 			</div>
 		</TabItem>
 		<TabItem class="tab--experience tabItem---layout">
-			<img class="tab--contentImage" src="../assets/images/TuOglosLogo.webp" />
+			<img class="tab--contentImage" src="../assets/images/TuOglosLogo.webp" alt="Logo" />
 			<div class="tab--desc">
 				<h3>Grupa 133 portali łącząca Polaków w Polsce i na całym świecie</h3>
 			</div>
@@ -56,22 +56,22 @@ import HobbyTile from './HobbyTile.vue';
 	>
 	<Tab class="tab--content tabItem---layout" v-if="currentTab === 'Hobbies'">
 		<HobbyTile title="Snowboard">
-			<img class="hobbyTile--image" src="../assets/images/Snowboard.webp"
+			<img class="hobbyTile--image" src="../assets/images/Snowboard.webp" alt="Snowboard"
 		/></HobbyTile>
 		<HobbyTile title="Traveling">
-			<img class="hobbyTile--image" src="../assets/images/Travel.webp"
+			<img class="hobbyTile--image" src="../assets/images/Travel.webp" alt="Travel"
 		/></HobbyTile>
 		<HobbyTile title="Board games">
-			<img class="hobbyTile--image" src="../assets/images/BoardGames.webp"
+			<img class="hobbyTile--image" src="../assets/images/BoardGames.webp" alt="BoardGames"
 		/></HobbyTile>
 		<HobbyTile title="Sightseeing">
-			<img class="hobbyTile--image" src="../assets/images/Sightseeing.webp"
+			<img class="hobbyTile--image" src="../assets/images/Sightseeing.webp" alt="Sightseeing"
 		/></HobbyTile>
 		<HobbyTile title="Music">
-			<img class="hobbyTile--image" src="../assets/images/Music.webp"
+			<img class="hobbyTile--image" src="../assets/images/Music.webp" alt="Music"
 		/></HobbyTile>
 		<HobbyTile title="Sport">
-			<img class="hobbyTile--image" src="../assets/images/Sport.webp"
+			<img class="hobbyTile--image" src="../assets/images/Sport.webp" alt="Sport"
 		/></HobbyTile>
 	</Tab>
 </template>

@@ -1,5 +1,5 @@
 <template>
-	<button class="button button--color" :class="colorClass" :title="title"></button>
+	<button type="button" class="button button--color" :class="colorClass" :title="title"></button>
 </template>
 
 <script>

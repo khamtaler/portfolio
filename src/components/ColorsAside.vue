@@ -12,12 +12,12 @@
 			title="dark"
 			@click="changeColor(`dark`)"
 		/>
-		<!-- <ColorButton
-			:class="{ active: active === 'colorful' }"
+		<ColorButton
+			:class="{ active: active === 'colorfule' }"
 			colorClass="button--color---colorful"
-			title="colorful"
-			@click="changeColor(`colorful`)"
-		/> -->
+			title="colorfule"
+			@click="changeColor(`colorfule`)"
+		/>
 	</aside>
 </template>
 
@@ -50,26 +50,32 @@ export default {
 <style lang="scss" scoped>
 .colorMenu {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 20px;
 	z-index: 2;
 	position: absolute;
-	top: 50px;
-	left: 10px;
+	top: 15px;
+	left: 70px;
 }
 .colorMenu .active {
-	left: 15px;
+	top: 7px;
 }
 @media (min-width: 1320px) {
 	.colorMenu {
 		left: -15px;
 	}
-}
-@media (max-width: 840px) {
-	.colorMenu {
-		top: 70px;
+	.colorMenu .active {
+		left: 15px;
 	}
 }
+@media (min-width: 841px) {
+	.colorMenu {
+		top: 50px;
+		left: 10px;
+		flex-direction: column;
+	}
+}
+
 // 	.colorMenu {
 // 		top: 10px;
 // 		right: 20px;
