@@ -31,15 +31,19 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 	<main class="main">
 		<Tile v-if="show === `Home`" id="Homepage" class="homepage">
 			<div class="homepage--section">
-				<img class="homepage--sectionImage" src="./assets/images/avatar.jpg" />
+				<img
+					class="homepage--sectionImage"
+					src="./assets/images/avatar.jpg"
+					alt="Creator picture"
+				/>
 				<div class="homepage--sectionText">
-					<h2>Welcome!</h2>
-					<p>
+					<h1>Welcome!</h1>
+					<p class="homepage--sectionTextWelcome">
 						My name is <b>Tomasz Sroka</b> and this is my website. The idea behind the project was
-						to make a simple single page website I could describe myself on. You can toggle
-						different colors in left menu if You wish. Projects are available to be viewed in
-						projects tab. You can contact me via links included in contact tab. Enjoy your stay
-						&#128512;
+						to make a simple single page website I could describe myself on. I've used Vue 3 to do
+						so. You can toggle different colors in left menu, check my projects, hobbies or get to
+						know me better going trough different tabs. You can also contact me via links included
+						in contact tab. Enjoy your stay &#128512;
 					</p>
 				</div>
 			</div></Tile
@@ -47,11 +51,18 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<Tile v-if="show === `About me`" id="About" class="about"> <Tabs /></Tile>
 		<Tile v-if="show === `Projects`" id="Projects" class="projects">
 			<ProjectTile
+				desc="Portfolio in Vue.js"
+				link="#/"
+				github="https://github.com/khamtaler/portfolio"
+			>
+				<img class="projects--image" src="./assets/images/Portfolio.webp" alt="project picture" />
+			</ProjectTile>
+			<ProjectTile
 				desc="Quizz in React"
 				link="https://clever-khapse-9eeb96.netlify.app/"
 				github="https://github.com/khamtaler/React_ts_quizz"
 			>
-				<img class="projects--image" src="./assets/images/Quizz.webp" />
+				<img class="projects--image" src="./assets/images/Quizz.webp" alt="project picture" />
 			</ProjectTile>
 
 			<ProjectTile
@@ -59,17 +70,18 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				link="https://creative-souffle-842769.netlify.app/"
 				github="https://github.com/khamtaler/nuxt_landing"
 			>
-				<img class="projects--image" src="./assets/images/ProductFactory.webp" />
+				<img
+					class="projects--image"
+					src="./assets/images/ProductFactory.webp"
+					alt="project picture"
+				/>
 			</ProjectTile>
 			<ProjectTile
 				desc="Landing in Vue.js"
 				link="https://sunny-mochi-22e9b8.netlify.app/"
 				github="https://github.com/khamtaler/vue_landing"
 			>
-				<img class="projects--image" src="./assets/images/TuOglos.webp" />
-			</ProjectTile>
-			<ProjectTile desc="Ecocalculator in Vanilla JS" link="https://lively.pl/ekokalkulator/">
-				<img class="projects--image" src="./assets/images/Kalkulator.webp" />
+				<img class="projects--image" src="./assets/images/TuOglos.webp" alt="project picture" />
 			</ProjectTile>
 		</Tile>
 		<Tile v-if="show === `Skills`" id="Skills" class="skills"> <Skills /></Tile>
@@ -97,9 +109,9 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				<div class="contact--city">
 					<p>Currently living in: <b>Cracow</b></p>
 					<div class="contact--cityImages">
-						<img class="contact--image" src="./assets/images/Lake.webp" />
-						<img class="contact--image" src="./assets/images/Balon.webp" />
-						<img class="contact--image" src="./assets/images/Storm.webp" />
+						<img class="contact--image" src="./assets/images/Lake.webp" alt="Lake" />
+						<img class="contact--image" src="./assets/images/Balon.webp" alt="Balon" />
+						<img class="contact--image" src="./assets/images/Storm.webp" alt="Storm" />
 					</div>
 				</div>
 			</Section>
@@ -166,6 +178,9 @@ export default {
 	background: #fff;
 	border-radius: 10px;
 	padding: 20px;
+}
+.homepage--sectionTextWelcome {
+	line-height: 2;
 }
 
 .homepage--sectionImage {

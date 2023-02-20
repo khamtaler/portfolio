@@ -32,7 +32,7 @@ export default {
 	width: 100%;
 	min-height: 62px;
 	align-items: center;
-	justify-content: end;
+	justify-content: flex-end;
 	gap: 50px;
 	margin-bottom: 30px;
 	padding: 10px 0px;

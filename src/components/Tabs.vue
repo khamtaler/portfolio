@@ -40,11 +40,11 @@ import HobbyTile from './HobbyTile.vue';
 		><TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/Lively.webp" alt="Logo" />
 			<div class="tab--desc">
-				<h3>Cracow University of Technology</h3>
-				<p>February 2021 - September 2022</p>
-				<p><b>Master Degree</b></p>
-				<p>Field of study: IT</p>
-				<p>Spec: Data Science</p>
+				<h3>
+					Specjaliści od świata online. <br />
+					Nieustająco podążają i uczą się nowinek technologicznych, aby klienci korzystali tylko z
+					najlepszych narzędzi. Kreują wirtualną rzeczywistość, realizują każde wydarzenie.
+				</h3>
 			</div>
 		</TabItem>
 		<TabItem class="tab--experience tabItem---layout">

@@ -1,3 +1,6 @@
+<script setup>
+import ColorButton from './ColorButton.vue';
+</script>
 <template>
 	<aside class="colorMenu">
 		<ColorButton
@@ -12,17 +15,16 @@
 			title="dark"
 			@click="changeColor(`dark`)"
 		/>
-		<ColorButton
+		<!-- <ColorButton
 			:class="{ active: active === 'colorfule' }"
 			colorClass="button--color---colorful"
 			title="colorfule"
 			@click="changeColor(`colorfule`)"
-		/>
+		/> -->
 	</aside>
 </template>
 
 <script>
-import ColorButton from './ColorButton.vue';
 export default {
 	data() {
 		return {
@@ -57,9 +59,7 @@ export default {
 	top: 15px;
 	left: 70px;
 }
-.colorMenu .active {
-	top: 7px;
-}
+
 @media (min-width: 1320px) {
 	.colorMenu {
 		left: -15px;
@@ -74,8 +74,15 @@ export default {
 		left: 10px;
 		flex-direction: column;
 	}
+	.colorMenu .active {
+		left: 7px;
+	}
 }
-
+@media (max-width: 840px) {
+	.colorMenu .active {
+		top: 7px;
+	}
+}
 // 	.colorMenu {
 // 		top: 10px;
 // 		right: 20px;
