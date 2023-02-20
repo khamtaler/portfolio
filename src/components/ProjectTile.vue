@@ -36,6 +36,7 @@ export default {
 .projectTile--desc {
 	font-size: 18px;
 	text-align: center;
+	margin-top: 5px;
 }
 .projectTile--github {
 	display: block;

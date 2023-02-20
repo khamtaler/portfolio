@@ -58,16 +58,16 @@ import HobbyTile from './HobbyTile.vue';
 		<HobbyTile title="Snowboard">
 			<img class="hobbyTile--image" src="../assets/images/Snowboard.webp" alt="Snowboard"
 		/></HobbyTile>
-		<HobbyTile title="Traveling">
+		<HobbyTile :title="$t('travel')">
 			<img class="hobbyTile--image" src="../assets/images/Travel.webp" alt="Travel"
 		/></HobbyTile>
-		<HobbyTile title="Board games">
+		<HobbyTile :title="$t('games')">
 			<img class="hobbyTile--image" src="../assets/images/BoardGames.webp" alt="BoardGames"
 		/></HobbyTile>
-		<HobbyTile title="Sightseeing">
+		<HobbyTile :title="$t('sightseeing')">
 			<img class="hobbyTile--image" src="../assets/images/Sightseeing.webp" alt="Sightseeing"
 		/></HobbyTile>
-		<HobbyTile title="Music">
+		<HobbyTile :title="$t('music')">
 			<img class="hobbyTile--image" src="../assets/images/Music.webp" alt="Music"
 		/></HobbyTile>
 		<HobbyTile title="Sport">

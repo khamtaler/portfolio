@@ -44,14 +44,14 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<Tile v-if="show === `About me`" id="About" class="about"> <Tabs /></Tile>
 		<Tile v-if="show === `Projects`" id="Projects" class="projects">
 			<ProjectTile
-				desc="Portfolio in Vue.js"
+				:desc="$t('portfolio-vue')"
 				link="#/"
 				github="https://github.com/khamtaler/portfolio"
 			>
 				<img class="projects--image" src="./assets/images/Portfolio.webp" alt="project picture" />
 			</ProjectTile>
 			<ProjectTile
-				desc="Quizz in React"
+				:desc="$t('quizz-react')"
 				link="https://clever-khapse-9eeb96.netlify.app/"
 				github="https://github.com/khamtaler/React_ts_quizz"
 			>
@@ -59,7 +59,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			</ProjectTile>
 
 			<ProjectTile
-				desc="Landing in Nuxt.js"
+				:desc="$t('landing-nuxt')"
 				link="https://creative-souffle-842769.netlify.app/"
 				github="https://github.com/khamtaler/nuxt_landing"
 			>
@@ -70,7 +70,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				/>
 			</ProjectTile>
 			<ProjectTile
-				desc="Landing in Vue.js"
+				:desc="$t('landing-vue')"
 				link="https://sunny-mochi-22e9b8.netlify.app/"
 				github="https://github.com/khamtaler/vue_landing"
 			>
@@ -100,7 +100,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 					>
 				</div>
 				<div class="contact--city">
-					<p>Currently living in: <b>Cracow</b></p>
+					<p v-html="$t('livingPlace')"></p>
 					<div class="contact--cityImages">
 						<img class="contact--image" src="./assets/images/Lake.webp" alt="Lake" />
 						<img class="contact--image" src="./assets/images/Balon.webp" alt="Balon" />

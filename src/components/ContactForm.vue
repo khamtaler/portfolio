@@ -4,13 +4,17 @@
 			<img class="contact--image" src="../assets/images/avatar.jpg" alt="Creator picture" />
 		</div>
 		<div class="contact--formContainer">
-			<h4 class="">
-				Do You need any further information? <br />
-
-				Write your message bellow and send it directly to me &#128512;
-			</h4>
-			<textarea class="contact--message" v-model="message" placeholder="input your message" />
-			<input class="contact--email" v-model="email" placeholder="Your email" />
+			<h4 v-html="$t('contact-form-header')"></h4>
+			<textarea
+				class="contact--message"
+				v-model="message"
+				:placeholder="$t('contact-text-placeholder')"
+			/>
+			<input
+				class="contact--email"
+				v-model="email"
+				:placeholder="$t('contact-email-placeholder')"
+			/>
 			<button
 				type="button"
 				class="button button--contact"

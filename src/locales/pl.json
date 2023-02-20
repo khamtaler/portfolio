@@ -1,5 +1,17 @@
 {
 	"opening": "Hejka!",
 	"greetings": "Nazywam się \n<b>Tomasz Sroka</b> i to jest moja strona internetowa. Ideą projektu było stworzenie prostej, jednostronicowej strony internetowej, na której mógłbym się opisać. Użyłem do tego Vue 3. Możesz przełączać różne kolory w lewym menu, sprawdzić moje projekty, hobby lub poznać mnie lepiej przechodząc przez różne zakładki. Możesz również skontaktować się ze mną za pomocą linków zawartych w zakładce kontakt. Miłego pobytu &#128512;",
-	"contactHeader": "Kontakt:"
+	"contactHeader": "Kontakt:",
+	"livingPlace": "Aktualnie mieszkam w: \n<b>Kraków</b>",
+	"contact-form-header": "Potrzebujesz więcej informacji? \n<br /> Napisz wiadomość poniżej i wyślij ją do mnie &#128512;",
+	"contact-text-placeholder": "Wpisz wiadomość",
+	"contact-email-placeholder": "Twój email",
+	"portfolio-vue": "Portfolio w Vue.js",
+	"quizz-react": "Quizz w React",
+	"landing-nuxt": "Landing w Nuxt.js",
+	"landing-vue": "Landing w Vue.js",
+	"travel": "Podróże",
+	"games": "Gry planszowe",
+	"sightseeing": "Zwiedzanie",
+	"music": "Muzyka"
 }
