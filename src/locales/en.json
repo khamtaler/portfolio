@@ -1,0 +1,5 @@
+{
+	"opening": "Welcome!",
+	"greetings": "My name is \n<b>Tomasz Sroka </b> and this is my website. The idea behind the project was to make a simple single page website I could describe myself on. I've used Vue 3 to do so. You can toggle different colors in left menu, check my projects, hobbies or get to know me better going trough different tabs. You can also contact me via links included in contact tab. Enjoy your stay &#128512;",
+	"contactHeader": "Contact:"
+}

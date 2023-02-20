@@ -1,7 +1,7 @@
 <template>
 	<div class="contact">
 		<div class="contact--imageContainer hideMobile">
-			<img class="contact--image" src="../assets/images/avatar.jpg" />
+			<img class="contact--image" src="../assets/images/avatar.jpg" alt="Creator picture" />
 		</div>
 		<div class="contact--formContainer">
 			<h4 class="">

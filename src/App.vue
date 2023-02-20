@@ -37,17 +37,10 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 					alt="Creator picture"
 				/>
 				<div class="homepage--sectionText">
-					<h1>Welcome!</h1>
-					<p class="homepage--sectionTextWelcome">
-						My name is <b>Tomasz Sroka</b> and this is my website. The idea behind the project was
-						to make a simple single page website I could describe myself on. I've used Vue 3 to do
-						so. You can toggle different colors in left menu, check my projects, hobbies or get to
-						know me better going trough different tabs. You can also contact me via links included
-						in contact tab. Enjoy your stay &#128512;
-					</p>
-				</div>
-			</div></Tile
-		>
+					<h1>{{ $t('opening') }}</h1>
+					<p class="homepage--sectionTextWelcome" v-html="$t('greetings')"></p>
+				</div></div
+		></Tile>
 		<Tile v-if="show === `About me`" id="About" class="about"> <Tabs /></Tile>
 		<Tile v-if="show === `Projects`" id="Projects" class="projects">
 			<ProjectTile
@@ -88,7 +81,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<Tile v-if="show === `Contact`" id="Contact" class="contact">
 			<Section class="section--contact">
 				<div class="contact--information">
-					<h2 class="contact--header">Contact information:</h2>
+					<h2 class="contact--header">{{ $t('contactHeader') }}</h2>
 
 					<a class="contact--link" href="mailto:tsroka41@gmail.com" target="blank"
 						><EnvelopeIcon class="mediaIcon" /> tsroka41@gmail.com</a

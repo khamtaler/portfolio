@@ -1,5 +1,6 @@
 <script setup>
 import ColorButton from './ColorButton.vue';
+import languageSwitch from './languageSwitch.vue';
 </script>
 <template>
 	<aside class="colorMenu">
@@ -15,6 +16,7 @@ import ColorButton from './ColorButton.vue';
 			title="dark"
 			@click="changeColor(`dark`)"
 		/>
+		<languageSwitch />
 		<!-- <ColorButton
 			:class="{ active: active === 'colorfule' }"
 			colorClass="button--color---colorful"
@@ -45,6 +47,7 @@ export default {
 	},
 	components: {
 		ColorButton,
+		languageSwitch,
 	},
 };
 </script>
@@ -58,6 +61,22 @@ export default {
 	position: absolute;
 	top: 15px;
 	left: 70px;
+}
+
+.colorMenu .active::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	background: #1f1f1f;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+}
+
+.dark {
+	.colorMenu .active::before {
+		background: #fff;
+	}
 }
 
 @media (min-width: 1320px) {
@@ -75,19 +94,43 @@ export default {
 		flex-direction: column;
 	}
 	.colorMenu .active {
-		left: 7px;
+		left: 12px;
+	}
+	.colorMenu .active::before {
+		left: -12px;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
 @media (max-width: 840px) {
+	.colorMenu .active:before {
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 	.colorMenu .active {
-		top: 7px;
+		top: 12px;
 	}
 }
-// 	.colorMenu {
-// 		top: 10px;
-// 		right: 20px;
-// 		left: unset;
-// 		flex-direction: row;
-// 	}
-// }
+
+@media (min-width: 841px) {
+	.languageMenu--label.active {
+		left: 10px;
+	}
+	.languageMenu--label.active::before {
+		left: -10px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+@media (max-width: 840px) {
+	.languageMenu--label.active:before {
+		top: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.languageMenu--label.active {
+		top: 10px;
+	}
+}
 </style>
