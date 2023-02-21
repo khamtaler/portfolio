@@ -31,6 +31,7 @@ export default {};
 @media (max-width: 840px) {
 	.tile {
 		padding: 20px 15px;
+		max-width: 100%;
 	}
 }
 </style>

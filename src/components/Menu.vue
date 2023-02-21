@@ -37,7 +37,7 @@ export default {
 	flex-direction: row;
 	width: 100%;
 	min-height: 62px;
-	align-items: center;
+	align-items: end;
 	justify-content: flex-end;
 	gap: 50px;
 	margin-bottom: 30px;
@@ -51,11 +51,11 @@ export default {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
+		align-items: center;
 		z-index: 2;
 		position: absolute;
 		height: 100vh;
-		width: 100vw;
+		width: 100%;
 		top: 0;
 		bottom: 0;
 		left: 0;

@@ -195,5 +195,11 @@ export default {
 	.tabItem---layout {
 		flex-direction: column;
 	}
+	.tabs {
+		flex-direction: column;
+	}
+	.tab {
+		margin-bottom: 15px;
+	}
 }
 </style>
