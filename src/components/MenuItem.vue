@@ -14,6 +14,7 @@ export default {};
 .menuItem--button {
 	background: transparent;
 	color: #fff;
+	font-weight: 700;
 	border-radius: 0px;
 	text-align: center;
 	border: none;
@@ -45,12 +46,11 @@ export default {};
 		background: #000;
 	}
 }
-.dark {
-	.active {
-		.menuItem--button::before {
-			background: #944bbe;
-			box-shadow: 0px 0px 2px 1px #944bbe;
-		}
+
+.active {
+	.menuItem--button::before {
+		background: #944bbe;
+		box-shadow: 0px 0px 1px 1px #944bbe;
 	}
 }
 </style>

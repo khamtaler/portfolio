@@ -116,14 +116,19 @@ export default {
 	text-align: center;
 	cursor: pointer;
 }
-.active::before {
+.tab::before {
 	content: '';
 	position: absolute;
-	bottom: -5px;
+	bottom: -8px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 50%;
+	width: 0%;
 	height: 1px;
+}
+
+.tab.active::before {
+	width: 50%;
+	transition: 0.5s ease-in-out;
 }
 .tab--content {
 	margin: auto;
@@ -161,13 +166,13 @@ export default {
 .light {
 	.active::before {
 		background: #000;
-		box-shadow: 0px 0px 3px 1px #000;
+		box-shadow: 0px 0px 1px 1px #000;
 	}
 }
 .dark {
 	.active::before {
-		background: #471564;
-		box-shadow: 0px 0px 3px 1px #471564;
+		background: #944bbe;
+		box-shadow: 0px 0px 1px 1px #944bbe;
 	}
 }
 @media (max-width: 1200px) {

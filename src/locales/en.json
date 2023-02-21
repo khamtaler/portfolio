@@ -1,6 +1,6 @@
 {
-	"opening": "Welcome!",
-	"greetings": "My name is \n<b>Tomasz Sroka </b> and this is my website. The idea behind the project was to make a simple single page website I could describe myself on. I've used Vue 3 to do so. You can toggle different colors in left menu, check my projects, hobbies or get to know me better going trough different tabs. You can also contact me via links included in contact tab. Enjoy your stay &#128512;",
+	"opening": "Hello there!",
+	"greetings": "My name is \n<b>Tomasz Sroka </b> and you are currently visiting my personal website. The idea behind the project was to make a simple single page website I could describe myself on. I've used Vue 3 to do so. I am a frontend developer gathering experience for over 2 years already. So far I was working mostly with wordpress. Not so long ago I started to learn Javasript frameworks and heres the current effect. You can toggle different colors in left menu, switch language between polish and english, check up on my projects, hobbies or get to know me better going trough other different tabs. You can also contact me via links included in contact tab. Enjoy your stay &#128512;",
 	"contactHeader": "Contact:",
 	"livingPlace": "Currently living in: \n<b>Cracow</b>",
 	"contact-form-header": "Do You need any further information? \n<br /> Write your message bellow and send it directly to me &#128512;",

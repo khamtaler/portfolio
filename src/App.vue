@@ -204,7 +204,11 @@ export default {
 	font-size: 18px;
 	text-decoration: none;
 	margin: 5px 0px;
-	color: #2e2d2d;
+	color: #471564;
+}
+
+.contact--link:hover {
+	color: #9e35db;
 }
 
 .contact--city {

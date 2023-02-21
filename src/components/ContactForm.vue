@@ -93,25 +93,59 @@ export default {
 	min-height: 100px;
 }
 .button--contact {
-	width: 130px;
+	// width: 100px;
+	border: none;
+	font-size: 18px;
+	padding: 5px 20px;
+	background: #fff;
 }
+.button--contact::before,
+.button--contact::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 1px;
+	background: #1f1f1f;
+	opacity: 0;
+	top: 0px;
+}
+.button--contact:hover {
+	background: transparent;
+}
+.button--contact::before {
+	left: 0px;
+}
+.button--contact::after {
+	right: 0px;
+}
+.button--contact:hover::before {
+	left: -5px;
+	opacity: 1;
+}
+.button--contact:hover::after {
+	right: -5px;
+	opacity: 1;
+}
+
 .dark {
-	// .contact {
-	// 	box-shadow: 0px 0px 15px 5px #471564;
-	// }
 	.button--contact {
-		box-shadow: 0px 0px 10px 0px #471564;
+		box-shadow: 0px 0px 5px 0px #944bbe;
 	}
 	.button--contact:hover {
-		box-shadow: 0px 0px 20px 0px #471564;
+		box-shadow: none;
+	}
+	.button--contact::before,
+	.button--contact::after {
+		background: #944bbe;
+		box-shadow: 0px 0px 1px 1px #944bbe;
 	}
 	.contact--message:focus-visible,
 	.contact--email:focus-visible {
-		border: 1px solid #471564;
-		box-shadow: 0px 0px 5px 0px #471564;
+		border: 1px solid #944bbe;
+		box-shadow: 0px 0px 5px 0px #944bbe;
 	}
 	.contact--email {
-		border: 1px solid #471564;
+		border: 1px solid #944bbe;
 	}
 	.contact {
 		background: #fff;

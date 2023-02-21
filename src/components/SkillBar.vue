@@ -33,11 +33,11 @@ export default {
 .skillBar--chart {
 	width: 100%;
 	border-radius: 5px;
-	border: 1px solid #471564;
+	border: 1px solid #944bbe;
 	margin: 15px 0px;
 }
 .skillBar--single {
-	height: 25px;
-	background: linear-gradient(to right, #a646dd, #471564);
+	height: 20px;
+	background: linear-gradient(to right, #a646dd, #944bbe);
 }
 </style>

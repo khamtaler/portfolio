@@ -1,6 +1,6 @@
 {
 	"opening": "Hejka!",
-	"greetings": "Nazywam się \n<b>Tomasz Sroka</b> i to jest moja strona internetowa. Ideą projektu było stworzenie prostej, jednostronicowej strony internetowej, na której mógłbym się opisać. Użyłem do tego Vue 3. Możesz przełączać różne kolory w lewym menu, sprawdzić moje projekty, hobby lub poznać mnie lepiej przechodząc przez różne zakładki. Możesz również skontaktować się ze mną za pomocą linków zawartych w zakładce kontakt. Miłego pobytu &#128512;",
+	"greetings": "Nazywam się \n<b>Tomasz Sroka</b> i aktualnie widzisz moją pierwszą osobistą stronę internetową. Ideą projektu było stworzenie prostej, jednostronicowej witryny, na której mógłbym przedstawić siebie. Użyłem do tego celu Vue 3. Jestem frontend developerem zbierającym doświadczenie już od ponad 2 lat, do tej pory pracującym głównie z wordpressem. Nie tak dawno temu zacząłem zgłębiać tajniki frameworków Javascript i oto efekt. Możesz przełączać różne kolory w lewym menu, zmienić język pomiędzy polskim a angielskim, sprawdzić moje projekty, poznać hobby i dowiedzieć się czegoś o mnie przechodząc przez różne zakładki. Możesz również skontaktować się ze mną za pomocą linków zawartych w zakładce kontakt. Miłego pobytu &#128512;",
 	"contactHeader": "Kontakt:",
 	"livingPlace": "Aktualnie mieszkam w: \n<b>Kraków</b>",
 	"contact-form-header": "Potrzebujesz więcej informacji? \n<br /> Napisz wiadomość poniżej i wyślij ją do mnie &#128512;",
