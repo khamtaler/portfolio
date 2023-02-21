@@ -17,40 +17,44 @@ import HobbyTile from './HobbyTile.vue';
 	</ul>
 	<Tab class="tab--content" v-if="currentTab === 'University'">
 		<TabItem
-			><h3 class="tab--contentHeader">Cracow University of Technology</h3>
-			<p>September 2022 - now</p>
-			<p><b>Bechelor Degree</b></p>
-			<p>Field of study: Renewable energy sources</p>
+			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
+			<p>{{ $t('re-bechelor-dates') }}</p>
+			<p>
+				<b>{{ $t('bechelor') }}</b>
+			</p>
+			<p>{{ $t('field') }} {{ $t('res') }}</p>
 		</TabItem>
 		<TabItem
-			><h3 class="tab--contentHeader">Cracow University of Technology</h3>
-			<p>February 2021 - September 2022</p>
-			<p><b>Master Degree</b></p>
-			<p>Field of study: IT</p>
-			<p>Spec: Data Science</p>
+			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
+			<p>{{ $t('it-master-dates') }}</p>
+			<p>
+				<b>{{ $t('master') }}</b>
+			</p>
+			<p>{{ $t('field') }} {{ $t('it') }}</p>
+			<p>{{ $t('spec') }}</p>
 		</TabItem>
 		<TabItem
-			><h3 class="tab--contentHeader">Cracow University of Technology</h3>
-			<p>October 2017 - January 2021</p>
-			<p><b>Bechelor Degree</b></p>
-			<p>Field of study: IT</p>
+			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
+			<p>{{ $t('it-bechelor-dates') }}</p>
+			<p>
+				<b>{{ $t('bechelor') }}</b>
+			</p>
+			<p>{{ $t('field') }} {{ $t('it') }}</p>
 		</TabItem>
 	</Tab>
 	<Tab class="tab--content" v-if="currentTab === 'Experience'"
 		><TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/Lively.webp" alt="Logo" />
 			<div class="tab--desc">
-				<h3>
-					Specjaliści od świata online. <br />
-					Nieustająco podążają i uczą się nowinek technologicznych, aby klienci korzystali tylko z
-					najlepszych narzędzi. Kreują wirtualną rzeczywistość, realizują każde wydarzenie.
-				</h3>
+				<h3 v-html="$t('lively-desc')"></h3>
+				<p class="tab--experienceDates">{{ $t('lively-dates') }}</p>
 			</div>
 		</TabItem>
 		<TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/TuOglosLogo.webp" alt="Logo" />
 			<div class="tab--desc">
-				<h3>Grupa 133 portali łącząca Polaków w Polsce i na całym świecie</h3>
+				<h3 v-html="$t('tuoglos-desc')"></h3>
+				<p class="tab--experienceDates">{{ $t('tuoglos-dates') }}</p>
 			</div>
 		</TabItem></Tab
 	>
@@ -123,6 +127,11 @@ export default {
 }
 .tab--experience {
 	padding: 20px 0px;
+}
+.tab--experienceDates {
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 700;
 }
 .tab--desc {
 	padding: 0px 10px;

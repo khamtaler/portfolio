@@ -109,7 +109,7 @@ export default {
 		transform: translateX(-50%);
 	}
 	.colorMenu .active {
-		top: 12px;
+		top: 10px;
 	}
 }
 
