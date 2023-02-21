@@ -27,5 +27,17 @@
 	"lively-desc": "Specjaliści od świata online. \n<br /> Nieustająco podążają i uczą się nowinek technologicznych, aby klienci korzystali tylko z najlepszych narzędzi. Kreują wirtualną rzeczywistość, realizują każde wydarzenie.",
 	"tuoglos-desc": "Grupa 133 portali łącząca Polaków w Polsce i na całym świecie",
 	"lively-dates": "marzec 2021 - teraz",
-	"tuoglos-dates": "wrzesień 2020 - listopad 2020"
+	"tuoglos-dates": "wrzesień 2020 - listopad 2020",
+	"menu": {
+		"home": "Strona główna",
+		"about": "O mnie",
+		"projects": "Projekty",
+		"skills": "Technologie",
+		"contact": "Kontakt"
+	},
+	"about": {
+		"university": "Wykształcenie",
+		"experience": "Doświadczenie",
+		"hobbies": "Zainteresowania"
+	}
 }

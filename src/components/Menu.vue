@@ -1,11 +1,11 @@
 <template>
 	<div class="menu">
 		<MenuItem
-			:class="{ active: active === tab }"
+			:class="{ active: active === tab.text_key }"
 			v-for="tab in tabs"
-			@click="$emit('changeTile', tab), (active = tab)"
-			:key="tab"
-			>{{ tab }}</MenuItem
+			@click="$emit('changeTile', tab.text_key), (active = tab.text_key)"
+			:key="tab.text_key"
+			>{{ $t(tab.text_key) }}</MenuItem
 		>
 	</div>
 </template>
@@ -15,8 +15,14 @@ import MenuItem from './MenuItem.vue';
 export default {
 	data() {
 		return {
-			tabs: ['Home', 'About me', 'Projects', 'Skills', 'Contact'],
-			active: 'Home',
+			tabs: [
+				{ text_key: 'menu.home' },
+				{ text_key: 'menu.about' },
+				{ text_key: 'menu.projects' },
+				{ text_key: 'menu.skills' },
+				{ text_key: 'menu.contact' },
+			],
+			active: 'menu.home',
 		};
 	},
 	components: {

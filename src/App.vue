@@ -29,7 +29,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 	<Menu @changeTile="toggleTile" :class="{ mobile: mobile }"></Menu>
 
 	<main class="main">
-		<Tile v-if="show === `Home`" id="Homepage" class="homepage">
+		<Tile v-if="show === `menu.home`" id="Homepage" class="homepage">
 			<div class="homepage--section">
 				<img
 					class="homepage--sectionImage"
@@ -41,8 +41,8 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 					<p class="homepage--sectionTextWelcome" v-html="$t('greetings')"></p>
 				</div></div
 		></Tile>
-		<Tile v-if="show === `About me`" id="About" class="about"> <Tabs /></Tile>
-		<Tile v-if="show === `Projects`" id="Projects" class="projects">
+		<Tile v-if="show === `menu.about`" id="About" class="about"> <Tabs /></Tile>
+		<Tile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
 				:desc="$t('portfolio-vue')"
 				link="#/"
@@ -77,8 +77,8 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				<img class="projects--image" src="./assets/images/TuOglos.webp" alt="project picture" />
 			</ProjectTile>
 		</Tile>
-		<Tile v-if="show === `Skills`" id="Skills" class="skills"> <Skills /></Tile>
-		<Tile v-if="show === `Contact`" id="Contact" class="contact">
+		<Tile v-if="show === `menu.skills`" id="Skills" class="skills"> <Skills /></Tile>
+		<Tile v-if="show === `menu.contact`" id="Contact" class="contact">
 			<Section class="section--contact">
 				<div class="contact--information">
 					<h2 class="contact--header">{{ $t('contactHeader') }}</h2>
@@ -117,7 +117,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 export default {
 	data() {
 		return {
-			show: 'Home',
+			show: 'menu.home',
 			mobile: false,
 		};
 	},
@@ -140,7 +140,6 @@ export default {
 	methods: {
 		toggleTile(tile) {
 			this.show = tile;
-			console.log(window.innerWidth);
 			if (window.innerWidth <= 840) {
 				this.mobile = !this.mobile;
 			}

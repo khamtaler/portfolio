@@ -26,7 +26,6 @@ export default {
 	},
 	methods: {
 		toggleLanguage(lang) {
-			console.log(lang);
 			this.lang = lang;
 		},
 	},

@@ -4,7 +4,7 @@
 	"contactHeader": "Contact:",
 	"livingPlace": "Currently living in: \n<b>Cracow</b>",
 	"contact-form-header": "Do You need any further information? \n<br /> Write your message bellow and send it directly to me &#128512;",
-	"contact-placeholder": "input your message",
+	"contact-text-placeholder": "input your message",
 	"contact-email-placeholder": "Your email",
 	"portfolio-vue": "Portfolio in Vue.js",
 	"quizz-react": "Quizz in React",
@@ -27,5 +27,17 @@
 	"lively-desc": "Specialists in the online world. \n<br />  Constantly following and learning technological innovations to provide customers with only the best tools. Creating virtual reality, realizing every event.",
 	"tuoglos-desc": "A group of 133 websites uniting Poles in the country and abroad.",
 	"lively-dates": "March 2021 - now",
-	"tuoglos-dates": "September 2020 - November 2020"
+	"tuoglos-dates": "September 2020 - November 2020",
+	"menu": {
+		"home": "Home",
+		"about": "About me",
+		"projects": "Projects",
+		"skills": "Skills",
+		"contact": "Contact"
+	},
+	"about": {
+		"university": "University",
+		"experience": "Experience",
+		"hobbies": "Hobbies"
+	}
 }

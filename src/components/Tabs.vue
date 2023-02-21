@@ -7,15 +7,15 @@ import HobbyTile from './HobbyTile.vue';
 	<ul class="tabs">
 		<li
 			class="tab"
-			:class="currentTab === tab ? `active` : ``"
-			v-for="(tab, index) in tabs"
-			:key="index"
-			@click="currentTab = tab"
+			:class="currentTab === tab.text_key ? `active` : ``"
+			v-for="tab in tabs"
+			:key="tab.text_key"
+			@click="currentTab = tab.text_key"
 		>
-			<b>{{ tab }}</b>
+			<b>{{ $t(tab.text_key) }}</b>
 		</li>
 	</ul>
-	<Tab class="tab--content" v-if="currentTab === 'University'">
+	<Tab class="tab--content" v-if="currentTab === 'about.university'">
 		<TabItem
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('re-bechelor-dates') }}</p>
@@ -42,7 +42,7 @@ import HobbyTile from './HobbyTile.vue';
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
 		</TabItem>
 	</Tab>
-	<Tab class="tab--content" v-if="currentTab === 'Experience'"
+	<Tab class="tab--content" v-if="currentTab === 'about.experience'"
 		><TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/Lively.webp" alt="Logo" />
 			<div class="tab--desc">
@@ -58,7 +58,7 @@ import HobbyTile from './HobbyTile.vue';
 			</div>
 		</TabItem></Tab
 	>
-	<Tab class="tab--content tabItem---layout" v-if="currentTab === 'Hobbies'">
+	<Tab class="tab--content tabItem---layout" v-if="currentTab === 'about.hobbies'">
 		<HobbyTile title="Snowboard">
 			<img class="hobbyTile--image" src="../assets/images/Snowboard.webp" alt="Snowboard"
 		/></HobbyTile>
@@ -84,8 +84,12 @@ import HobbyTile from './HobbyTile.vue';
 export default {
 	data() {
 		return {
-			tabs: ['University', 'Experience', 'Hobbies'],
-			currentTab: 'University',
+			tabs: [
+				{ text_key: 'about.university' },
+				{ text_key: 'about.experience' },
+				{ text_key: 'about.hobbies' },
+			],
+			currentTab: 'about.university',
 		};
 	},
 	methods: {},
