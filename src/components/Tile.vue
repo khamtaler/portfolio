@@ -22,6 +22,11 @@ export default {};
 	padding: 20px;
 	border-radius: 10px;
 }
+.light {
+	.tile {
+		background: #ebebeb;
+	}
+}
 .dark {
 	.tile {
 		background: #d1d0d0;

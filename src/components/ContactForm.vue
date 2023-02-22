@@ -104,10 +104,22 @@ export default {
 	content: '';
 	position: absolute;
 	height: 100%;
-	width: 1px;
-	background: #1f1f1f;
+	width: 100%;
+
+	background: transparent;
 	opacity: 0;
+}
+.button--contact::before {
 	top: 0px;
+	border-left: 1px solid #d190f7;
+	border-top: 1px solid #d190f7;
+	border-radius: 5px 0px 0px 0px;
+}
+.button--contact::after {
+	bottom: 0px;
+	border-right: 1px solid #d190f7;
+	border-bottom: 1px solid #d190f7;
+	border-radius: 0px 0px 5px 0px;
 }
 .button--contact:hover {
 	background: transparent;
@@ -120,25 +132,26 @@ export default {
 }
 .button--contact:hover::before {
 	left: -5px;
+	top: -5px;
 	opacity: 1;
 }
 .button--contact:hover::after {
 	right: -5px;
+	bottom: -5px;
 	opacity: 1;
 }
 
 .dark {
 	.button--contact {
-		box-shadow: 0px 0px 5px 0px #944bbe;
+		box-shadow: 0px 0px 5px 0px #d190f7;
 	}
 	.button--contact:hover {
 		box-shadow: none;
 	}
-	.button--contact::before,
-	.button--contact::after {
-		background: #944bbe;
-		box-shadow: 0px 0px 1px 1px #944bbe;
-	}
+	// .button--contact::before,
+	// .button--contact::after {
+	// 	box-shadow: 0px 0px 1px 1px #944bbe;
+	// }
 	.contact--message:focus-visible,
 	.contact--email:focus-visible {
 		border: 1px solid #944bbe;

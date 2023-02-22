@@ -89,7 +89,7 @@ export default {
 }
 @media (min-width: 841px) {
 	.colorMenu {
-		top: 50px;
+		top: 100px;
 		left: 10px;
 		flex-direction: column;
 	}

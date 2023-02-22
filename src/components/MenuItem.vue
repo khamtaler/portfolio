@@ -11,6 +11,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.menu:not(.mobile) .menuItem:last-child {
+	margin-right: 30px;
+}
 .menuItem--button {
 	background: transparent;
 	color: #fff;
@@ -40,17 +43,18 @@ export default {};
 }
 .light {
 	.menuItem--button {
-		color: #000;
+		color: #fff;
 	}
 	.menuItem--button::before {
-		background: #000;
+		background: #fff;
 	}
 }
-
-.active {
-	.menuItem--button::before {
-		background: #944bbe;
-		box-shadow: 0px 0px 1px 1px #944bbe;
+.light {
+	.active {
+		.menuItem--button::before {
+			background: #ffde0b;
+			box-shadow: 0px 0px 1px 1px #ffde0b;
+		}
 	}
 }
 </style>

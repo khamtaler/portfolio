@@ -1,3 +1,7 @@
+<script setup>
+import MenuBackground from '../assets/bgImages/MenuBackground.vue';
+</script>
+
 <template>
 	<div class="menu">
 		<MenuItem
@@ -27,6 +31,7 @@ export default {
 	},
 	components: {
 		MenuItem,
+		MenuBackground,
 	},
 };
 </script>
@@ -34,14 +39,32 @@ export default {
 <style lang="scss" scoped>
 .menu {
 	display: flex;
+	position: absolute;
 	flex-direction: row;
-	width: 100%;
+	width: 100vw;
+	top: 0;
+	right: calc(-1 * (100vw - 100%) / 2);
 	min-height: 62px;
-	align-items: end;
+	height: 250px;
+	align-items: baseline;
 	justify-content: flex-end;
 	gap: 50px;
-	margin-bottom: 30px;
 	padding: 10px 0px;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 0s;
+}
+
+.light {
+	.menu {
+		background-image: url('../assets/bgImages/MenuBackgroundLight.svg');
+	}
+}
+.dark {
+	.menu {
+		background-image: url('../assets/bgImages/MenuBackgroundDark.svg');
+	}
 }
 @media (max-width: 840px) {
 	.menu {

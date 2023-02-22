@@ -37,7 +37,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 					alt="Creator picture"
 				/>
 				<div class="homepage--sectionText">
-					<h1>{{ $t('opening') }}</h1>
+					<h1 class="homepage--sectionHeader">{{ $t('opening') }}</h1>
 					<p class="homepage--sectionTextWelcome" v-html="$t('greetings')"></p>
 				</div></div
 		></Tile>
@@ -162,6 +162,7 @@ export default {
 	justify-content: center;
 	height: 100%;
 	width: 100%;
+	margin-top: 80px;
 }
 .homepage--section {
 	display: flex;
@@ -170,6 +171,9 @@ export default {
 	background: #fff;
 	border-radius: 10px;
 	padding: 20px;
+}
+.homepage--sectionHeader {
+	margin-bottom: 15px;
 }
 .homepage--sectionTextWelcome {
 	line-height: 2;
