@@ -20,6 +20,12 @@ export default {
 .hobbyTile--desc {
 	text-align: center;
 }
+
+.dark {
+	.hobbyTile--desc {
+		color: #fff;
+	}
+}
 @media (min-width: 841px) {
 	.hobbyTile {
 		width: 30%;

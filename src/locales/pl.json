@@ -24,7 +24,7 @@
 	"res": "Odnawialne źródła energii",
 	"it": "Informatyka",
 	"spec": "specjalizacja: Data science",
-	"lively-desc": "Specjaliści od świata online. \n<br /> Nieustająco podążają i uczą się nowinek technologicznych, aby klienci korzystali tylko z najlepszych narzędzi. Kreują wirtualną rzeczywistość, realizują każde wydarzenie.",
+	"lively-desc": "Specjaliści od świata online.",
 	"tuoglos-desc": "Grupa 133 portali łącząca Polaków w Polsce i na całym świecie",
 	"lively-dates": "marzec 2021 - teraz",
 	"tuoglos-dates": "wrzesień 2020 - listopad 2020",
@@ -43,7 +43,8 @@
 	"project-link": "Zobacz",
 	"livelyExperience": {
 		"projects": "Wykonywanie projektów zgodnie z wytycznymi klienta",
-		"wordpress": "Tworzenie stron głownie (ale nie tylko) na podstawie szablonów wordpress",
+		"wordpress": "Tworzenie stron głównie (ale nie tylko) w oparciu o wordpress",
+		"forms": "Wykonywanie formularzy, list, planerów, agend",
 		"mails": "Przygotowywanie szablonów maili",
 		"conservation": "utrzymanie wielu stron internetowych"
 	},

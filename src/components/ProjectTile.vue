@@ -96,19 +96,24 @@ export default {
 	filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(296deg) brightness(93%) contrast(106%);
 }
 
-.projectTile::before {
-	content: '';
-	position: absolute;
-	bottom: -15px;
-	width: 100%;
-	height: 1px;
-}
+// .projectTile::before {
+// 	content: '';
+// 	position: absolute;
+// 	bottom: -15px;
+// 	width: 100%;
+// 	height: 1px;
+// }
 .crossed {
 	text-decoration: line-through;
 }
 .disabled {
 	pointer-events: none;
 	opacity: 0.5;
+}
+.projectTile {
+	background: #fff;
+	padding: 15px;
+	border-radius: 10px;
 }
 .projectTile--githubContainer {
 	display: flex;
@@ -138,6 +143,13 @@ export default {
 	opacity: 1;
 }
 .light {
+	.projectTile--githubLink:hover {
+		color: #f8b526;
+	}
+	.projectTile--githubLink:hover::before,
+	.projectTile--githubLink:hover::after {
+		color: #f8b526;
+	}
 	.projectTile--desc {
 		color: #1f1f1f;
 	}
@@ -179,7 +191,7 @@ export default {
 
 @media (min-width: 841px) {
 	.projectTile {
-		width: 30%;
+		width: 48%;
 	}
 }
 @media (min-width: 601px) and (max-width: 840px) {
@@ -190,6 +202,7 @@ export default {
 @media (max-width: 840px) {
 	.projectTile {
 		margin-bottom: 10px;
+		padding: 20px;
 	}
 }
 </style>

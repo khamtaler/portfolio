@@ -13,7 +13,7 @@ export default {};
 	width: 100%;
 	background-color: #fff;
 	padding: 10px 30px;
-	margin: 50px 0px;
+	margin: 30px 0px;
 	border-radius: 10px;
 	border: none;
 }
@@ -26,11 +26,11 @@ export default {};
 	background: transparent;
 }
 .tabItem--borders::before {
-	left: 0;
+	left: -5px;
 	top: -5%;
 }
 .tabItem--borders::after {
-	right: 0;
+	right: -5px;
 	top: -5%;
 }
 .light {

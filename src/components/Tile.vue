@@ -18,19 +18,9 @@ export default {};
 	width: 100%;
 	height: 100%;
 	min-height: 78vh;
-
-	padding: 20px;
+	background: transparent;
+	padding: 10px;
 	border-radius: 10px;
-}
-.light {
-	.tile {
-		background: #ebebeb;
-	}
-}
-.dark {
-	.tile {
-		background: #d1d0d0;
-	}
 }
 
 @media (max-width: 840px) {

@@ -17,7 +17,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 		</li>
 	</ul>
 	<Tab class="tab--content" v-if="currentTab === 'about.university'">
-		<TabItem class="tabItem--borders"
+		<TabItem class="tabItem--borders tabItem---extendedMargin"
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('re-bechelor-dates') }}</p>
 			<p>
@@ -25,7 +25,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			</p>
 			<p>{{ $t('field') }} {{ $t('res') }}</p>
 		</TabItem>
-		<TabItem class="tabItem--borders"
+		<TabItem class="tabItem--borders tabItem---extendedMargin"
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('it-master-dates') }}</p>
 			<p>
@@ -34,7 +34,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
 			<p>{{ $t('spec') }}</p>
 		</TabItem>
-		<TabItem class="tabItem--borders"
+		<TabItem class="tabItem--borders tabItem---extendedMargin"
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('it-bechelor-dates') }}</p>
 			<p>
@@ -47,7 +47,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 		><TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/Lively.webp" alt="Logo" />
 			<div class="tab--desc">
-				<h3 v-html="$t('lively-desc')"></h3>
+				<h2 class="tab--experienceHeader" v-html="$t('lively-desc')"></h2>
 				<p class="tab--experienceDates">{{ $t('lively-dates') }}</p>
 				<ul class="tab--experienceList">
 					<li class="tab--experienceListItem" v-for="item in livelyExperience" :key="item.text_key">
@@ -59,7 +59,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 		<TabItem class="tab--experience tabItem---layout">
 			<img class="tab--contentImage" src="../assets/images/TuOglosLogo.webp" alt="Logo" />
 			<div class="tab--desc">
-				<h3 v-html="$t('tuoglos-desc')"></h3>
+				<h2 class="tab--experienceHeader" v-html="$t('tuoglos-desc')"></h2>
 				<p class="tab--experienceDates">{{ $t('tuoglos-dates') }}</p>
 				<ul class="tab--experienceList">
 					<li class="tab--experienceListItem" v-for="item in tuOglos" :key="item.text_key">
@@ -102,6 +102,7 @@ export default {
 			],
 			livelyExperience: [
 				{ text_key: 'livelyExperience.projects' },
+				{ text_key: 'livelyExperience.forms' },
 				{ text_key: 'livelyExperience.wordpress' },
 				{ text_key: 'livelyExperience.mails' },
 				{ text_key: 'livelyExperience.conservation' },
@@ -130,14 +131,17 @@ export default {
 .tab {
 	flex-shrink: 1;
 	list-style: none;
-	width: 100%;
+	width: 30%;
+	padding: 15px;
+	border-radius: 10px;
+	background: #fff;
 	text-align: center;
 	cursor: pointer;
 }
 .tab::before {
 	content: '';
 	position: absolute;
-	bottom: -8px;
+	bottom: 10px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 0%;
@@ -153,13 +157,20 @@ export default {
 	width: 100%;
 }
 
+.tabItem---extendedMargin {
+	margin: 50px 0px;
+}
 .tab--experience {
 	padding: 20px 0px;
+}
+.tab--experienceHeader {
+	text-align: center;
 }
 .tab--experienceDates {
 	margin-top: 10px;
 	text-align: center;
 	font-weight: 700;
+	padding-bottom: 5px;
 }
 .tab--experienceList {
 	list-style: none;
@@ -193,9 +204,20 @@ export default {
 	border-radius: 20px;
 }
 .light {
+	.tab,
+	.tabItem {
+		border: 1px solid #1f1f1f;
+		transition: 0.1s ease-in-out;
+	}
+	.tab:hover {
+		letter-spacing: 3px;
+	}
 	.active::before {
 		background: #f8b526;
 		box-shadow: 0px 0px 1px 1px #f8b526;
+	}
+	.tab--experienceDates {
+		border-bottom: 1px solid #f8b526;
 	}
 	.tab--experienceIcon {
 		filter: invert(72%) sepia(100%) saturate(831%) hue-rotate(339deg) brightness(101%) contrast(94%);
@@ -205,6 +227,9 @@ export default {
 	.active::before {
 		background: #944bbe;
 		box-shadow: 0px 0px 1px 1px #944bbe;
+	}
+	.tab--experienceDates {
+		border-bottom: 1px solid #944bbe;
 	}
 	.tab--experienceIcon {
 		filter: invert(39%) sepia(18%) saturate(2800%) hue-rotate(240deg) brightness(90%) contrast(92%);
@@ -240,6 +265,7 @@ export default {
 	}
 	.tab {
 		margin-bottom: 15px;
+		width: 100%;
 	}
 }
 </style>

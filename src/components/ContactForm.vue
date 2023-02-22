@@ -1,7 +1,7 @@
 <template>
 	<div class="contact">
 		<div class="contact--imageContainer hideMobile">
-			<img class="contact--image" src="../assets/images/avatar.jpg" alt="Creator picture" />
+			<img class="contact--image" src="../assets/images/avatar.svg" alt="Creator picture" />
 		</div>
 		<div class="contact--formContainer">
 			<h4 v-html="$t('contact-form-header')"></h4>
@@ -60,6 +60,30 @@ export default {
 
 	border-radius: 10px;
 }
+
+.contact {
+	background: #fff;
+	border-radius: 15px 0px 15px 0px;
+	padding: 20px;
+}
+
+.contact::before,
+.contact::after {
+	content: '';
+	background: transparent;
+	height: 130px;
+	width: 90px;
+	position: absolute;
+}
+.contact::before {
+	bottom: -5px;
+	left: -5px;
+}
+
+.contact::after {
+	top: -5px;
+	right: -5px;
+}
 .contact--formContainer {
 	display: flex;
 	flex-direction: column;
@@ -72,6 +96,7 @@ export default {
 	width: 100%;
 	max-width: 300px;
 	margin: auto;
+	border-radius: 50%;
 }
 .contact--formHeader {
 	font-size: 1.2rem;
@@ -141,6 +166,17 @@ export default {
 	opacity: 1;
 }
 
+.light {
+	.contact::before {
+		border-left: 15px solid #f8b526;
+		border-bottom: 15px solid #f8b526;
+	}
+	.contact::after {
+		border-top: 15px solid #f8b526;
+		border-right: 15px solid #f8b526;
+	}
+}
+
 .dark {
 	.button--contact {
 		box-shadow: 0px 0px 5px 0px #d190f7;
@@ -148,10 +184,6 @@ export default {
 	.button--contact:hover {
 		box-shadow: none;
 	}
-	// .button--contact::before,
-	// .button--contact::after {
-	// 	box-shadow: 0px 0px 1px 1px #944bbe;
-	// }
 	.contact--message:focus-visible,
 	.contact--email:focus-visible {
 		border: 1px solid #944bbe;
@@ -162,6 +194,15 @@ export default {
 	}
 	.contact {
 		background: #fff;
+	}
+
+	.contact::before {
+		border-left: 15px solid #9e35db;
+		border-bottom: 15px solid #9e35db;
+	}
+	.contact::after {
+		border-top: 15px solid #9e35db;
+		border-right: 15px solid #9e35db;
 	}
 }
 

@@ -24,7 +24,7 @@
 	"res": "Renewable energy sources",
 	"it": "IT",
 	"spec": "Spec: Data Science",
-	"lively-desc": "Specialists in the online world. \n<br />  Constantly following and learning technological innovations to provide customers with only the best tools. Creating virtual reality, realizing every event.",
+	"lively-desc": "Specialists in the online world.",
 	"tuoglos-desc": "A group of 133 websites uniting Poles in the country and abroad.",
 	"lively-dates": "March 2021 - now",
 	"tuoglos-dates": "September 2020 - November 2020",
@@ -43,7 +43,8 @@
 	"project-link": "View",
 	"livelyExperience": {
 		"projects": "Execution of projects in accordance with the client's guidelines",
-		"wordpress": "Creating pages mostly (but not only) based on wordpress templates",
+		"forms": "Making forms, lists, planners, agendas",
+		"wordpress": "Creating pages mostly (but not only) based on wordpress",
 		"mails": "Preparation of email templates",
 		"conservation": "maintaining multiple websites"
 	},

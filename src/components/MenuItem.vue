@@ -49,7 +49,15 @@ export default {};
 	background: #fff;
 }
 
+.mobile {
+	.menuItem--button {
+		font-size: 20px;
+	}
+}
 .light {
+	.menuItem--button {
+		color: #1f1f1f;
+	}
 	.active {
 		.menuItem--button::before {
 			background: #ffde0b;
@@ -61,8 +69,8 @@ export default {};
 .dark {
 	.active {
 		.menuItem--button::before {
-			background: #1f1f1f;
-			box-shadow: 0px 0px 1px 1px #1f1f1f;
+			background: #944bbe;
+			box-shadow: 0px 0px 1px 1px #944bbe;
 		}
 	}
 }

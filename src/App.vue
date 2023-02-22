@@ -33,7 +33,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			<div class="homepage--section">
 				<img
 					class="homepage--sectionImage"
-					src="./assets/images/avatar.jpg"
+					src="./assets/images/avatar.svg"
 					alt="Creator picture"
 				/>
 				<div class="homepage--sectionText">
@@ -203,7 +203,8 @@ export default {
 }
 
 .homepage--sectionImage {
-	mix-blend-mode: multiply;
+	border-radius: 50%;
+	padding: 0px 60px 120px;
 }
 .section--contact {
 	display: flex;
@@ -285,6 +286,10 @@ export default {
 		border-top: 15px solid #f8b526;
 		border-right: 15px solid #f8b526;
 	}
+
+	.homepage--sectionText {
+		border: 1px solid #1f1f1f;
+	}
 }
 .dark {
 	.mobileMenuButton {
@@ -345,6 +350,9 @@ export default {
 		margin-top: 50px;
 	}
 
+	.homepage--sectionImage {
+		padding: 0px 60px 30px;
+	}
 	.section--contact {
 		flex-direction: column;
 	}
