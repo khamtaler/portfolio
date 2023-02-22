@@ -57,7 +57,6 @@ export default {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-
 	border-radius: 10px;
 }
 
@@ -109,7 +108,6 @@ export default {
 .contact--message,
 .contact--email {
 	padding: 10px;
-
 	border-radius: 5px;
 	border: 1px solid #1f1f1f;
 }
@@ -176,9 +174,6 @@ export default {
 		border: 1px solid #f8b526;
 		box-shadow: 0px 0px 5px 0px #f8b526;
 	}
-	.contact--email {
-		border: 1px solid #f8b526;
-	}
 	.button--contact {
 		box-shadow: 0px 0px 5px 0px #f8b526;
 	}
@@ -226,9 +221,6 @@ export default {
 	.contact--email:focus-visible {
 		border: 1px solid #944bbe;
 		box-shadow: 0px 0px 5px 0px #944bbe;
-	}
-	.contact--email {
-		border: 1px solid #944bbe;
 	}
 }
 

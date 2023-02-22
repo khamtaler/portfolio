@@ -42,7 +42,7 @@ export default {
 	top: 0;
 	right: calc(-1 * (100vw - 100%) / 2);
 	min-height: 62px;
-	height: 250px;
+	height: 300px;
 	align-items: baseline;
 	justify-content: flex-end;
 	gap: 50px;

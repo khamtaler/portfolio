@@ -271,7 +271,6 @@ export default {
 	object-fit: cover;
 	overflow: hidden;
 	border-radius: 5px;
-	// transition: 1s;
 }
 .projectTile:hover .projects--image {
 	transform: scale(1.05);

@@ -137,6 +137,10 @@ export default {
 	background: #fff;
 	text-align: center;
 	cursor: pointer;
+	transition: 0.1s ease-in-out;
+}
+.tab:hover {
+	letter-spacing: 3px;
 }
 .tab::before {
 	content: '';
@@ -207,11 +211,8 @@ export default {
 	.tab,
 	.tabItem {
 		border: 1px solid #1f1f1f;
-		transition: 0.1s ease-in-out;
 	}
-	.tab:hover {
-		letter-spacing: 3px;
-	}
+
 	.active::before {
 		background: #f8b526;
 		box-shadow: 0px 0px 1px 1px #f8b526;
