@@ -304,6 +304,12 @@ export default {
 	}
 }
 
+@media (min-width: 1200px) {
+	.homepage--sectionTextWelcome {
+		font-size: 1.1rem;
+	}
+}
+
 @media (min-width: 841px) {
 	.homepage--sectionText,
 	.homepage--sectionImage {
@@ -311,17 +317,6 @@ export default {
 	}
 }
 
-@media (min-width: 601px) {
-	.projects {
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-}
-@media (max-width: 600px) {
-	.projects {
-		flex-direction: column;
-	}
-}
 @media (max-width: 840px) {
 	.mobileMenuButton {
 		display: block;
@@ -382,6 +377,18 @@ export default {
 		align-items: center;
 		width: 100%;
 		padding: 20px;
+	}
+}
+
+@media (min-width: 601px) {
+	.projects {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 600px) {
+	.projects {
+		flex-direction: column;
 	}
 }
 </style>

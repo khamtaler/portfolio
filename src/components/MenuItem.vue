@@ -74,4 +74,10 @@ export default {};
 		}
 	}
 }
+
+@media (min-width: 1200px) {
+	.menuItem--button {
+		font-size: 1.1rem;
+	}
+}
 </style>
