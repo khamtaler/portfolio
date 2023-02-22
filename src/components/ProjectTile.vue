@@ -96,13 +96,6 @@ export default {
 	filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(296deg) brightness(93%) contrast(106%);
 }
 
-// .projectTile::before {
-// 	content: '';
-// 	position: absolute;
-// 	bottom: -15px;
-// 	width: 100%;
-// 	height: 1px;
-// }
 .crossed {
 	text-decoration: line-through;
 }

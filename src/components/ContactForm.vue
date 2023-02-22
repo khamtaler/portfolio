@@ -118,7 +118,6 @@ export default {
 	min-height: 100px;
 }
 .button--contact {
-	// width: 100px;
 	border: none;
 	font-size: 18px;
 	padding: 5px 20px;
@@ -136,14 +135,10 @@ export default {
 }
 .button--contact::before {
 	top: 0px;
-	border-left: 1px solid #d190f7;
-	border-top: 1px solid #d190f7;
 	border-radius: 5px 0px 0px 0px;
 }
 .button--contact::after {
 	bottom: 0px;
-	border-right: 1px solid #d190f7;
-	border-bottom: 1px solid #d190f7;
 	border-radius: 0px 0px 5px 0px;
 }
 .button--contact:hover {
@@ -175,23 +170,32 @@ export default {
 		border-top: 15px solid #f8b526;
 		border-right: 15px solid #f8b526;
 	}
-}
 
-.dark {
+	.contact--message:focus-visible,
+	.contact--email:focus-visible {
+		border: 1px solid #f8b526;
+		box-shadow: 0px 0px 5px 0px #f8b526;
+	}
+	.contact--email {
+		border: 1px solid #f8b526;
+	}
 	.button--contact {
-		box-shadow: 0px 0px 5px 0px #d190f7;
+		box-shadow: 0px 0px 5px 0px #f8b526;
 	}
 	.button--contact:hover {
 		box-shadow: none;
 	}
-	.contact--message:focus-visible,
-	.contact--email:focus-visible {
-		border: 1px solid #944bbe;
-		box-shadow: 0px 0px 5px 0px #944bbe;
+	.button--contact::before {
+		border-left: 2px solid #f8b526;
+		border-top: 2px solid #f8b526;
 	}
-	.contact--email {
-		border: 1px solid #944bbe;
+	.button--contact::after {
+		border-right: 2px solid #f8b526;
+		border-bottom: 2px solid #f8b526;
 	}
+}
+
+.dark {
 	.contact {
 		background: #fff;
 	}
@@ -203,6 +207,28 @@ export default {
 	.contact::after {
 		border-top: 15px solid #9e35db;
 		border-right: 15px solid #9e35db;
+	}
+	.button--contact {
+		box-shadow: 0px 0px 5px 0px #d190f7;
+	}
+	.button--contact:hover {
+		box-shadow: none;
+	}
+	.button--contact::before {
+		border-left: 2px solid #d190f7;
+		border-top: 2px solid #d190f7;
+	}
+	.button--contact::after {
+		border-right: 2px solid #d190f7;
+		border-bottom: 2px solid #d190f7;
+	}
+	.contact--message:focus-visible,
+	.contact--email:focus-visible {
+		border: 1px solid #944bbe;
+		box-shadow: 0px 0px 5px 0px #944bbe;
+	}
+	.contact--email {
+		border: 1px solid #944bbe;
 	}
 }
 

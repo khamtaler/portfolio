@@ -56,7 +56,7 @@ export default {};
 }
 .light {
 	.menuItem--button {
-		color: #1f1f1f;
+		color: #fff;
 	}
 	.active {
 		.menuItem--button::before {
@@ -69,8 +69,8 @@ export default {};
 .dark {
 	.active {
 		.menuItem--button::before {
-			background: #944bbe;
-			box-shadow: 0px 0px 1px 1px #944bbe;
+			background: #a7a7a7;
+			box-shadow: 0px 0px 1px 1px #a7a7a7;
 		}
 	}
 }
