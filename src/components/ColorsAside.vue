@@ -81,7 +81,7 @@ export default {
 
 @media (min-width: 1320px) {
 	.colorMenu {
-		left: -15px;
+		left: calc(-1 * (100vw - 100%) / 2);
 	}
 	.colorMenu .active {
 		left: 15px;
@@ -89,8 +89,9 @@ export default {
 }
 @media (min-width: 841px) {
 	.colorMenu {
-		top: 100px;
-		left: 10px;
+		top: 50vh;
+		transform: translateY(-50%);
+		left: calc((-1 * (100vw - 100%) / 2) + 15px);
 		flex-direction: column;
 	}
 	.colorMenu .active {
@@ -98,6 +99,14 @@ export default {
 	}
 	.colorMenu .active::before {
 		left: -12px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.languageMenu--label.active {
+		left: 10px;
+	}
+	.languageMenu--label.active::before {
+		left: -10px;
 		top: 50%;
 		transform: translateY(-50%);
 	}
@@ -113,16 +122,6 @@ export default {
 	}
 }
 
-@media (min-width: 841px) {
-	.languageMenu--label.active {
-		left: 10px;
-	}
-	.languageMenu--label.active::before {
-		left: -10px;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-}
 @media (max-width: 840px) {
 	.languageMenu--label.active:before {
 		top: -10px;

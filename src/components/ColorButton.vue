@@ -28,10 +28,4 @@ export default {
 .button--color---colorful {
 	background: linear-gradient(#e66465, #9198e5);
 }
-
-// @media (max-width: 840px) {
-// 	.button--color {
-// 		margin: 0px;
-// 	}
-// }
 </style>
