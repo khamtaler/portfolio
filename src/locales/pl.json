@@ -40,5 +40,15 @@
 		"experience": "Doświadczenie",
 		"hobbies": "Zainteresowania"
 	},
-	"project-link": "Zobacz"
+	"project-link": "Zobacz",
+	"livelyExperience": {
+		"projects": "Wykonywanie projektów zgodnie z wytycznymi klienta",
+		"wordpress": "Tworzenie stron głownie (ale nie tylko) na podstawie szablonów wordpress",
+		"mails": "Przygotowywanie szablonów maili",
+		"conservation": "utrzymanie wielu stron internetowych"
+	},
+	"tuOglos": {
+		"vueLanding": "Przygotowanie landingu z wykorzystaniem Vue 3",
+		"landing": "Tworzenie prostych landingów"
+	}
 }

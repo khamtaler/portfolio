@@ -47,7 +47,6 @@ export default {
 	justify-content: flex-end;
 	gap: 50px;
 	padding: 10px 0px;
-
 	background-repeat: no-repeat;
 	background-size: cover;
 	transition: 0s;

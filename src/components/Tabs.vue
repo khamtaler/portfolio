@@ -2,6 +2,7 @@
 import Tab from './Tab.vue';
 import TabItem from './TabItem.vue';
 import HobbyTile from './HobbyTile.vue';
+import ArrowRightTop from './icons/ArrowRightTop.vue';
 </script>
 <template>
 	<ul class="tabs">
@@ -48,6 +49,11 @@ import HobbyTile from './HobbyTile.vue';
 			<div class="tab--desc">
 				<h3 v-html="$t('lively-desc')"></h3>
 				<p class="tab--experienceDates">{{ $t('lively-dates') }}</p>
+				<ul class="tab--experienceList">
+					<li class="tab--experienceListItem" v-for="item in livelyExperience" :key="item.text_key">
+						<ArrowRightTop class="icon tab--experienceIcon" /> {{ $t(item.text_key) }}
+					</li>
+				</ul>
 			</div>
 		</TabItem>
 		<TabItem class="tab--experience tabItem---layout">
@@ -55,6 +61,11 @@ import HobbyTile from './HobbyTile.vue';
 			<div class="tab--desc">
 				<h3 v-html="$t('tuoglos-desc')"></h3>
 				<p class="tab--experienceDates">{{ $t('tuoglos-dates') }}</p>
+				<ul class="tab--experienceList">
+					<li class="tab--experienceListItem" v-for="item in tuOglos" :key="item.text_key">
+						<ArrowRightTop class="icon tab--experienceIcon" /> {{ $t(item.text_key) }}
+					</li>
+				</ul>
 			</div>
 		</TabItem></Tab
 	>
@@ -89,6 +100,13 @@ export default {
 				{ text_key: 'about.experience' },
 				{ text_key: 'about.hobbies' },
 			],
+			livelyExperience: [
+				{ text_key: 'livelyExperience.projects' },
+				{ text_key: 'livelyExperience.wordpress' },
+				{ text_key: 'livelyExperience.mails' },
+				{ text_key: 'livelyExperience.conservation' },
+			],
+			tuOglos: [{ text_key: 'tuOglos.vueLanding' }, { text_key: 'tuOglos.landing' }],
 			currentTab: 'about.university',
 		};
 	},
@@ -143,6 +161,16 @@ export default {
 	text-align: center;
 	font-weight: 700;
 }
+.tab--experienceList {
+	list-style: none;
+	margin-top: 20px;
+}
+.tab--experienceListItem {
+	font-size: 16px;
+	line-height: 1.1;
+	margin: 10px 0px;
+}
+
 .tab--desc {
 	padding: 0px 10px;
 }
@@ -166,14 +194,20 @@ export default {
 }
 .light {
 	.active::before {
-		background: #000;
-		box-shadow: 0px 0px 1px 1px #000;
+		background: #f8b526;
+		box-shadow: 0px 0px 1px 1px #f8b526;
+	}
+	.tab--experienceIcon {
+		filter: invert(72%) sepia(100%) saturate(831%) hue-rotate(339deg) brightness(101%) contrast(94%);
 	}
 }
 .dark {
 	.active::before {
 		background: #944bbe;
 		box-shadow: 0px 0px 1px 1px #944bbe;
+	}
+	.tab--experienceIcon {
+		filter: invert(39%) sepia(18%) saturate(2800%) hue-rotate(240deg) brightness(90%) contrast(92%);
 	}
 }
 @media (max-width: 1200px) {

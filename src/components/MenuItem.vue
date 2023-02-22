@@ -41,19 +41,28 @@ export default {};
 .menuItem--button:hover::before {
 	box-shadow: 0px 0px 1px 1px #fff;
 }
-.light {
-	.menuItem--button {
-		color: #fff;
-	}
-	.menuItem--button::before {
-		background: #fff;
-	}
+
+.menuItem--button {
+	color: #fff;
 }
+.menuItem--button::before {
+	background: #fff;
+}
+
 .light {
 	.active {
 		.menuItem--button::before {
 			background: #ffde0b;
 			box-shadow: 0px 0px 1px 1px #ffde0b;
+		}
+	}
+}
+
+.dark {
+	.active {
+		.menuItem--button::before {
+			background: #1f1f1f;
+			box-shadow: 0px 0px 1px 1px #1f1f1f;
 		}
 	}
 }

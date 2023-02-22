@@ -173,9 +173,28 @@ export default {
 }
 .homepage--sectionText {
 	background: #fff;
-	border-radius: 10px;
+	border-radius: 15px 0px 15px 0px;
 	padding: 20px;
 }
+
+.homepage--sectionText::before,
+.homepage--sectionText::after {
+	content: '';
+	background: transparent;
+	height: 130px;
+	width: 90px;
+	position: absolute;
+}
+.homepage--sectionText::before {
+	bottom: -5px;
+	left: -5px;
+}
+
+.homepage--sectionText::after {
+	top: -5px;
+	right: -5px;
+}
+
 .homepage--sectionHeader {
 	margin-bottom: 15px;
 }
@@ -258,10 +277,26 @@ export default {
 }
 
 .light {
+	.homepage--sectionText::before {
+		border-left: 15px solid #f8b526;
+		border-bottom: 15px solid #f8b526;
+	}
+	.homepage--sectionText::after {
+		border-top: 15px solid #f8b526;
+		border-right: 15px solid #f8b526;
+	}
 }
 .dark {
 	.mobileMenuButton {
 		filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(29deg) brightness(107%) contrast(100%);
+	}
+	.homepage--sectionText::before {
+		border-left: 15px solid #9e35db;
+		border-bottom: 15px solid #9e35db;
+	}
+	.homepage--sectionText::after {
+		border-top: 15px solid #9e35db;
+		border-right: 15px solid #9e35db;
 	}
 }
 

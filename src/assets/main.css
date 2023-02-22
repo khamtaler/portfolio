@@ -16,6 +16,11 @@
 	border: 1px solid #000;
 }
 
+.icon {
+	width: 16px;
+	height: auto;
+}
+
 .button:hover {
 	cursor: pointer;
 }

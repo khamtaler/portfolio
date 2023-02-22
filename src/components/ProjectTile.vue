@@ -143,8 +143,8 @@ export default {
 		color: #1f1f1f;
 	}
 	.projectTile::before {
-		background: #1f1f1f;
-		box-shadow: 0px 0px 3px 1px #1f1f1f;
+		background: #f8b526;
+		box-shadow: 0px 0px 3px 1px #f8b526;
 	}
 
 	.projectTile--overlay {

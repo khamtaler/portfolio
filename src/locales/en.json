@@ -40,5 +40,15 @@
 		"experience": "Experience",
 		"hobbies": "Hobbies"
 	},
-	"project-link": "View"
+	"project-link": "View",
+	"livelyExperience": {
+		"projects": "Execution of projects in accordance with the client's guidelines",
+		"wordpress": "Creating pages mostly (but not only) based on wordpress templates",
+		"mails": "Preparation of email templates",
+		"conservation": "maintaining multiple websites"
+	},
+	"tuOglos": {
+		"vueLanding": "Preparation of a landing page using Vue 3",
+		"landing": "Creating simple landing pages"
+	}
 }
