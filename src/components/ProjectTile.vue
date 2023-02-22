@@ -1,13 +1,19 @@
 <script setup>
 import GithubIcon from './icons/GithubIcon.vue';
+import FollowIcon from './icons/FollowIcon.vue';
 </script>
 
 <template>
-	<div class="projectTile">
-		<a :href="link" target="_blank">
+	<div>
+		<a class="projectTile--link" :href="link" target="_blank">
 			<slot />
-			<p class="projectTile--desc">{{ desc }}</p>
+			<div class="projectTile--overlay">
+				<p class="projectTile--overlayDesc">
+					{{ $t('project-link') }} <FollowIcon class="icon followIcon" />
+				</p>
+			</div>
 		</a>
+		<p class="projectTile--desc">{{ desc }}</p>
 		<div class="projectTile--githubContainer">
 			<a
 				class="projectTile--githubLink"
@@ -15,7 +21,7 @@ import GithubIcon from './icons/GithubIcon.vue';
 				:href="github"
 				target="_blank"
 			>
-				<GithubIcon class="githubIcon" /> Github</a
+				<GithubIcon class="icon githubIcon" /> Github</a
 			>
 		</div>
 	</div>
@@ -30,11 +36,40 @@ export default {
 	},
 	components: {
 		GithubIcon,
+		FollowIcon,
 	},
 };
 </script>
 
 <style lang="scss" scoped>
+.projectTile--link {
+	height: 100%;
+	display: block;
+}
+.projectTile--overlay {
+	display: flex;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	opacity: 0;
+	border-radius: 5px;
+	background: rgba(148, 75, 190, 0);
+}
+.projectTile--overlayDesc {
+	font-size: 26px;
+	text-align: center;
+	margin: auto;
+	font-weight: 700;
+}
+.projectTile--link:hover {
+	.projectTile--overlay {
+		background: rgba(148, 75, 190, 0.7);
+		opacity: 1;
+		transform: scale(1.05);
+		transition: 1s;
+	}
+}
 .projectTile--desc {
 	font-size: 18px;
 	text-align: center;
@@ -50,9 +85,14 @@ export default {
 	height: 30px;
 	color: #1f1f1f;
 }
-.githubIcon {
+.icon {
 	width: 16px;
+}
+.githubIcon {
 	margin-right: 5px;
+}
+.followIcon {
+	margin-left: 5px;
 }
 .projectTile::before {
 	content: '';
@@ -103,6 +143,9 @@ export default {
 		background: #1f1f1f;
 		box-shadow: 0px 0px 3px 1px #1f1f1f;
 	}
+	.projectTile--overlayDesc {
+		color: #1f1f1f;
+	}
 }
 .dark {
 	.projectTile--githubLink:hover {
@@ -115,6 +158,12 @@ export default {
 	.projectTile::before {
 		background: #944bbe;
 		box-shadow: 0px 0px 3px 1px #944bbe;
+	}
+	.projectTile--overlayDesc {
+		color: #fff;
+	}
+	.followIcon {
+		filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(296deg) brightness(93%) contrast(106%);
 	}
 }
 

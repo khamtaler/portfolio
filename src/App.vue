@@ -44,6 +44,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<Tile v-if="show === `menu.about`" id="About" class="about"> <Tabs /></Tile>
 		<Tile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
+				class="projectTile"
 				:desc="$t('portfolio-vue')"
 				link="#/"
 				github="https://github.com/khamtaler/portfolio"
@@ -51,6 +52,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				<img class="projects--image" src="./assets/images/Portfolio.webp" alt="project picture" />
 			</ProjectTile>
 			<ProjectTile
+				class="projectTile"
 				:desc="$t('quizz-react')"
 				link="https://clever-khapse-9eeb96.netlify.app/"
 				github="https://github.com/khamtaler/React_ts_quizz"
@@ -59,6 +61,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			</ProjectTile>
 
 			<ProjectTile
+				class="projectTile"
 				:desc="$t('landing-nuxt')"
 				link="https://creative-souffle-842769.netlify.app/"
 				github="https://github.com/khamtaler/nuxt_landing"
@@ -70,6 +73,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				/>
 			</ProjectTile>
 			<ProjectTile
+				class="projectTile"
 				:desc="$t('landing-vue')"
 				link="https://sunny-mochi-22e9b8.netlify.app/"
 				github="https://github.com/khamtaler/vue_landing"
@@ -240,14 +244,16 @@ export default {
 	flex-wrap: wrap;
 }
 .projects--image {
-	height: 200px;
+	display: block;
+	margin: 0px;
+	height: 205px;
 	width: 100%;
 	object-fit: cover;
 	overflow: hidden;
 	border-radius: 5px;
 	transition: 1s;
 }
-.projects--image:hover {
+.projectTile:hover .projects--image {
 	transform: scale(1.05);
 }
 

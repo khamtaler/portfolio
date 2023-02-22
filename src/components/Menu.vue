@@ -1,6 +1,4 @@
-<script setup>
-import MenuBackground from '../assets/bgImages/MenuBackground.vue';
-</script>
+<script setup></script>
 
 <template>
 	<div class="menu">
@@ -31,7 +29,6 @@ export default {
 	},
 	components: {
 		MenuItem,
-		MenuBackground,
 	},
 };
 </script>
