@@ -54,7 +54,6 @@ export default {
 	top: 0;
 	opacity: 0;
 	border-radius: 5px;
-	background: rgba(148, 75, 190, 0);
 }
 .projectTile--overlayDesc {
 	font-size: 26px;
@@ -62,9 +61,11 @@ export default {
 	margin: auto;
 	font-weight: 700;
 }
+.projectTile--overlayDesc {
+	color: #fff;
+}
 .projectTile--link:hover {
 	.projectTile--overlay {
-		background: rgba(148, 75, 190, 0.7);
 		opacity: 1;
 		transform: scale(1.05);
 		transition: 1s;
@@ -93,7 +94,9 @@ export default {
 }
 .followIcon {
 	margin-left: 5px;
+	filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(296deg) brightness(93%) contrast(106%);
 }
+
 .projectTile::before {
 	content: '';
 	position: absolute;
@@ -143,8 +146,14 @@ export default {
 		background: #1f1f1f;
 		box-shadow: 0px 0px 3px 1px #1f1f1f;
 	}
-	.projectTile--overlayDesc {
-		color: #1f1f1f;
+
+	.projectTile--overlay {
+		background: rgba(248, 181, 38, 0);
+	}
+	.projectTile--link:hover {
+		.projectTile--overlay {
+			background: rgba(248, 181, 38, 0.8);
+		}
 	}
 }
 .dark {
@@ -159,11 +168,13 @@ export default {
 		background: #944bbe;
 		box-shadow: 0px 0px 3px 1px #944bbe;
 	}
-	.projectTile--overlayDesc {
-		color: #fff;
+	.projectTile--overlay {
+		background: rgba(148, 75, 190, 0);
 	}
-	.followIcon {
-		filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(296deg) brightness(93%) contrast(106%);
+	.projectTile--link:hover {
+		.projectTile--overlay {
+			background: rgba(148, 75, 190, 0.8);
+		}
 	}
 }
 

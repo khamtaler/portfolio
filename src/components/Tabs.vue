@@ -16,7 +16,7 @@ import HobbyTile from './HobbyTile.vue';
 		</li>
 	</ul>
 	<Tab class="tab--content" v-if="currentTab === 'about.university'">
-		<TabItem
+		<TabItem class="tabItem--borders"
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('re-bechelor-dates') }}</p>
 			<p>
@@ -24,7 +24,7 @@ import HobbyTile from './HobbyTile.vue';
 			</p>
 			<p>{{ $t('field') }} {{ $t('res') }}</p>
 		</TabItem>
-		<TabItem
+		<TabItem class="tabItem--borders"
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('it-master-dates') }}</p>
 			<p>
@@ -33,7 +33,7 @@ import HobbyTile from './HobbyTile.vue';
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
 			<p>{{ $t('spec') }}</p>
 		</TabItem>
-		<TabItem
+		<TabItem class="tabItem--borders"
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('it-bechelor-dates') }}</p>
 			<p>
@@ -134,6 +134,7 @@ export default {
 	margin: auto;
 	width: 100%;
 }
+
 .tab--experience {
 	padding: 20px 0px;
 }
