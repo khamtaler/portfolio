@@ -68,13 +68,12 @@ export default {
 	.projectTile--overlay {
 		opacity: 1;
 		transform: scale(1.05);
-		transition: 1s;
 	}
 }
 .projectTile--desc {
 	font-size: 18px;
 	text-align: center;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 .projectTile--githubLink {
 	display: flex;
