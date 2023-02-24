@@ -39,7 +39,7 @@ export default {
 	},
 	methods: {
 		send() {
-			console.log(this.message);
+			alert(this.$t('contactAlert'));
 		},
 		textGo() {
 			this.buttonText = 'Lets Go!';

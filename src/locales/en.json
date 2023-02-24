@@ -1,10 +1,10 @@
 {
 	"opening": "Hello there!",
-	"greetings": "My name is \n<b>Tomasz Sroka </b> and you are currently visiting my personal website. The idea behind the project was to make a simple single page website I could describe myself on. I've used Vue 3 to do so. I am a frontend developer gathering experience for over 2 years already. So far I was working mostly with wordpress. Not so long ago I started to learn Javasript frameworks and heres the current effect. You can toggle different colors in left menu, switch language between polish and english, check up on my projects, hobbies or get to know me better going trough other different tabs. You can also contact me via links included in contact tab. Enjoy your stay &#128512;",
+	"greetings": "My name is \n<b class=\"disableTransition\">Tomasz Sroka </b> and you are currently visiting my personal website. The idea behind the project was to make a simple single page website I could describe myself on. I've used Vue 3 to do so. I am a frontend developer gathering experience for over 2 years already. So far I was working mostly with wordpress. Not so long ago I started to learn Javasript frameworks and heres the current effect. You can toggle different colors in left menu, switch language between polish and english, check up on my projects, hobbies or get to know me better going trough other different tabs. You can also contact me via links included in contact tab. Enjoy your stay &#128512;",
 	"contactHeader": "Contact:",
 	"livingPlace": "Currently living in: \n<b>Cracow</b>",
 	"contact-form-header": "Do You need any further information? \n<br /> Write your message bellow and send it directly to me &#128512;",
-	"contact-text-placeholder": "input your message",
+	"contact-text-placeholder": "Input your message",
 	"contact-email-placeholder": "Your email",
 	"portfolio-vue": "Portfolio in Vue.js",
 	"quizz-react": "Quizz in React",
@@ -28,6 +28,7 @@
 	"tuoglos-desc": "A group of 133 websites uniting Poles in the country and abroad.",
 	"lively-dates": "March 2021 - now",
 	"tuoglos-dates": "September 2020 - November 2020",
+	"contactAlert": "I would need to collect RODO acceptances to allow this section to work properly",
 	"menu": {
 		"home": "Home",
 		"about": "About me",
@@ -46,7 +47,7 @@
 		"forms": "Making forms, lists, planners, agendas",
 		"wordpress": "Creating pages mostly (but not only) based on wordpress",
 		"mails": "Preparation of email templates",
-		"conservation": "maintaining multiple websites"
+		"conservation": "Maintaining multiple websites"
 	},
 	"tuOglos": {
 		"vueLanding": "Preparation of a landing page using Vue 3",

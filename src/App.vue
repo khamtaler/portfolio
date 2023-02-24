@@ -197,6 +197,7 @@ export default {
 
 .homepage--sectionHeader {
 	margin-bottom: 15px;
+	transition: 0s;
 }
 .homepage--sectionTextWelcome {
 	line-height: 2;
@@ -204,6 +205,7 @@ export default {
 
 .homepage--sectionImage {
 	border-radius: 50%;
+	margin: auto;
 	padding: 0px 60px 120px;
 }
 .section--contact {
@@ -233,10 +235,6 @@ export default {
 	text-decoration: none;
 	margin: 5px 0px;
 	color: #471564;
-}
-
-.contact--link:hover {
-	color: #9e35db;
 }
 
 .contact--city {
@@ -277,6 +275,12 @@ export default {
 }
 
 .light {
+	.homepage--sectionText {
+		background: #fff;
+		color: #272727;
+		transition: 0ms;
+	}
+
 	.homepage--sectionText::before {
 		border-left: 15px solid #f8b526;
 		border-bottom: 15px solid #f8b526;
@@ -289,10 +293,19 @@ export default {
 	.homepage--sectionText {
 		border: 1px solid #1f1f1f;
 	}
+	.contact--link:hover {
+		color: #f8b526;
+	}
 }
 .dark {
 	.mobileMenuButton {
 		filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(29deg) brightness(107%) contrast(100%);
+	}
+
+	.homepage--sectionText {
+		background: #272727;
+		color: #fff;
+		transition: 0ms;
 	}
 	.homepage--sectionText::before {
 		border-left: 15px solid #9e35db;
@@ -301,6 +314,9 @@ export default {
 	.homepage--sectionText::after {
 		border-top: 15px solid #9e35db;
 		border-right: 15px solid #9e35db;
+	}
+	.contact--link:hover {
+		color: #9e35db;
 	}
 }
 

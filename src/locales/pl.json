@@ -1,6 +1,6 @@
 {
 	"opening": "Hejka!",
-	"greetings": "Nazywam się \n<b>Tomasz Sroka</b> i aktualnie widzisz moją pierwszą osobistą stronę internetową. Ideą projektu było stworzenie prostej, jednostronicowej witryny, na której mógłbym przedstawić siebie. Użyłem do tego celu Vue 3. Jestem frontend developerem zbierającym doświadczenie już od ponad 2 lat, do tej pory pracującym głównie z wordpressem. Nie tak dawno temu zacząłem zgłębiać tajniki frameworków Javascript i oto efekt. Możesz przełączać różne kolory w lewym menu, zmienić język pomiędzy polskim a angielskim, sprawdzić moje projekty, poznać hobby i dowiedzieć się czegoś o mnie przechodząc przez różne zakładki. Możesz również skontaktować się ze mną za pomocą linków zawartych w zakładce kontakt. Miłego pobytu &#128512;",
+	"greetings": "Nazywam się \n<b class=\"disableTransition\">Tomasz Sroka</b> i aktualnie widzisz moją pierwszą osobistą stronę internetową. Ideą projektu było stworzenie prostej, jednostronicowej witryny, na której mógłbym przedstawić siebie. Użyłem do tego celu Vue 3. Jestem frontend developerem zbierającym doświadczenie już od ponad 2 lat, do tej pory pracującym głównie z wordpressem. Nie tak dawno temu zacząłem zgłębiać tajniki frameworków Javascript i oto efekt. Możesz przełączać różne kolory w lewym menu, zmienić język pomiędzy polskim a angielskim, sprawdzić moje projekty, poznać hobby i dowiedzieć się czegoś o mnie przechodząc przez różne zakładki. Możesz również skontaktować się ze mną za pomocą linków zawartych w zakładce kontakt. Miłego pobytu &#128512;",
 	"contactHeader": "Kontakt:",
 	"livingPlace": "Aktualnie mieszkam w: \n<b>Kraków</b>",
 	"contact-form-header": "Potrzebujesz więcej informacji? \n<br /> Napisz wiadomość poniżej i wyślij ją do mnie &#128512;",
@@ -20,14 +20,15 @@
 	"re-bechelor-dates": "wrzesień 2022 - teraz",
 	"bechelor": "Studia inżynierskie",
 	"master": "Studia magisterskie",
-	"field": "kierunek:",
+	"field": "Kierunek:",
 	"res": "Odnawialne źródła energii",
 	"it": "Informatyka",
-	"spec": "specjalizacja: Data science",
+	"spec": "Specjalizacja: Data science",
 	"lively-desc": "Specjaliści od świata online.",
 	"tuoglos-desc": "Grupa 133 portali łącząca Polaków w Polsce i na całym świecie",
 	"lively-dates": "marzec 2021 - teraz",
 	"tuoglos-dates": "wrzesień 2020 - listopad 2020",
+	"contactAlert": "Musiałbym zbierać zgody RODO aby pozwolić tej sekcji działać poprawnie.",
 	"menu": {
 		"home": "Strona główna",
 		"about": "O mnie",
@@ -46,7 +47,7 @@
 		"wordpress": "Tworzenie stron głównie (ale nie tylko) w oparciu o wordpress",
 		"forms": "Wykonywanie formularzy, list, planerów, agend",
 		"mails": "Przygotowywanie szablonów maili",
-		"conservation": "utrzymanie wielu stron internetowych"
+		"conservation": "Utrzymanie wielu stron internetowych"
 	},
 	"tuOglos": {
 		"vueLanding": "Przygotowanie landingu z wykorzystaniem Vue 3",

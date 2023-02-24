@@ -48,6 +48,11 @@ export default {};
 .menuItem--button::before {
 	background: #fff;
 }
+.active {
+	.menuItem--button {
+		opacity: 1;
+	}
+}
 
 .mobile {
 	.menuItem--button {
@@ -55,8 +60,10 @@ export default {};
 	}
 }
 .light {
-	.menuItem--button {
-		color: #fff;
+	.mobile {
+		.menuItem--button {
+			color: #000;
+		}
 	}
 	.active {
 		.menuItem--button::before {
