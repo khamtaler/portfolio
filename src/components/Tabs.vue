@@ -21,7 +21,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('re-bechelor-dates') }}</p>
 			<p>
-				<b>{{ $t('bechelor') }}</b>
+				<b class="disableTransition">{{ $t('bechelor') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('res') }}</p>
 		</TabItem>
@@ -29,7 +29,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('it-master-dates') }}</p>
 			<p>
-				<b>{{ $t('master') }}</b>
+				<b class="disableTransition">{{ $t('master') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
 			<p>{{ $t('spec') }}</p>
@@ -38,7 +38,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
 			<p>{{ $t('it-bechelor-dates') }}</p>
 			<p>
-				<b>{{ $t('bechelor') }}</b>
+				<b class="disableTransition">{{ $t('bechelor') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
 		</TabItem>
@@ -134,7 +134,7 @@ export default {
 	width: 30%;
 	padding: 15px;
 	border-radius: 10px;
-	background: #fff;
+
 	text-align: center;
 	cursor: pointer;
 	transition: 0.1s ease-in-out;
@@ -212,6 +212,10 @@ export default {
 	.tabItem {
 		border: 1px solid #1f1f1f;
 	}
+	.tab {
+		background: #fff;
+		color: #272727;
+	}
 
 	.active::before {
 		background: #f8b526;
@@ -225,6 +229,10 @@ export default {
 	}
 }
 .dark {
+	.tab {
+		background: #272727;
+		color: #fff;
+	}
 	.active::before {
 		background: #944bbe;
 		box-shadow: 0px 0px 1px 1px #944bbe;

@@ -191,8 +191,10 @@ export default {
 }
 
 .dark {
-	.contact {
-		background: #fff;
+	.contact,
+	.button--contact {
+		background: #272727;
+		color: #fff;
 	}
 
 	.contact::before {

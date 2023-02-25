@@ -34,6 +34,10 @@ export default {};
 	top: -5%;
 }
 .light {
+	.tabItem {
+		background: #fff;
+		color: #272727;
+	}
 	.tabItem--borders::before {
 		border-top: 10px solid #f8b526;
 		border-bottom: 10px solid #f8b526;
@@ -46,6 +50,10 @@ export default {};
 	}
 }
 .dark {
+	.tabItem {
+		background: #272727;
+		color: #fff;
+	}
 	.tabItem--borders::before {
 		border-top: 10px solid #944bbe;
 		border-bottom: 10px solid #944bbe;

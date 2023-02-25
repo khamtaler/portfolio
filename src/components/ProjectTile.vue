@@ -89,7 +89,8 @@ export default {
 	width: 16px;
 }
 .githubIcon {
-	margin-right: 5px;
+	margin-right: 7px;
+	width: 20px;
 }
 .followIcon {
 	margin-left: 5px;
@@ -103,11 +104,7 @@ export default {
 	pointer-events: none;
 	opacity: 0.5;
 }
-.projectTile {
-	background: #fff;
-	padding: 15px;
-	border-radius: 10px;
-}
+
 .projectTile--githubContainer {
 	display: flex;
 	align-items: center;
@@ -136,6 +133,9 @@ export default {
 	opacity: 1;
 }
 .light {
+	.projectTile--githubLink {
+		color: #272727;
+	}
 	.projectTile--githubLink:hover {
 		color: #f8b526;
 	}
@@ -144,7 +144,7 @@ export default {
 		color: #f8b526;
 	}
 	.projectTile--desc {
-		color: #1f1f1f;
+		color: #272727;
 	}
 	.projectTile::before {
 		background: #f8b526;
@@ -161,6 +161,12 @@ export default {
 	}
 }
 .dark {
+	.githubIcon {
+		filter: invert(100%) sepia(72%) saturate(48%) hue-rotate(230deg) brightness(116%) contrast(100%);
+	}
+	.projectTile--githubLink {
+		color: #fff;
+	}
 	.projectTile--githubLink:hover {
 		color: #944bbe;
 	}

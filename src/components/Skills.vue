@@ -71,4 +71,10 @@ export default {
 .skills--logo---js {
 	filter: invert(97%) sepia(54%) saturate(5270%) hue-rotate(341deg) brightness(96%) contrast(92%);
 }
+
+.dark {
+	.skills {
+		background: #272727;
+	}
+}
 </style>

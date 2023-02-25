@@ -1,6 +1,6 @@
 <template>
 	<p>
-		<b>{{ name }}</b>
+		<b class="skillName">{{ name }}</b>
 	</p>
 	<div class="skillBar">
 		<slot />
@@ -47,6 +47,9 @@ export default {
 	}
 }
 .dark {
+	.skillName {
+		color: #fff;
+	}
 	.skillBar--chart {
 		border: 1px solid #944bbe;
 	}

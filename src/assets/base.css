@@ -61,6 +61,18 @@
 	transition: 500ms;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+span {
+	transition: 0ms;
+}
+
 body {
 	min-height: 100vh;
 

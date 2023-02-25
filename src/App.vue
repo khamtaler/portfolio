@@ -270,6 +270,11 @@ export default {
 	overflow: hidden;
 	border-radius: 5px;
 }
+.projectTile {
+	// background: #fff;
+	padding: 15px 20px;
+	border-radius: 10px;
+}
 .projectTile:hover .projects--image {
 	transform: scale(1.05);
 }
@@ -293,6 +298,12 @@ export default {
 	.homepage--sectionText {
 		border: 1px solid #1f1f1f;
 	}
+
+	.projectTile {
+		background: #fff;
+		color: #272727;
+	}
+
 	.contact--link:hover {
 		color: #f8b526;
 	}
@@ -315,8 +326,25 @@ export default {
 		border-top: 15px solid #9e35db;
 		border-right: 15px solid #9e35db;
 	}
+
+	.projectTile {
+		background: #272727;
+		color: #fff;
+	}
+
 	.contact--link:hover {
 		color: #9e35db;
+	}
+	.section--contact {
+		background: #272727;
+		color: #fff;
+	}
+	.contact--header,
+	.contact--link {
+		color: #fff;
+	}
+	.mediaIcon {
+		filter: invert(100%) sepia(72%) saturate(48%) hue-rotate(230deg) brightness(116%) contrast(100%);
 	}
 }
 
