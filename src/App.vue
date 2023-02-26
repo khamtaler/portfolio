@@ -1,6 +1,6 @@
 <script setup>
-import Menu from './components/Menu.vue';
-import ColorsAside from './components/ColorsAside.vue';
+import TheMenu from './components/TheMenu.vue';
+import TheColorMenu from './components/TheColorMenu.vue';
 import Section from './components/Section.vue';
 import Tile from './components/Tile.vue';
 import Tabs from './components/Tabs.vue';
@@ -16,7 +16,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 </script>
 
 <template>
-	<ColorsAside />
+	<TheColorMenu />
 	<HamburgerIcon
 		class="mobileMenuButton mobileMenuButton--open"
 		@click="toggleMobileMenu"
@@ -26,7 +26,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		@click="toggleMobileMenu"
 		:class="{ buttonVisible: mobile }"
 	></CloseIcon>
-	<Menu @changeTile="toggleTile" :class="{ mobile: mobile }"></Menu>
+	<TheMenu @changeTile="toggleTile" :class="{ mobile: mobile }"></TheMenu>
 
 	<main class="main">
 		<Tile v-if="show === `menu.home`" id="Homepage" class="homepage">
@@ -126,8 +126,8 @@ export default {
 		};
 	},
 	components: {
-		Menu,
-		ColorsAside,
+		TheMenu,
+		TheColorMenu,
 		Section,
 		Tile,
 		Tabs,

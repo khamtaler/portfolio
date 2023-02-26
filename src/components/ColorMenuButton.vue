@@ -28,4 +28,7 @@ export default {
 .button--color---colorful {
 	background: linear-gradient(#e66465, #9198e5);
 }
+
+.dark {
+}
 </style>

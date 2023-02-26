@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import MenuItem from './MenuItem.vue';
+</script>
 
 <template>
 	<div class="menu">
@@ -13,7 +15,6 @@
 </template>
 
 <script>
-import MenuItem from './MenuItem.vue';
 export default {
 	data() {
 		return {

@@ -1,28 +1,22 @@
 <script setup>
-import ColorButton from './ColorButton.vue';
-import languageSwitch from './languageSwitch.vue';
+import ColorMenuButton from './ColorMenuButton.vue';
+import TheLanguageMenu from './TheLanguageMenu.vue';
 </script>
 <template>
-	<aside class="colorMenu">
-		<ColorButton
+	<aside class="aside">
+		<ColorMenuButton
 			:class="{ active: active === 'light' }"
 			colorClass="button--color---light"
 			title="light"
 			@click="changeColor(`light`)"
 		/>
-		<ColorButton
+		<ColorMenuButton
 			:class="{ active: active === 'dark' }"
 			colorClass="button--color---dark"
 			title="dark"
 			@click="changeColor(`dark`)"
 		/>
-		<languageSwitch />
-		<!-- <ColorButton
-			:class="{ active: active === 'colorfule' }"
-			colorClass="button--color---colorful"
-			title="colorfule"
-			@click="changeColor(`colorfule`)"
-		/> -->
+		<TheLanguageMenu />
 	</aside>
 </template>
 
@@ -46,14 +40,14 @@ export default {
 		document.body.classList.add(this.color);
 	},
 	components: {
-		ColorButton,
-		languageSwitch,
+		ColorMenuButton,
+		TheLanguageMenu,
 	},
 };
 </script>
 
 <style lang="scss" scoped>
-.colorMenu {
+.aside {
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
@@ -63,7 +57,7 @@ export default {
 	left: 70px;
 }
 
-.colorMenu .active::before {
+.active::before {
 	content: '';
 	display: inline-block;
 	position: absolute;
@@ -74,62 +68,64 @@ export default {
 }
 
 .dark {
-	.colorMenu .active::before {
-		background: #fff;
+	.active {
+		&::before {
+			background: #fff;
+		}
 	}
 }
 
 @media (min-width: 1320px) {
-	.colorMenu {
+	.aside {
 		left: calc(-1 * (100vw - 100%) / 2);
 	}
-	.colorMenu .active {
+	.active {
 		left: 15px;
 	}
 }
 @media (min-width: 841px) {
-	.colorMenu {
+	.aside {
 		top: 50vh;
 		transform: translateY(-50%);
 		left: calc((-1 * (100vw - 100%) / 2) + 15px);
 		flex-direction: column;
 	}
-	.colorMenu .active {
+	.active {
 		left: 12px;
+		&::before {
+			left: -12px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
-	.colorMenu .active::before {
-		left: -12px;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	.languageMenu--label.active {
+	.active {
 		left: 10px;
-	}
-	.languageMenu--label.active::before {
-		left: -10px;
-		top: 50%;
-		transform: translateY(-50%);
+		&::before {
+			left: -10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 }
 @media (max-width: 840px) {
-	.colorMenu .active:before {
-		top: -12px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	.colorMenu .active {
+	.active {
 		top: 10px;
+		&::before {
+			top: -12px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 }
 
 @media (max-width: 840px) {
-	.languageMenu--label.active:before {
-		top: -10px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	.languageMenu--label.active {
+	.active {
 		top: 10px;
+		&::before {
+			top: -10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 }
 </style>

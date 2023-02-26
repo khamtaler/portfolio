@@ -137,10 +137,10 @@ export default {
 
 	text-align: center;
 	cursor: pointer;
-	transition: 0.1s ease-in-out;
 }
 .tab:hover {
 	letter-spacing: 3px;
+	transition: 500ms ease-in-out;
 }
 .tab::before {
 	content: '';
