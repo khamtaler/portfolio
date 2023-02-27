@@ -6,13 +6,11 @@ import TheLanguageMenu from './TheLanguageMenu.vue';
 	<aside class="aside">
 		<ColorMenuButton
 			:class="{ active: active === 'light' }"
-			colorClass="button--color---light"
 			title="light"
 			@click="changeColor(`light`)"
 		/>
 		<ColorMenuButton
 			:class="{ active: active === 'dark' }"
-			colorClass="button--color---dark"
 			title="dark"
 			@click="changeColor(`dark`)"
 		/>

@@ -1,15 +1,15 @@
 <script setup>
-import MenuItem from './MenuItem.vue';
+import MenuButton from './MenuButton.vue';
 </script>
 
 <template>
 	<div class="menu">
-		<MenuItem
+		<MenuButton
 			:class="{ active: active === tab.text_key }"
 			v-for="tab in tabs"
 			@click="$emit('changeTile', tab.text_key), (active = tab.text_key)"
 			:key="tab.text_key"
-			>{{ $t(tab.text_key) }}</MenuItem
+			>{{ $t(tab.text_key) }}</MenuButton
 		>
 	</div>
 </template>
@@ -29,7 +29,7 @@ export default {
 		};
 	},
 	components: {
-		MenuItem,
+		MenuButton,
 	},
 };
 </script>

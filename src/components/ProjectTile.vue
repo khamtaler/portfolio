@@ -17,7 +17,7 @@ import FollowIcon from './icons/FollowIcon.vue';
 		<div class="projectTile--githubContainer">
 			<a
 				class="projectTile--githubLink"
-				:class="{ crossed: !github, disabled: !github }"
+				:class="{ githubDisabled: !github }"
 				:href="github"
 				target="_blank"
 			>
@@ -97,14 +97,11 @@ export default {
 	filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(296deg) brightness(93%) contrast(106%);
 }
 
-.crossed {
+.githubDisabled {
 	text-decoration: line-through;
-}
-.disabled {
 	pointer-events: none;
 	opacity: 0.5;
 }
-
 .projectTile--githubContainer {
 	display: flex;
 	align-items: center;

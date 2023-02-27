@@ -1,6 +1,7 @@
 <script setup>
 import TheMenu from './components/TheMenu.vue';
-import TheColorMenu from './components/TheColorMenu.vue';
+import TheAside from './components/TheAside.vue';
+import TheFooter from './components/TheFooter.vue';
 import Section from './components/Section.vue';
 import Tile from './components/Tile.vue';
 import Tabs from './components/Tabs.vue';
@@ -16,7 +17,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 </script>
 
 <template>
-	<TheColorMenu />
+	<TheAside />
 	<HamburgerIcon
 		class="mobileMenuButton mobileMenuButton--open"
 		@click="toggleMobileMenu"
@@ -115,6 +116,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			<ContactForm />
 		</Tile>
 	</main>
+	<TheFooter />
 </template>
 
 <script>
@@ -127,7 +129,8 @@ export default {
 	},
 	components: {
 		TheMenu,
-		TheColorMenu,
+		TheAside,
+		TheFooter,
 		Section,
 		Tile,
 		Tabs,

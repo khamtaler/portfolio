@@ -22,7 +22,7 @@
 				@mouseover="textGo"
 				@mouseleave="textReady"
 			>
-				{{ buttonText }}
+				{{ $t('send') }}
 			</button>
 		</div>
 	</div>
@@ -34,18 +34,11 @@ export default {
 		return {
 			message: '',
 			email: '',
-			buttonText: 'Ready?',
 		};
 	},
 	methods: {
 		send() {
 			alert(this.$t('contactAlert'));
-		},
-		textGo() {
-			this.buttonText = 'Lets Go!';
-		},
-		textReady() {
-			this.buttonText = 'Ready?';
 		},
 	},
 };
@@ -58,9 +51,6 @@ export default {
 	justify-content: center;
 	width: 100%;
 	border-radius: 10px;
-}
-
-.contact {
 	background: #fff;
 	border-radius: 15px 0px 15px 0px;
 	padding: 20px;
@@ -101,15 +91,15 @@ export default {
 	font-size: 1.2rem;
 	color: #1f1f1f;
 }
-.contact--message:focus-visible,
-.contact--email:focus-visible {
-	outline: unset;
-}
 .contact--message,
 .contact--email {
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid #1f1f1f;
+}
+.contact--message:focus-visible,
+.contact--email:focus-visible {
+	outline: unset;
 }
 
 .contact--message {
@@ -133,21 +123,18 @@ export default {
 }
 .button--contact::before {
 	top: 0px;
+	left: 0px;
 	border-radius: 5px 0px 0px 0px;
 }
 .button--contact::after {
 	bottom: 0px;
+	right: 0px;
 	border-radius: 0px 0px 5px 0px;
 }
 .button--contact:hover {
 	background: transparent;
 }
-.button--contact::before {
-	left: 0px;
-}
-.button--contact::after {
-	right: 0px;
-}
+
 .button--contact:hover::before {
 	left: -5px;
 	top: -5px;

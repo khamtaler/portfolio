@@ -21,7 +21,7 @@
 export default {
 	data() {
 		return {
-			lang: 'en',
+			lang: 'pl',
 		};
 	},
 	methods: {

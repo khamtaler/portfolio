@@ -1,6 +1,6 @@
 <template>
-	<div class="menuItem">
-		<button type="button" class="button menuItem--button">
+	<div class="menuButton">
+		<button type="button" class="button menuButton--button">
 			<slot />
 		</button>
 	</div>
@@ -11,10 +11,10 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.menu:not(.mobile) .menuItem:last-child {
+.menu:not(.mobile) .menuButton:last-child {
 	margin-right: 30px;
 }
-.menuItem--button {
+.menuButton--button {
 	background: transparent;
 	color: #fff;
 	font-weight: 700;
@@ -24,7 +24,7 @@ export default {};
 	opacity: 0.9;
 }
 
-.menuItem--button::before {
+.menuButton--button::before {
 	content: '';
 	position: absolute;
 	bottom: 0px;
@@ -33,40 +33,40 @@ export default {};
 	height: 2px;
 	background: #fff;
 }
-.menuItem--button:hover {
+.menuButton--button:hover {
 	transform: translateY(-6px);
 	opacity: 1;
 	transition: 0.5s ease-in-out;
 }
-.menuItem--button:hover::before {
+.menuButton--button:hover::before {
 	box-shadow: 0px 0px 1px 1px #fff;
 }
 
-.menuItem--button {
+.menuButton--button {
 	color: #fff;
 }
-.menuItem--button::before {
+.menuButton--button::before {
 	background: #fff;
 }
 .active {
-	.menuItem--button {
+	.menuButton--button {
 		opacity: 1;
 	}
 }
 
 .mobile {
-	.menuItem--button {
+	.menuButton--button {
 		font-size: 20px;
 	}
 }
 .light {
 	.mobile {
-		.menuItem--button {
+		.menuButton--button {
 			color: #000;
 		}
 	}
 	.active {
-		.menuItem--button::before {
+		.menuButton--button::before {
 			background: #ffde0b;
 			box-shadow: 0px 0px 1px 1px #ffde0b;
 		}
@@ -75,10 +75,10 @@ export default {};
 
 .dark {
 	.active {
-		.menuItem--button {
+		.menuButton--button {
 			color: #272727;
 		}
-		.menuItem--button::before {
+		.menuButton--button::before {
 			background: #272727;
 			box-shadow: 0px 0px 1px 1px #272727;
 		}
@@ -86,7 +86,7 @@ export default {};
 }
 
 @media (min-width: 1200px) {
-	.menuItem--button {
+	.menuButton--button {
 		font-size: 1.1rem;
 	}
 }

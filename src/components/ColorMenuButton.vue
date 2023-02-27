@@ -1,12 +1,16 @@
 <template>
-	<button type="button" class="button button--color" :class="colorClass" :title="title"></button>
+	<button type="button" class="button button--color" :class="setMode" :title="title"></button>
 </template>
 
 <script>
 export default {
 	props: {
-		colorClass: String,
-		title: String,
+		title: { type: String, required: true },
+	},
+	computed: {
+		setMode() {
+			return `button--color---${this.title}`;
+		},
 	},
 };
 </script>
@@ -24,11 +28,5 @@ export default {
 }
 .button--color---dark {
 	background-color: #1f1f1f;
-}
-.button--color---colorful {
-	background: linear-gradient(#e66465, #9198e5);
-}
-
-.dark {
 }
 </style>

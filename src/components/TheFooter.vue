@@ -8,12 +8,15 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
-	width: 100%;
-	height: 20px;
+	position: absolute;
+	height: 15px;
+	width: 100vw;
+	left: calc(-1 * (100vw - 100%) / 2);
+	bottom: 0;
 }
 .light {
 	.footer {
-		background: #fe4709;
+		background: #fe5209;
 	}
 }
 
