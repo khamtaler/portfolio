@@ -36,7 +36,9 @@ h5,
 h6,
 p,
 b,
-span {
+span,
+ul,
+li {
 	transition: 0ms;
 }
 

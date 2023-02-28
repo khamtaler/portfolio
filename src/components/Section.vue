@@ -16,7 +16,7 @@ export default {};
 }
 .light {
 	.section {
-		border: 1px solid #1f1f1f;
+		border: 1px solid #272727;
 	}
 }
 </style>

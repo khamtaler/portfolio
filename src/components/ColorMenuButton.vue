@@ -27,6 +27,6 @@ export default {
 	background-color: #a7a7a7;
 }
 .button--color---dark {
-	background-color: #1f1f1f;
+	background-color: #272727;
 }
 </style>

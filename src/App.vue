@@ -4,7 +4,7 @@ import TheAside from './components/TheAside.vue';
 import TheFooter from './components/TheFooter.vue';
 import Section from './components/Section.vue';
 import Tile from './components/Tile.vue';
-import Tabs from './components/Tabs.vue';
+import TheAboutMe from './components/TheAboutMe.vue';
 import ContactForm from './components/ContactForm.vue';
 import ProjectTile from './components/ProjectTile.vue';
 import TheSkills from './components/TheSkills.vue';
@@ -42,7 +42,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 					<p class="homepage--sectionTextWelcome" v-html="$t('greetings')"></p>
 				</div></div
 		></Tile>
-		<Tile v-if="show === `menu.about`" id="About" class="about"> <Tabs /></Tile>
+		<Tile v-if="show === `menu.about`" id="About" class="about"> <TheAboutMe /></Tile>
 		<Tile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
 				class="projectTile"
@@ -133,7 +133,7 @@ export default {
 		TheFooter,
 		Section,
 		Tile,
-		Tabs,
+		TheAboutMe,
 		ContactForm,
 		ProjectTile,
 		TheSkills,
@@ -216,7 +216,7 @@ export default {
 	width: 100%;
 }
 .contact--header {
-	color: #1f1f1f;
+	color: #272727;
 	text-decoration: underline;
 	margin-bottom: 15px;
 }
@@ -299,7 +299,7 @@ export default {
 	}
 
 	.homepage--sectionText {
-		border: 1px solid #1f1f1f;
+		border: 1px solid #272727;
 	}
 
 	.projectTile {

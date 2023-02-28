@@ -1,13 +1,13 @@
 <script setup>
 import Tab from './Tab.vue';
-import TabItem from './TabItem.vue';
+import TabContent from './TabContent.vue';
 import HobbyTile from './HobbyTile.vue';
 import ArrowRightTop from './icons/ArrowRightTop.vue';
 </script>
 <template>
 	<ul class="tabs">
 		<li
-			class="tab"
+			class="tabs--tab"
 			:class="currentTab === tab.text_key ? `active` : ``"
 			v-for="tab in tabs"
 			:key="tab.text_key"
@@ -16,60 +16,64 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			<b>{{ $t(tab.text_key) }}</b>
 		</li>
 	</ul>
-	<Tab class="tab--content" v-if="currentTab === 'about.university'">
-		<TabItem class="tabItem--borders tabItem---extendedMargin"
-			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
+	<Tab v-if="currentTab === 'about.university'">
+		<TabContent class="tab--university"
+			><h3 class="tab--university-header">{{ $t('university') }}</h3>
 			<p>{{ $t('re-bechelor-dates') }}</p>
 			<p>
-				<b class="disableTransition">{{ $t('bechelor') }}</b>
+				<b>{{ $t('bechelor') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('res') }}</p>
-		</TabItem>
-		<TabItem class="tabItem--borders tabItem---extendedMargin"
-			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
+		</TabContent>
+		<TabContent class="tab--university"
+			><h3 class="tab--university-header">{{ $t('university') }}</h3>
 			<p>{{ $t('it-master-dates') }}</p>
 			<p>
-				<b class="disableTransition">{{ $t('master') }}</b>
+				<b>{{ $t('master') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
 			<p>{{ $t('spec') }}</p>
-		</TabItem>
-		<TabItem class="tabItem--borders tabItem---extendedMargin"
-			><h3 class="tab--contentHeader">{{ $t('university') }}</h3>
+		</TabContent>
+		<TabContent class="tab--university"
+			><h3 class="tab--university-header">{{ $t('university') }}</h3>
 			<p>{{ $t('it-bechelor-dates') }}</p>
 			<p>
-				<b class="disableTransition">{{ $t('bechelor') }}</b>
+				<b>{{ $t('bechelor') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
-		</TabItem>
+		</TabContent>
 	</Tab>
-	<Tab class="tab--content" v-if="currentTab === 'about.experience'"
-		><TabItem class="tab--experience tabItem---layout">
-			<img class="tab--contentImage" src="../assets/images/Lively.webp" alt="Logo" />
-			<div class="tab--desc">
-				<h2 class="tab--experienceHeader" v-html="$t('lively-desc')"></h2>
-				<p class="tab--experienceDates">{{ $t('lively-dates') }}</p>
-				<ul class="tab--experienceList">
-					<li class="tab--experienceListItem" v-for="item in livelyExperience" :key="item.text_key">
-						<ArrowRightTop class="icon tab--experienceIcon" /> {{ $t(item.text_key) }}
+	<Tab v-if="currentTab === 'about.experience'"
+		><TabContent class="tab--experience tab--experience---padding">
+			<img class="tab--experience-logo" src="../assets/images/Lively.webp" alt="Logo" />
+			<div class="tab--experience-desc">
+				<h2 class="tab--experience-header" v-html="$t('lively-desc')"></h2>
+				<p class="tab--experience-dates">{{ $t('lively-dates') }}</p>
+				<ul class="tab--experience-list">
+					<li
+						class="tab--experience-listItem"
+						v-for="item in livelyExperience"
+						:key="item.text_key"
+					>
+						<ArrowRightTop class="icon tab--experience-icon" /> {{ $t(item.text_key) }}
 					</li>
 				</ul>
 			</div>
-		</TabItem>
-		<TabItem class="tab--experience tabItem---layout">
-			<img class="tab--contentImage" src="../assets/images/TuOglosLogo.webp" alt="Logo" />
-			<div class="tab--desc">
-				<h2 class="tab--experienceHeader" v-html="$t('tuoglos-desc')"></h2>
-				<p class="tab--experienceDates">{{ $t('tuoglos-dates') }}</p>
-				<ul class="tab--experienceList">
-					<li class="tab--experienceListItem" v-for="item in tuOglos" :key="item.text_key">
-						<ArrowRightTop class="icon tab--experienceIcon" /> {{ $t(item.text_key) }}
+		</TabContent>
+		<TabContent class="tab--experience tab--experience---padding">
+			<img class="tab--experience-logo" src="../assets/images/TuOglosLogo.webp" alt="Logo" />
+			<div class="tab--experience-desc">
+				<h2 class="tab--experience-header" v-html="$t('tuoglos-desc')"></h2>
+				<p class="tab--experience-dates">{{ $t('tuoglos-dates') }}</p>
+				<ul class="tab--experience-list">
+					<li class="tab--experience-listItem" v-for="item in tuOglos" :key="item.text_key">
+						<ArrowRightTop class="icon tab--experience-icon" /> {{ $t(item.text_key) }}
 					</li>
 				</ul>
 			</div>
-		</TabItem></Tab
+		</TabContent></Tab
 	>
-	<Tab class="tab--content tabItem---layout" v-if="currentTab === 'about.hobbies'">
+	<Tab class="tab--hobbys" v-if="currentTab === 'about.hobbies'">
 		<HobbyTile title="Snowboard">
 			<img class="hobbyTile--image" src="../assets/images/Snowboard.webp" alt="Snowboard"
 		/></HobbyTile>
@@ -114,7 +118,7 @@ export default {
 	methods: {},
 	components: {
 		Tab,
-		TabItem,
+		TabContent,
 		HobbyTile,
 	},
 };
@@ -128,7 +132,7 @@ export default {
 	width: 100%;
 	margin-bottom: 30px;
 }
-.tab {
+.tabs--tab {
 	flex-shrink: 1;
 	list-style: none;
 	width: 30%;
@@ -138,11 +142,11 @@ export default {
 	text-align: center;
 	cursor: pointer;
 }
-.tab:hover {
+.tabs--tab:hover {
 	letter-spacing: 3px;
 	transition: 500ms ease-in-out;
 }
-.tab::before {
+.tabs--tab::before {
 	content: '';
 	position: absolute;
 	bottom: 10px;
@@ -152,54 +156,68 @@ export default {
 	height: 1px;
 }
 
-.tab.active::before {
+.tabs--tab.active::before {
 	width: 50%;
 	transition: 0.5s ease-in-out;
 }
-.tab--content {
-	margin: auto;
-	width: 100%;
-}
-
-.tabItem---extendedMargin {
+.tab--university {
 	margin: 50px 0px;
 }
-.tab--experience {
+.tab--university::before,
+.tab--university::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 110%;
+	background: transparent;
+}
+.tab--university::before {
+	left: -5px;
+	top: -5%;
+}
+.tab--university::after {
+	right: -5px;
+	top: -5%;
+}
+
+.tab--experience---padding {
 	padding: 20px 0px;
 }
-.tab--experienceHeader {
+.tab--experience-header {
 	text-align: center;
 }
-.tab--experienceDates {
+.tab--experience-dates {
 	margin-top: 10px;
 	text-align: center;
 	font-weight: 700;
 	padding-bottom: 5px;
 }
-.tab--experienceList {
+.tab--experience-list {
 	list-style: none;
 	margin-top: 20px;
 }
-.tab--experienceListItem {
+.tab--experience-listItem {
 	font-size: 16px;
 	line-height: 1.1;
 	margin: 10px 0px;
 }
 
-.tab--desc {
+.tab--experience-desc {
 	padding: 0px 10px;
+	transition: 0ms;
 }
-.tabItem---layout {
+.tab--hobbys,
+.tab--experience {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
 	gap: 30px;
 }
-.tab--contentHeader {
+.tab--university-header {
 	text-decoration: underline;
 }
-.tab--contentImage {
+.tab--experience-logo {
 	max-width: 60%;
 }
 .hobbyTile--image {
@@ -208,11 +226,11 @@ export default {
 	border-radius: 20px;
 }
 .light {
-	.tab,
-	.tabItem {
-		border: 1px solid #1f1f1f;
+	.tabs--tab,
+	.tab--content {
+		border: 1px solid #272727;
 	}
-	.tab {
+	.tabs--tab {
 		background: #fff;
 		color: #272727;
 	}
@@ -221,15 +239,27 @@ export default {
 		background: #f8b526;
 		box-shadow: 0px 0px 1px 1px #f8b526;
 	}
-	.tab--experienceDates {
+
+	.tab--university::before {
+		border-top: 10px solid #f8b526;
+		border-bottom: 10px solid #f8b526;
+		border-left: 10px solid #f8b526;
+	}
+	.tab--university::after {
+		border-top: 10px solid #f8b526;
+		border-right: 10px solid #f8b526;
+		border-bottom: 10px solid #f8b526;
+	}
+	.tab--experience-dates {
 		border-bottom: 1px solid #f8b526;
 	}
-	.tab--experienceIcon {
+	.tab--experience-icon {
 		filter: invert(72%) sepia(100%) saturate(831%) hue-rotate(339deg) brightness(101%) contrast(94%);
 	}
 }
+
 .dark {
-	.tab {
+	.tabs--tab {
 		background: #272727;
 		color: #fff;
 	}
@@ -237,10 +267,20 @@ export default {
 		background: #944bbe;
 		box-shadow: 0px 0px 1px 1px #944bbe;
 	}
-	.tab--experienceDates {
+	.tab--university::before {
+		border-top: 10px solid #944bbe;
+		border-bottom: 10px solid #944bbe;
+		border-left: 10px solid #944bbe;
+	}
+	.tab--university::after {
+		border-top: 10px solid #944bbe;
+		border-right: 10px solid #944bbe;
+		border-bottom: 10px solid #944bbe;
+	}
+	.tab--experience-dates {
 		border-bottom: 1px solid #944bbe;
 	}
-	.tab--experienceIcon {
+	.tab--experience-icon {
 		filter: invert(39%) sepia(18%) saturate(2800%) hue-rotate(240deg) brightness(90%) contrast(92%);
 	}
 }
@@ -258,21 +298,22 @@ export default {
 		max-height: 200px;
 		border-radius: 50px;
 	}
-	.tab--contentImage {
+	.tab--experience-logo {
 		max-width: 30%;
 	}
-	.tab--desc {
+	.tab--experience-desc {
 		width: 50%;
 	}
 }
 @media (max-width: 600px) {
-	.tabItem---layout {
+	.tab--hobbys,
+	.tab--experience {
 		flex-direction: column;
 	}
 	.tabs {
 		flex-direction: column;
 	}
-	.tab {
+	.tabs--tab {
 		margin-bottom: 15px;
 		width: 100%;
 	}

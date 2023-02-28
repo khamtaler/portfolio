@@ -89,13 +89,13 @@ export default {
 }
 .contact--formHeader {
 	font-size: 1.2rem;
-	color: #1f1f1f;
+	color: #272727;
 }
 .contact--message,
 .contact--email {
 	padding: 10px;
 	border-radius: 5px;
-	border: 1px solid #1f1f1f;
+	border: 1px solid #272727;
 }
 .contact--message:focus-visible,
 .contact--email:focus-visible {

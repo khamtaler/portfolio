@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="tab">
 		<slot />
 	</div>
 </template>
@@ -8,4 +8,9 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.tab {
+	margin: auto;
+	width: 100%;
+}
+</style>

@@ -83,7 +83,7 @@ export default {
 	margin-top: 5px;
 	font-size: 20px;
 	height: 30px;
-	color: #1f1f1f;
+	color: #272727;
 }
 .icon {
 	width: 16px;
@@ -111,7 +111,7 @@ export default {
 .projectTile--githubLink::before {
 	position: absolute;
 	opacity: 0;
-	color: #1f1f1f;
+	color: #272727;
 }
 .projectTile--githubLink::after {
 	content: ']';

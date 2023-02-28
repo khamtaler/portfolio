@@ -59,7 +59,7 @@ export default {
 	content: '';
 	display: inline-block;
 	position: absolute;
-	background: #1f1f1f;
+	background: #272727;
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
