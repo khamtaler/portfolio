@@ -7,7 +7,7 @@ import Tile from './components/Tile.vue';
 import Tabs from './components/Tabs.vue';
 import ContactForm from './components/ContactForm.vue';
 import ProjectTile from './components/ProjectTile.vue';
-import Skills from './components/Skills.vue';
+import TheSkills from './components/TheSkills.vue';
 import PhoneIcon from './components/icons/PhoneIcon.vue';
 import EnvelopeIcon from './components/icons/EnvelopeIcon.vue';
 import GithubIcon from './components/icons/GithubIcon.vue';
@@ -82,7 +82,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				<img class="projects--image" src="./assets/images/TuOglos.webp" alt="project picture" />
 			</ProjectTile>
 		</Tile>
-		<Tile v-if="show === `menu.skills`" id="Skills" class="skills"> <Skills /></Tile>
+		<Tile v-if="show === `menu.skills`" id="Skills" class="skills"> <TheSkills /></Tile>
 		<Tile v-if="show === `menu.contact`" id="Contact" class="contact">
 			<Section class="section--contact">
 				<div class="contact--information">
@@ -136,7 +136,7 @@ export default {
 		Tabs,
 		ContactForm,
 		ProjectTile,
-		Skills,
+		TheSkills,
 		PhoneIcon,
 		EnvelopeIcon,
 		GithubIcon,

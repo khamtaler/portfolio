@@ -1,11 +1,11 @@
 <template>
-	<p>
-		<b class="skillName">{{ name }}</b>
-	</p>
-	<div class="skillBar">
+	<h4 class="skillbar--header">
+		<b>{{ name }}</b>
+	</h4>
+	<div class="skillbar--bar">
 		<slot />
-		<div class="skillBar--chart">
-			<div class="skillBar--single" :style="style"></div>
+		<div class="skillbar--bar-chart">
+			<div class="skillbar--bar-line" :style="style"></div>
 		</div>
 	</div>
 </template>
@@ -25,35 +25,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skillBar {
+.skillbar--bar {
 	display: flex;
 	align-items: center;
 	gap: 20px;
 }
-.skillBar--chart {
+.skillbar--bar-chart {
 	width: 100%;
 	border-radius: 5px;
 	margin: 15px 0px;
 }
-.skillBar--single {
+.skillbar--bar-line {
 	height: 20px;
 }
 .light {
-	.skillBar--chart {
+	.skillbar--header {
+		color: #272727;
+	}
+	.skillbar--bar-chart {
 		border: 1px solid #f8b526;
 	}
-	.skillBar--single {
+	.skillbar--bar-line {
 		background: linear-gradient(to right, #f5cd77, #f8b526);
 	}
 }
 .dark {
-	.skillName {
+	.skillbar--header {
 		color: #fff;
 	}
-	.skillBar--chart {
+	.skillbar--bar-chart {
 		border: 1px solid #944bbe;
 	}
-	.skillBar--single {
+	.skillbar--bar-line {
 		background: linear-gradient(to right, #a646dd, #944bbe);
 	}
 }
