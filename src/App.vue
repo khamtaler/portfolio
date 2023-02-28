@@ -2,10 +2,10 @@
 import TheMenu from './components/TheMenu.vue';
 import TheAside from './components/TheAside.vue';
 import TheFooter from './components/TheFooter.vue';
-import Section from './components/Section.vue';
+import BaseSection from './components/BaseSection.vue';
 import Tile from './components/Tile.vue';
 import TheAboutMe from './components/TheAboutMe.vue';
-import ContactForm from './components/ContactForm.vue';
+import TheContactForm from './components/TheContactForm.vue';
 import ProjectTile from './components/ProjectTile.vue';
 import TheSkills from './components/TheSkills.vue';
 import PhoneIcon from './components/icons/PhoneIcon.vue';
@@ -84,7 +84,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		</Tile>
 		<Tile v-if="show === `menu.skills`" id="Skills" class="skills"> <TheSkills /></Tile>
 		<Tile v-if="show === `menu.contact`" id="Contact" class="contact">
-			<Section class="section--contact">
+			<BaseSection class="section--contact">
 				<div class="contact--information">
 					<h2 class="contact--header">{{ $t('contactHeader') }}</h2>
 
@@ -112,8 +112,8 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 						<img class="contact--image" src="./assets/images/Storm.webp" alt="Storm" />
 					</div>
 				</div>
-			</Section>
-			<ContactForm />
+			</BaseSection>
+			<TheContactForm />
 		</Tile>
 	</main>
 	<TheFooter />
@@ -131,10 +131,10 @@ export default {
 		TheMenu,
 		TheAside,
 		TheFooter,
-		Section,
+		BaseSection,
 		Tile,
 		TheAboutMe,
-		ContactForm,
+		TheContactForm,
 		ProjectTile,
 		TheSkills,
 		PhoneIcon,

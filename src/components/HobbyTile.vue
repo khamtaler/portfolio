@@ -19,6 +19,13 @@ export default {
 <style lang="scss" scoped>
 .hobbyTile--desc {
 	text-align: center;
+	margin-top: 10px;
+}
+
+.light {
+	.hobbyTile--desc {
+		color: #272727;
+	}
 }
 
 .dark {

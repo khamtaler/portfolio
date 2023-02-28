@@ -1,6 +1,6 @@
 <script setup>
-import Tab from './Tab.vue';
-import TabContent from './TabContent.vue';
+import BaseTab from './BaseTab.vue';
+import BaseTabContent from './BaseTabContent.vue';
 import HobbyTile from './HobbyTile.vue';
 import ArrowRightTop from './icons/ArrowRightTop.vue';
 </script>
@@ -13,19 +13,19 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			:key="tab.text_key"
 			@click="currentTab = tab.text_key"
 		>
-			<b>{{ $t(tab.text_key) }}</b>
+			<b class="tabs--name">{{ $t(tab.text_key) }}</b>
 		</li>
 	</ul>
-	<Tab v-if="currentTab === 'about.university'">
-		<TabContent class="tab--university"
+	<BaseTab v-if="currentTab === 'about.university'">
+		<BaseTabContent class="tab--university"
 			><h3 class="tab--university-header">{{ $t('university') }}</h3>
 			<p>{{ $t('re-bechelor-dates') }}</p>
 			<p>
 				<b>{{ $t('bechelor') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('res') }}</p>
-		</TabContent>
-		<TabContent class="tab--university"
+		</BaseTabContent>
+		<BaseTabContent class="tab--university"
 			><h3 class="tab--university-header">{{ $t('university') }}</h3>
 			<p>{{ $t('it-master-dates') }}</p>
 			<p>
@@ -33,18 +33,18 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 			</p>
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
 			<p>{{ $t('spec') }}</p>
-		</TabContent>
-		<TabContent class="tab--university"
+		</BaseTabContent>
+		<BaseTabContent class="tab--university"
 			><h3 class="tab--university-header">{{ $t('university') }}</h3>
 			<p>{{ $t('it-bechelor-dates') }}</p>
 			<p>
 				<b>{{ $t('bechelor') }}</b>
 			</p>
 			<p>{{ $t('field') }} {{ $t('it') }}</p>
-		</TabContent>
-	</Tab>
-	<Tab v-if="currentTab === 'about.experience'"
-		><TabContent class="tab--experience tab--experience---padding">
+		</BaseTabContent>
+	</BaseTab>
+	<BaseTab v-if="currentTab === 'about.experience'"
+		><BaseTabContent class="tab--experience tab--experience---padding">
 			<img class="tab--experience-logo" src="../assets/images/Lively.webp" alt="Logo" />
 			<div class="tab--experience-desc">
 				<h2 class="tab--experience-header" v-html="$t('lively-desc')"></h2>
@@ -59,8 +59,8 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 					</li>
 				</ul>
 			</div>
-		</TabContent>
-		<TabContent class="tab--experience tab--experience---padding">
+		</BaseTabContent>
+		<BaseTabContent class="tab--experience tab--experience---padding">
 			<img class="tab--experience-logo" src="../assets/images/TuOglosLogo.webp" alt="Logo" />
 			<div class="tab--experience-desc">
 				<h2 class="tab--experience-header" v-html="$t('tuoglos-desc')"></h2>
@@ -71,9 +71,9 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 					</li>
 				</ul>
 			</div>
-		</TabContent></Tab
+		</BaseTabContent></BaseTab
 	>
-	<Tab class="tab--hobbys" v-if="currentTab === 'about.hobbies'">
+	<BaseTab class="tab--hobbys" v-if="currentTab === 'about.hobbies'">
 		<HobbyTile title="Snowboard">
 			<img class="hobbyTile--image" src="../assets/images/Snowboard.webp" alt="Snowboard"
 		/></HobbyTile>
@@ -92,7 +92,7 @@ import ArrowRightTop from './icons/ArrowRightTop.vue';
 		<HobbyTile title="Sport">
 			<img class="hobbyTile--image" src="../assets/images/Sport.webp" alt="Sport"
 		/></HobbyTile>
-	</Tab>
+	</BaseTab>
 </template>
 
 <script>
@@ -117,8 +117,8 @@ export default {
 	},
 	methods: {},
 	components: {
-		Tab,
-		TabContent,
+		BaseTab,
+		BaseTabContent,
 		HobbyTile,
 	},
 };
@@ -131,6 +131,7 @@ export default {
 	justify-content: space-between;
 	width: 100%;
 	margin-bottom: 30px;
+	transition: 0ms;
 }
 .tabs--tab {
 	flex-shrink: 1;
@@ -138,13 +139,13 @@ export default {
 	width: 30%;
 	padding: 15px;
 	border-radius: 10px;
-
 	text-align: center;
 	cursor: pointer;
 }
+
 .tabs--tab:hover {
 	letter-spacing: 3px;
-	transition: 500ms ease-in-out;
+	transition: 300ms ease-in-out;
 }
 .tabs--tab::before {
 	content: '';
