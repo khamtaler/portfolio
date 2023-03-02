@@ -356,16 +356,16 @@ export default {
 		width: 25px;
 		height: auto;
 		position: absolute;
-		left: 10px;
+		left: 20px;
 	}
 	.mobileMenuButton:hover {
 		cursor: pointer;
 	}
 	.mobileMenuButton--open {
-		top: 15px;
+		top: 20px;
 	}
 	.mobileMenuButton--close {
-		top: 12px;
+		top: 17px;
 		display: none;
 	}
 

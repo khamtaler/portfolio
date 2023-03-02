@@ -51,8 +51,8 @@ export default {
 	gap: 20px;
 	z-index: 2;
 	position: absolute;
-	top: 15px;
-	left: 70px;
+	top: 20px;
+	left: 90px;
 }
 
 .active::before {
