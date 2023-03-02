@@ -1,11 +1,13 @@
 <template>
-	<h4 class="skillbar--header">
-		<b>{{ name }}</b>
-	</h4>
-	<div class="skillbar--bar">
-		<slot />
-		<div class="skillbar--bar-chart">
-			<div class="skillbar--bar-line" :style="style"></div>
+	<div class="skillbar">
+		<h4 class="skillbar--header">
+			<b>{{ name }}</b>
+		</h4>
+		<div class="skillbar--bar">
+			<slot />
+			<div class="skillbar--bar-chart">
+				<div class="skillbar--bar-line" :style="style"></div>
+			</div>
 		</div>
 	</div>
 </template>

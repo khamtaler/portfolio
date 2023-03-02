@@ -76,6 +76,15 @@ export default {};
 .dark {
 	.active {
 		.menuButton--button {
+			color: #1f1f1f;
+		}
+		.menuButton--button::before {
+			background: #1f1f1f;
+			box-shadow: 0px 0px 1px 1px #1f1f1f;
+		}
+	}
+	.mobile .active {
+		.menuButton--button {
 			color: #9e35db;
 		}
 		.menuButton--button::before {

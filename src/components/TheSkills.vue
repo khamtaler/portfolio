@@ -9,22 +9,22 @@ import JsIcon from './icons/JsIcon.vue';
 </script>
 <template>
 	<div class="skills">
-		<SkillBar class="skillbar" name="Vue.js" width="40">
+		<SkillBar name="Vue.js" width="40">
 			<VueIcon class="skillbar--icon skillbar--icon---vue" />
 		</SkillBar>
-		<SkillBar class="skillbar" name="React.js" width="30">
+		<SkillBar name="React.js" width="30">
 			<ReactIcon class="skillbar--icon skillbar--icon---react" />
 		</SkillBar>
-		<SkillBar class="skillbar" name="Vanilla JS" width="60">
+		<SkillBar name="Vanilla JS" width="60">
 			<JsIcon class="skillbar--icon skillbar--icon---js" />
 		</SkillBar>
-		<SkillBar class="skillbar" name="PHP" width="30">
+		<SkillBar name="PHP" width="30">
 			<PhpIcon class="skillbar--icon skillbar--icon---php" />
 		</SkillBar>
-		<SkillBar class="skillbar" name="Typescript" width="35">
+		<SkillBar name="Typescript" width="35">
 			<TsIcon class="skillbar--icon skillbar--icon---ts" />
 		</SkillBar>
-		<SkillBar class="skillbar" name="CSS/SCSS" width="80">
+		<SkillBar name="CSS/SCSS" width="80">
 			<CssIcon class="skillbar--icon skillbar--icon---css" />
 		</SkillBar>
 	</div>
