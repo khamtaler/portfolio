@@ -10,12 +10,12 @@ export default {};
 
 <style lang="scss" scoped>
 .section {
-	background: #fff;
 	padding: 20px;
 	border-radius: 10px;
 }
 .light {
 	.section {
+		background: #fff;
 		border: 1px solid #272727;
 	}
 }

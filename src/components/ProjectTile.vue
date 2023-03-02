@@ -4,7 +4,7 @@ import FollowIcon from './icons/FollowIcon.vue';
 </script>
 
 <template>
-	<div>
+	<div class="projectTile">
 		<a class="projectTile--link" :href="link" target="_blank">
 			<slot />
 			<div class="projectTile--overlay">
@@ -42,6 +42,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.projectTile {
+	padding: 15px 20px;
+	border-radius: 10px;
+}
 .projectTile--link {
 	height: 100%;
 	display: block;
@@ -130,6 +134,11 @@ export default {
 	opacity: 1;
 }
 .light {
+	.projectTile {
+		background: #fff;
+		color: #272727;
+	}
+
 	.projectTile--githubLink {
 		color: #272727;
 	}
@@ -158,6 +167,10 @@ export default {
 	}
 }
 .dark {
+	.projectTile {
+		background: #272727;
+		color: #fff;
+	}
 	.githubIcon {
 		filter: invert(100%) sepia(72%) saturate(48%) hue-rotate(230deg) brightness(116%) contrast(100%);
 	}

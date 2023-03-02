@@ -34,4 +34,7 @@
 	#app {
 		padding: 1rem;
 	}
+	.hideMobile {
+		display: none;
+	}
 }

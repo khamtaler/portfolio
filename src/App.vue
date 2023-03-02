@@ -3,7 +3,7 @@ import TheMenu from './components/TheMenu.vue';
 import TheAside from './components/TheAside.vue';
 import TheFooter from './components/TheFooter.vue';
 import BaseSection from './components/BaseSection.vue';
-import Tile from './components/Tile.vue';
+import BaseTile from './components/BaseTile.vue';
 import TheAboutMe from './components/TheAboutMe.vue';
 import TheContactForm from './components/TheContactForm.vue';
 import ProjectTile from './components/ProjectTile.vue';
@@ -30,91 +30,91 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 	<TheMenu @changeTile="toggleTile" :class="{ mobile: mobile }"></TheMenu>
 
 	<main class="main">
-		<Tile v-if="show === `menu.home`" id="Homepage" class="homepage">
+		<BaseTile v-if="show === `menu.home`" id="Homepage" class="homepage">
 			<div class="homepage--section">
 				<img
-					class="homepage--sectionImage"
+					class="homepage--section-avatar"
 					src="./assets/images/avatar.svg"
 					alt="Creator picture"
 				/>
-				<div class="homepage--sectionText">
-					<h1 class="homepage--sectionHeader">{{ $t('opening') }}</h1>
-					<p class="homepage--sectionTextWelcome" v-html="$t('greetings')"></p>
+				<div class="homepage--section-desc">
+					<h1 class="homepage--section-header">{{ $t('opening') }}</h1>
+					<p class="homepage--section-text" v-html="$t('greetings')"></p>
 				</div></div
-		></Tile>
-		<Tile v-if="show === `menu.about`" id="About" class="about"> <TheAboutMe /></Tile>
-		<Tile v-if="show === `menu.projects`" id="Projects" class="projects">
+		></BaseTile>
+		<BaseTile v-if="show === `menu.about`" id="About" class="about"> <TheAboutMe /></BaseTile>
+		<BaseTile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
-				class="projectTile"
 				:desc="$t('portfolio-vue')"
 				link="#/"
 				github="https://github.com/khamtaler/portfolio"
 			>
-				<img class="projects--image" src="./assets/images/Portfolio.webp" alt="project picture" />
+				<img
+					class="projectTile--image"
+					src="./assets/images/Portfolio.webp"
+					alt="project picture"
+				/>
 			</ProjectTile>
 			<ProjectTile
-				class="projectTile"
 				:desc="$t('quizz-react')"
 				link="https://clever-khapse-9eeb96.netlify.app/"
 				github="https://github.com/khamtaler/React_ts_quizz"
 			>
-				<img class="projects--image" src="./assets/images/Quizz.webp" alt="project picture" />
+				<img class="projectTile--image" src="./assets/images/Quizz.webp" alt="project picture" />
 			</ProjectTile>
 
 			<ProjectTile
-				class="projectTile"
 				:desc="$t('landing-nuxt')"
 				link="https://creative-souffle-842769.netlify.app/"
 				github="https://github.com/khamtaler/nuxt_landing"
 			>
 				<img
-					class="projects--image"
+					class="projectTile--image"
 					src="./assets/images/ProductFactory.webp"
 					alt="project picture"
 				/>
 			</ProjectTile>
 			<ProjectTile
-				class="projectTile"
 				:desc="$t('landing-vue')"
 				link="https://sunny-mochi-22e9b8.netlify.app/"
 				github="https://github.com/khamtaler/vue_landing"
 			>
-				<img class="projects--image" src="./assets/images/TuOglos.webp" alt="project picture" />
+				<img class="projectTile--image" src="./assets/images/TuOglos.webp" alt="project picture" />
 			</ProjectTile>
-		</Tile>
-		<Tile v-if="show === `menu.skills`" id="Skills" class="skills"> <TheSkills /></Tile>
-		<Tile v-if="show === `menu.contact`" id="Contact" class="contact">
-			<BaseSection class="section--contact">
-				<div class="contact--information">
-					<h2 class="contact--header">{{ $t('contactHeader') }}</h2>
+		</BaseTile>
+		<BaseTile v-if="show === `menu.skills`" id="Skills" class="skills"> <TheSkills /></BaseTile>
+		<BaseTile v-if="show === `menu.contact`" id="Contact" class="contact">
+			<BaseSection class="contact--info">
+				<div class="contact--info-links">
+					<h2 class="contact--info-header">{{ $t('contactHeader') }}</h2>
 
-					<a class="contact--link" href="mailto:tsroka41@gmail.com" target="blank"
-						><EnvelopeIcon class="mediaIcon" /> tsroka41@gmail.com</a
+					<a class="contact--info-link" href="mailto:tsroka41@gmail.com" target="blank"
+						><EnvelopeIcon class="icon mediaIcon" /> tsroka41@gmail.com</a
 					>
-					<a class="contact--link" href="tel:+48794794818" target="blank">
-						<PhoneIcon class="mediaIcon" /> 794 794 818</a
+					<a class="contact--info-link" href="tel:+48794794818" target="blank">
+						<PhoneIcon class="icon mediaIcon" /> 794 794 818</a
 					>
-					<a class="contact--link" href="https://github.com/khamtaler" target="blank">
-						<GithubIcon class="mediaIcon" />Github</a
+					<a class="contact--info-link" href="https://github.com/khamtaler" target="blank">
+						<GithubIcon class="icon mediaIcon" />Github</a
 					>
 					<a
-						class="contact--link"
+						class="contact--info-link"
 						href="https://www.linkedin.com/in/tomasz-sroka-114790243/"
 						target="blank"
-						><LinkedinIcon class="mediaIcon" />Linkedin</a
+						><LinkedinIcon class="icon mediaIcon" />Linkedin</a
 					>
 				</div>
-				<div class="contact--city">
+				<div class="contact--info-city">
 					<p v-html="$t('livingPlace')"></p>
-					<div class="contact--cityImages">
-						<img class="contact--image" src="./assets/images/Lake.webp" alt="Lake" />
-						<img class="contact--image" src="./assets/images/Balon.webp" alt="Balon" />
-						<img class="contact--image" src="./assets/images/Storm.webp" alt="Storm" />
+					<div class="contact--info-images">
+						<img class="contact--info-image" src="./assets/images/Lake.webp" alt="Lake" />
+						<img class="contact--info-image" src="./assets/images/Balon.webp" alt="Balon" />
+						<img class="contact--info-image" src="./assets/images/Storm.webp" alt="Storm" />
 					</div>
 				</div>
 			</BaseSection>
 			<TheContactForm />
-		</Tile>
+		</BaseTile>
 	</main>
 	<TheFooter />
 </template>
@@ -132,7 +132,7 @@ export default {
 		TheAside,
 		TheFooter,
 		BaseSection,
-		Tile,
+		BaseTile,
 		TheAboutMe,
 		TheContactForm,
 		ProjectTile,
@@ -174,53 +174,53 @@ export default {
 .homepage--section {
 	display: flex;
 }
-.homepage--sectionText {
+.homepage--section-desc {
 	background: #fff;
 	border-radius: 15px 0px 15px 0px;
 	padding: 20px;
 }
 
-.homepage--sectionText::before,
-.homepage--sectionText::after {
+.homepage--section-desc::before,
+.homepage--section-desc::after {
 	content: '';
 	background: transparent;
 	height: 130px;
 	width: 90px;
 	position: absolute;
 }
-.homepage--sectionText::before {
+.homepage--section-desc::before {
 	bottom: -5px;
 	left: -5px;
 }
 
-.homepage--sectionText::after {
+.homepage--section-desc::after {
 	top: -5px;
 	right: -5px;
 }
 
-.homepage--sectionHeader {
+.homepage--section-header {
 	margin-bottom: 15px;
 	transition: 0s;
 }
-.homepage--sectionTextWelcome {
+.homepage--section-text {
 	line-height: 2;
 }
 
-.homepage--sectionImage {
+.homepage--section-avatar {
 	border-radius: 50%;
 	margin: auto;
 	padding: 0px 60px 120px;
 }
-.section--contact {
+.contact--info {
 	display: flex;
 	width: 100%;
 }
-.contact--header {
+.contact--info-header {
 	color: #272727;
 	text-decoration: underline;
 	margin-bottom: 15px;
 }
-.contact--information {
+.contact--info-links {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -230,7 +230,7 @@ export default {
 	width: 16px;
 	height: auto;
 }
-.contact--link {
+.contact--info-link {
 	display: flex;
 	align-items: center;
 	gap: 6px;
@@ -240,16 +240,16 @@ export default {
 	color: #471564;
 }
 
-.contact--city {
+.contact--info-city {
 	padding: 0px 0px 0px 20px;
 	margin-left: auto;
 }
-.contact--cityImages {
+.contact--info-images {
 	margin-top: 10px;
 	display: flex;
 	justify-content: space-between;
 }
-.contact--image {
+.contact--info-image {
 	max-width: 30%;
 	width: 100%;
 	max-height: 200px;
@@ -264,7 +264,7 @@ export default {
 	gap: 20px;
 	flex-wrap: wrap;
 }
-.projects--image {
+.projectTile--image {
 	display: block;
 	margin: 0px;
 	height: 205px;
@@ -273,41 +273,32 @@ export default {
 	overflow: hidden;
 	border-radius: 5px;
 }
-.projectTile {
-	// background: #fff;
-	padding: 15px 20px;
-	border-radius: 10px;
-}
-.projectTile:hover .projects--image {
+
+.projectTile:hover .projectTile--image {
 	transform: scale(1.05);
 }
 
 .light {
-	.homepage--sectionText {
+	.homepage--section-desc {
 		background: #fff;
 		color: #272727;
 		transition: 0ms;
 	}
 
-	.homepage--sectionText::before {
+	.homepage--section-desc::before {
 		border-left: 15px solid #f8b526;
 		border-bottom: 15px solid #f8b526;
 	}
-	.homepage--sectionText::after {
+	.homepage--section-desc::after {
 		border-top: 15px solid #f8b526;
 		border-right: 15px solid #f8b526;
 	}
 
-	.homepage--sectionText {
+	.homepage--section-desc {
 		border: 1px solid #272727;
 	}
 
-	.projectTile {
-		background: #fff;
-		color: #272727;
-	}
-
-	.contact--link:hover {
+	.contact--info-link:hover {
 		color: #f8b526;
 	}
 }
@@ -316,34 +307,29 @@ export default {
 		filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(29deg) brightness(107%) contrast(100%);
 	}
 
-	.homepage--sectionText {
+	.homepage--section-desc {
 		background: #272727;
 		color: #fff;
 		transition: 0ms;
 	}
-	.homepage--sectionText::before {
+	.homepage--section-desc::before {
 		border-left: 15px solid #9e35db;
 		border-bottom: 15px solid #9e35db;
 	}
-	.homepage--sectionText::after {
+	.homepage--section-desc::after {
 		border-top: 15px solid #9e35db;
 		border-right: 15px solid #9e35db;
 	}
 
-	.projectTile {
-		background: #272727;
-		color: #fff;
-	}
-
-	.contact--link:hover {
+	.contact--info-link:hover {
 		color: #9e35db;
 	}
-	.section--contact {
+	.contact--info {
 		background: #272727;
 		color: #fff;
 	}
-	.contact--header,
-	.contact--link {
+	.contact--info-header,
+	.contact--info-link {
 		color: #fff;
 	}
 	.mediaIcon {
@@ -352,14 +338,14 @@ export default {
 }
 
 @media (min-width: 1200px) {
-	.homepage--sectionTextWelcome {
+	.homepage--section-text {
 		font-size: 1.1rem;
 	}
 }
 
 @media (min-width: 841px) {
-	.homepage--sectionText,
-	.homepage--sectionImage {
+	.homepage--section-desc,
+	.homepage--section-avatar {
 		width: 50%;
 	}
 }
@@ -391,31 +377,31 @@ export default {
 		margin-top: 50px;
 	}
 
-	.homepage--sectionImage {
+	.homepage--section-avatar {
 		padding: 0px 60px 30px;
 	}
-	.section--contact {
+	.contact--info {
 		flex-direction: column;
 	}
 	.contact {
 		gap: 20px;
 	}
-	.contact--information {
+	.contact--info-links {
 		padding: 0px;
 	}
-	.contact--link {
+	.contact--info-link {
 		font-size: 1rem;
 		margin-bottom: 10px;
 	}
-	.contact--city {
+	.contact--info-city {
 		padding: 0;
 	}
-	.projects--image {
+	.projectTile--image {
 		aspect-ratio: 1;
 		height: unset;
 		margin-bottom: 15px;
 	}
-	.homepage--sectionImage {
+	.homepage--section-avatar {
 		width: 100%;
 	}
 	.homepage--section {
@@ -428,7 +414,7 @@ export default {
 }
 
 @media (min-width: 601px) {
-	.projects {
+	.tile.projects {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}

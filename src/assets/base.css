@@ -56,9 +56,3 @@ a {
 a:hover {
 	cursor: pointer;
 }
-
-@media (max-width: 840px) {
-	.hideMobile {
-		display: none;
-	}
-}

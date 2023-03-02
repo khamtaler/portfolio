@@ -76,11 +76,11 @@ export default {};
 .dark {
 	.active {
 		.menuButton--button {
-			color: #272727;
+			color: #9e35db;
 		}
 		.menuButton--button::before {
-			background: #272727;
-			box-shadow: 0px 0px 1px 1px #272727;
+			background: #9e35db;
+			box-shadow: 0px 0px 1px 1px #9e35db;
 		}
 	}
 }
