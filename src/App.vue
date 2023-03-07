@@ -63,6 +63,13 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				<img class="projectTile--image" src="./assets/images/Quizz.webp" alt="project picture" />
 			</ProjectTile>
 
+			<ProjectTile :desc="$t('calculator-js')" link="https://lively.pl/ekokalkulator/" github="">
+				<img
+					class="projectTile--image"
+					src="./assets/images/kalkulator.webp"
+					alt="project picture"
+				/>
+			</ProjectTile>
 			<ProjectTile
 				:desc="$t('landing-nuxt')"
 				link="https://creative-souffle-842769.netlify.app/"
