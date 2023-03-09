@@ -6,6 +6,7 @@
 	"contact-form-header": "Do You need any further information? \n<br /> Write your message bellow and send it directly to me &#128512;",
 	"contact-text-placeholder": "Input your message",
 	"contact-email-placeholder": "Your email",
+	"weatherApp-vue": "WeatherApp in Vue + Tailwind",
 	"portfolio-vue": "Portfolio in Vue.js",
 	"quizz-react": "Quizz in React",
 	"calculator-js": "EcoCalculator in Vanilla Js",

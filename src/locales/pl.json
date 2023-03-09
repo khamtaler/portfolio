@@ -6,6 +6,7 @@
 	"contact-form-header": "Potrzebujesz więcej informacji? \n<br /> Napisz wiadomość poniżej i wyślij ją do mnie &#128512;",
 	"contact-text-placeholder": "Wpisz wiadomość",
 	"contact-email-placeholder": "Twój email",
+	"weatherApp-vue": "Aplikacja pogodowa w Vue + Tailwind",
 	"portfolio-vue": "Portfolio w Vue.js",
 	"quizz-react": "Quizz w React",
 	"calculator-js": "EkoKalkulator w Vanilla Js",

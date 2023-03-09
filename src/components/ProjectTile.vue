@@ -13,16 +13,19 @@ import FollowIcon from './icons/FollowIcon.vue';
 				</p>
 			</div>
 		</a>
-		<p class="projectTile--desc">{{ desc }}</p>
-		<div class="projectTile--githubContainer">
-			<a
-				class="projectTile--githubLink"
-				:class="{ githubDisabled: !github }"
-				:href="github"
-				target="_blank"
-			>
-				<GithubIcon class="icon githubIcon" /> Github</a
-			>
+		<div class="projectTile--info">
+			<h3 class="projectTile--info-header">{{ header }}</h3>
+			<p v-if="inProgress" class="projectTile--info-addictionalInfo">&lt; In progress.. &gt;</p>
+			<div class="projectTile--info-githubContainer">
+				<a
+					class="projectTile--info-githubLink"
+					:class="{ githubDisabled: !github }"
+					:href="github"
+					target="_blank"
+				>
+					<GithubIcon class="icon githubIcon" /> Github</a
+				>
+			</div>
 		</div>
 	</div>
 </template>
@@ -30,9 +33,10 @@ import FollowIcon from './icons/FollowIcon.vue';
 <script>
 export default {
 	props: {
-		desc: String,
+		header: String,
 		link: String,
 		github: String,
+		inProgress: Boolean,
 	},
 	components: {
 		GithubIcon,
@@ -43,13 +47,16 @@ export default {
 
 <style lang="scss" scoped>
 .projectTile {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	padding: 15px 20px;
 	border-radius: 10px;
 }
-.projectTile--link {
-	height: 100%;
-	display: block;
-}
+// .projectTile--link {
+// 	height: 100%;
+// 	display: block;
+// }
 .projectTile--overlay {
 	display: flex;
 	position: absolute;
@@ -74,12 +81,18 @@ export default {
 		transform: scale(1.05);
 	}
 }
-.projectTile--desc {
+.projectTile--info-header {
 	font-size: 18px;
 	text-align: center;
 	margin-top: 10px;
 }
-.projectTile--githubLink {
+.projectTile--info-addictionalInfo {
+	text-align: center;
+}
+.projectTile--info {
+	margin-top: 10px;
+}
+.projectTile--info-githubLink {
 	display: flex;
 	text-align: center;
 	align-items: center;
@@ -106,30 +119,30 @@ export default {
 	pointer-events: none;
 	opacity: 0.5;
 }
-.projectTile--githubContainer {
+.projectTile--info-githubContainer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.projectTile--githubLink::after,
-.projectTile--githubLink::before {
+.projectTile--info-githubLink::after,
+.projectTile--info-githubLink::before {
 	position: absolute;
 	opacity: 0;
 	color: #272727;
 }
-.projectTile--githubLink::after {
+.projectTile--info-githubLink::after {
 	content: ']';
 	right: 0px;
 }
-.projectTile--githubLink::before {
+.projectTile--info-githubLink::before {
 	content: '[';
 	left: 0px;
 }
-.projectTile--githubLink:hover::after {
+.projectTile--info-githubLink:hover::after {
 	right: -15px;
 	opacity: 1;
 }
-.projectTile--githubLink:hover::before {
+.projectTile--info-githubLink:hover::before {
 	left: -15px;
 	opacity: 1;
 }
@@ -139,17 +152,17 @@ export default {
 		color: #272727;
 	}
 
-	.projectTile--githubLink {
+	.projectTile--info-githubLink {
 		color: #272727;
 	}
-	.projectTile--githubLink:hover {
+	.projectTile--info-githubLink:hover {
 		color: #f8b526;
 	}
-	.projectTile--githubLink:hover::before,
-	.projectTile--githubLink:hover::after {
+	.projectTile--info-githubLink:hover::before,
+	.projectTile--info-githubLink:hover::after {
 		color: #f8b526;
 	}
-	.projectTile--desc {
+	.projectTile--info-header {
 		color: #272727;
 	}
 	.projectTile::before {
@@ -174,14 +187,14 @@ export default {
 	.githubIcon {
 		filter: invert(100%) sepia(72%) saturate(48%) hue-rotate(230deg) brightness(116%) contrast(100%);
 	}
-	.projectTile--githubLink {
+	.projectTile--info-githubLink {
 		color: #fff;
 	}
-	.projectTile--githubLink:hover {
+	.projectTile--info-githubLink:hover {
 		color: #944bbe;
 	}
-	.projectTile--githubLink:hover::before,
-	.projectTile--githubLink:hover::after {
+	.projectTile--info-githubLink:hover::before,
+	.projectTile--info-githubLink:hover::after {
 		color: #944bbe;
 	}
 	.projectTile::before {

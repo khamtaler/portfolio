@@ -45,7 +45,19 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<BaseTile v-if="show === `menu.about`" id="About" class="about"> <TheAboutMe /></BaseTile>
 		<BaseTile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
-				:desc="$t('portfolio-vue')"
+				:header="$t('weatherApp-vue')"
+				link="https://imaginative-lollipop-f4535e.netlify.app/"
+				github="https://github.com/khamtaler/weatherApp"
+				:inProgress="true"
+			>
+				<img
+					class="projectTile--image"
+					src="./assets/images/WeatherApp.webp"
+					alt="project picture"
+				/>
+			</ProjectTile>
+			<ProjectTile
+				:header="$t('portfolio-vue')"
 				link="#/"
 				github="https://github.com/khamtaler/portfolio"
 			>
@@ -56,14 +68,14 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				/>
 			</ProjectTile>
 			<ProjectTile
-				:desc="$t('quizz-react')"
+				:header="$t('quizz-react')"
 				link="https://clever-khapse-9eeb96.netlify.app/"
 				github="https://github.com/khamtaler/React_ts_quizz"
 			>
 				<img class="projectTile--image" src="./assets/images/Quizz.webp" alt="project picture" />
 			</ProjectTile>
 
-			<ProjectTile :desc="$t('calculator-js')" link="https://lively.pl/ekokalkulator/" github="">
+			<ProjectTile :header="$t('calculator-js')" link="https://lively.pl/ekokalkulator/" github="">
 				<img
 					class="projectTile--image"
 					src="./assets/images/kalkulator.webp"
@@ -71,7 +83,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				/>
 			</ProjectTile>
 			<ProjectTile
-				:desc="$t('landing-nuxt')"
+				:header="$t('landing-nuxt')"
 				link="https://creative-souffle-842769.netlify.app/"
 				github="https://github.com/khamtaler/nuxt_landing"
 			>
@@ -82,7 +94,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				/>
 			</ProjectTile>
 			<ProjectTile
-				:desc="$t('landing-vue')"
+				:header="$t('landing-vue')"
 				link="https://sunny-mochi-22e9b8.netlify.app/"
 				github="https://github.com/khamtaler/vue_landing"
 			>
@@ -266,7 +278,7 @@ export default {
 }
 .projects {
 	flex-direction: row;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-around;
 	gap: 20px;
 	flex-wrap: wrap;
