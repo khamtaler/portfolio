@@ -16,6 +16,7 @@ import FollowIcon from './icons/FollowIcon.vue';
 		<div class="projectTile--info">
 			<h3 class="projectTile--info-header">{{ header }}</h3>
 			<p v-if="inProgress" class="projectTile--info-addictionalInfo">&lt; In progress.. &gt;</p>
+
 			<div class="projectTile--info-githubContainer">
 				<a
 					class="projectTile--info-githubLink"
@@ -27,6 +28,7 @@ import FollowIcon from './icons/FollowIcon.vue';
 				>
 			</div>
 		</div>
+		<p v-if="desc" class="projectTile--info-desc">{{ desc }}</p>
 	</div>
 </template>
 
@@ -37,6 +39,7 @@ export default {
 		link: String,
 		github: String,
 		inProgress: Boolean,
+		desc: String,
 	},
 	components: {
 		GithubIcon,
@@ -53,10 +56,7 @@ export default {
 	padding: 15px 20px;
 	border-radius: 10px;
 }
-// .projectTile--link {
-// 	height: 100%;
-// 	display: block;
-// }
+
 .projectTile--overlay {
 	display: flex;
 	position: absolute;
@@ -81,6 +81,9 @@ export default {
 		transform: scale(1.05);
 	}
 }
+.projectTile--info {
+	margin: 10px 0px;
+}
 .projectTile--info-header {
 	font-size: 18px;
 	text-align: center;
@@ -89,9 +92,12 @@ export default {
 .projectTile--info-addictionalInfo {
 	text-align: center;
 }
-.projectTile--info {
-	margin-top: 10px;
+.projectTile--info-desc {
+	margin: 15px 0px;
+	margin-top: auto;
+	text-align: center;
 }
+
 .projectTile--info-githubLink {
 	display: flex;
 	text-align: center;

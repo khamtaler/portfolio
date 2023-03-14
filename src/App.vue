@@ -46,9 +46,10 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<BaseTile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
 				:header="$t('weatherApp-vue')"
+				:desc="$t('weatherApp-desc')"
 				link="https://imaginative-lollipop-f4535e.netlify.app/"
 				github="https://github.com/khamtaler/weatherApp"
-				:inProgress="true"
+				:inProgress="false"
 			>
 				<img
 					class="projectTile--image"
@@ -58,8 +59,10 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			</ProjectTile>
 			<ProjectTile
 				:header="$t('portfolio-vue')"
+				:desc="$t('portfolio-desc')"
 				link="#/"
 				github="https://github.com/khamtaler/portfolio"
+				:inProgress="false"
 			>
 				<img
 					class="projectTile--image"
@@ -69,13 +72,19 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			</ProjectTile>
 			<ProjectTile
 				:header="$t('quizz-react')"
+				:desc="$t('quizz-desc')"
 				link="https://clever-khapse-9eeb96.netlify.app/"
 				github="https://github.com/khamtaler/React_ts_quizz"
+				:inProgress="false"
 			>
 				<img class="projectTile--image" src="./assets/images/Quizz.webp" alt="project picture" />
 			</ProjectTile>
 
-			<ProjectTile :header="$t('calculator-js')" link="https://lively.pl/ekokalkulator/" github="">
+			<ProjectTile
+				:header="$t('calculator-js')"
+				:desc="$t('ecocalculator-desc')"
+				link="https://lively.pl/ekokalkulator/"
+			>
 				<img
 					class="projectTile--image"
 					src="./assets/images/kalkulator.webp"
@@ -84,8 +93,10 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			</ProjectTile>
 			<ProjectTile
 				:header="$t('landing-nuxt')"
+				:desc="$t('landingNuxt-desc')"
 				link="https://creative-souffle-842769.netlify.app/"
 				github="https://github.com/khamtaler/nuxt_landing"
+				:inProgress="false"
 			>
 				<img
 					class="projectTile--image"
@@ -95,8 +106,10 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 			</ProjectTile>
 			<ProjectTile
 				:header="$t('landing-vue')"
+				:desc="$t('landingVue-desc')"
 				link="https://sunny-mochi-22e9b8.netlify.app/"
 				github="https://github.com/khamtaler/vue_landing"
+				:inProgress="false"
 			>
 				<img class="projectTile--image" src="./assets/images/TuOglos.webp" alt="project picture" />
 			</ProjectTile>

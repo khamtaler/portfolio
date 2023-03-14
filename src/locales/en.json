@@ -55,5 +55,11 @@
 	"tuOglos": {
 		"vueLanding": "Preparation of a landing page using Vue 3",
 		"landing": "Creating simple landing pages"
-	}
+	},
+	"weatherApp-desc": "A simple weather application using Vue 3 and Tailwind, used to search for Polish cities and display hourly/daily and current weather for them. It also allows you to cache the city you are watching and displays a shortcut to detailed weather on the home screen.",
+	"quizz-desc": "Quiz created with React.js. The application sends a request to the Api with questions based on the completed form, then presents tiles with questions to be answered. At the end it is possible to check your answers, start the quiz again with the current settings or return to the form.",
+	"portfolio-desc": "Portfolio website made using Vue.js without using a router. CSS written according to BEM rules. The project serves as a page telling about the author, allows you to get to know me better, check projects, and provides social links with contact information.",
+	"ecocalculator-desc": "Eco calculator written in Vanilla.js. The application is used to calculate CO2 consumption during the conference, it also allows you to compare various forms of events and their CO2 emissions.",
+	"landingVue-desc": "Simple landing in Vue 3",
+	"landingNuxt-desc": "Simple landing in Nuxt.js"
 }

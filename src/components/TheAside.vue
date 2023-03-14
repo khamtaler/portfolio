@@ -50,7 +50,7 @@ export default {
 	flex-direction: row;
 	gap: 20px;
 	z-index: 2;
-	position: absolute;
+	position: fixed;
 	top: 20px;
 	left: 90px;
 }

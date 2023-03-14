@@ -55,5 +55,11 @@
 	"tuOglos": {
 		"vueLanding": "Przygotowanie landingu z wykorzystaniem Vue 3",
 		"landing": "Tworzenie prostych landingów"
-	}
+	},
+	"weatherApp-desc": "Prosta aplikacja pogodowa z wykorzystaniem Vue 3 i Tailwind, służąca do wyszukiwania polskich miast oraz wyświetlania dla nich godzinowej/dniowej oraz aktualnej pogody. Umożliwia ona również zapisanie w pamięci podręcznej obserwowanego miasta oraz wyświetla skrót do szczegółowej pogody na ekranie głównym",
+	"quizz-desc": "Quizz stworzony przy pomocy React.js. Aplikacja wysyła zapytanie do Api z pytaniami na podstawie wypełnionego formularza, następnie przedstawia kolejny płytki z pytaniami, na które należy odpowiedzieć. Na końcu możliwe jest sprawdzenie swoich odpowiedzi, rozpoczęcie quizzu ponownie z obecnymi ustawieniami lub powrót do formularza.",
+	"portfolio-desc": "Strona portfolio wykonana przy użyciu Vue.js bez wykorzystania routera. CSS napisany zgodnie z zasadami BEM. Projekt służy jako strona opowiadająca o autorze, umożliwia poznanie mnie lepiej, sprawdzenie projektów, udostępnia również linki społecznościowe i informacje kontaktowe.",
+	"ecocalculator-desc": "Eko kalkulator napisany w Vanilla.js. Aplikacja służy do obliczania zużycia CO2 w trakcie konferencji, umożliwia także porównianie różnych form eventów i ich emisji CO2.",
+	"landingVue-desc": "Prosty landing w Vue 3",
+	"landingNuxt-desc": "Prosty landing w Nuxt.js"
 }
