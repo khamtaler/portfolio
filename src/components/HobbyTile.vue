@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hobbyTile{
+	flex:1;
+}
+.hobbyTile:hover{flex:7}
 .hobbyTile--desc {
 	text-align: center;
 	margin-top: 10px;

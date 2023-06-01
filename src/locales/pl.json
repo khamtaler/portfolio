@@ -26,6 +26,8 @@
 	"res": "Odnawialne źródła energii",
 	"it": "Informatyka",
 	"spec": "Specjalizacja: Data science",
+	"foodity":"Wyszukiwarka przepisów",
+	"foodity-desc":"Aplikacja webowa do wyszukiwania przepisów na potrawy z wykorzystaniem Vue 3, Vuex, Vue router i Tailwind",
 	"lively-desc": "Specjaliści od świata online.",
 	"tuoglos-desc": "Grupa 133 portali łącząca Polaków w Polsce i na całym świecie",
 	"lively-dates": "marzec 2021 - teraz",
@@ -53,7 +55,7 @@
 		"conservation": "Utrzymanie wielu stron internetowych"
 	},
 	"tuOglos": {
-		"vueLanding": "Przygotowanie landingu z wykorzystaniem Vue 3",
+		"vueLanding": "Przygotowanie landingów z wykorzystaniem Vue 3/Nuxt.js",
 		"landing": "Tworzenie prostych landingów"
 	},
 	"weatherApp-desc": "Prosta aplikacja pogodowa z wykorzystaniem Vue 3 i Tailwind, służąca do wyszukiwania polskich miast oraz wyświetlania dla nich godzinowej/dniowej oraz aktualnej pogody. Umożliwia ona również zapisanie w pamięci podręcznej obserwowanego miasta oraz wyświetla skrót do szczegółowej pogody na ekranie głównym",

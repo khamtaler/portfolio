@@ -45,6 +45,19 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<BaseTile v-if="show === `menu.about`" id="About" class="about"> <TheAboutMe /></BaseTile>
 		<BaseTile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
+				:header="$t('foodity')"
+				:desc="$t('foodity-desc')"
+				link="https://glowing-malasada-0eb946.netlify.app/"
+				github="https://github.com/khamtaler/foodity"
+				:inProgress="false"
+			>
+				<img
+					class="projectTile--image"
+					src="./assets/images/Foodity.webp"
+					alt="project picture"
+				/>
+			</ProjectTile>
+			<ProjectTile
 				:header="$t('weatherApp-vue')"
 				:desc="$t('weatherApp-desc')"
 				link="https://imaginative-lollipop-f4535e.netlify.app/"
@@ -91,19 +104,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 					alt="project picture"
 				/>
 			</ProjectTile>
-			<ProjectTile
-				:header="$t('landing-nuxt')"
-				:desc="$t('landingNuxt-desc')"
-				link="https://creative-souffle-842769.netlify.app/"
-				github="https://github.com/khamtaler/nuxt_landing"
-				:inProgress="false"
-			>
-				<img
-					class="projectTile--image"
-					src="./assets/images/ProductFactory.webp"
-					alt="project picture"
-				/>
-			</ProjectTile>
+			
 			<ProjectTile
 				:header="$t('landing-vue')"
 				:desc="$t('landingVue-desc')"

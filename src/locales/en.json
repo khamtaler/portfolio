@@ -26,6 +26,8 @@
 	"res": "Renewable energy sources",
 	"it": "IT",
 	"spec": "Spec: Data Science",
+	"foodity":"recipe finder",
+	"foodity-desc":"Web application for finding recipes using Vue 3, Vuex, Vue router and Tailwind",
 	"lively-desc": "Specialists in the online world.",
 	"tuoglos-desc": "A group of 133 websites uniting Poles in the country and abroad.",
 	"lively-dates": "March 2021 - now",
@@ -53,7 +55,7 @@
 		"conservation": "Maintaining multiple websites"
 	},
 	"tuOglos": {
-		"vueLanding": "Preparation of a landing page using Vue 3",
+		"vueLanding": "Preparation of a landings page using Vue 3/Nuxt.js",
 		"landing": "Creating simple landing pages"
 	},
 	"weatherApp-desc": "A simple weather application using Vue 3 and Tailwind, used to search for Polish cities and display hourly/daily and current weather for them. It also allows you to cache the city you are watching and displays a shortcut to detailed weather on the home screen.",
