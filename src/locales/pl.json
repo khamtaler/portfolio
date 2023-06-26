@@ -1,6 +1,6 @@
 {
 	"opening": "Hejka!",
-	"greetings": "Nazywam się \n<b class=\"disableTransition\">Tomasz Sroka</b> i aktualnie widzisz moją pierwszą osobistą stronę internetową. Ideą projektu było stworzenie prostej, jednostronicowej witryny, na której mógłbym przedstawić siebie. Użyłem do tego celu Vue 3. Jestem frontend developerem zbierającym doświadczenie już od ponad 2 lat, do tej pory pracującym głównie z wordpressem. Nie tak dawno temu zacząłem zgłębiać tajniki frameworków Javascript i oto efekt. Możesz przełączać różne kolory w lewym menu, zmienić język pomiędzy polskim a angielskim, sprawdzić moje projekty, poznać hobby i dowiedzieć się czegoś o mnie przechodząc przez różne zakładki. Możesz również skontaktować się ze mną za pomocą linków zawartych w zakładce kontakt. Miłego pobytu &#128512;",
+	"greetings": "Nazywam się \n<b class=\"disableTransition\">Tomasz Sroka</b>, aktualnie widzisz moją pierwszą osobistą stronę internetową. Ideą projektu było stworzenie prostej i przejrzystej witryny pełniącej rolę portfolio, na której mógłbym przedstawić siebie. Użyłem do tego celu Vue 3. Jak wiadomo nie jest to najlepszy sposób jeśli chodzi o tworzenie statycznych stron, głównym powodem wyboru było jednak sprawdzenie swoich umiejętności w tym frameworku. Jestem frontend developerem zbierającym doświadczenie komercyjne od ponad 2 lat, do tej pory pracującym głównie z javascript, html, css i wieloma pochodnymi. W zakładce projekty można znaleźć najbardziej aktualne wykonane przezemnie prace i przynajmniej w większości zaglądnąć do ich wnętrza dzięki githubowi. Lewe menu (w widoku mobilnym górne) służy do zmiany języka lub kolorów wyświetlanych na stronie. Dodatkowe zakładki służą do tego, żeby poznać moje hobby i dowiedzieć się czegoś o mnie. W zakłądce kontaktu podane są podstawowe dane kontaktowe do mnie. Miłego pobytu &#128512;",
 	"contactHeader": "Kontakt:",
 	"livingPlace": "Aktualnie mieszkam w: \n<b>Kraków</b>",
 	"contact-form-header": "Potrzebujesz więcej informacji? \n<br /> Napisz wiadomość poniżej i wyślij ją do mnie &#128512;",
@@ -28,6 +28,8 @@
 	"spec": "Specjalizacja: Data science",
 	"foodity":"Wyszukiwarka przepisów",
 	"foodity-desc":"Aplikacja webowa do wyszukiwania przepisów na potrawy z wykorzystaniem Vue 3, Vuex, Vue router i Tailwind",
+	"users":"Zarządzanie użytkownikami",
+	"users-desc":"Mały projekt listy do zarządzania użytkownikami, pozwala na edycję, usuwanie oraz tworzenie nowych użytkowników. Wykorzystane zostało darmowe otwarte API zwracające prawdziwe odpowiedzi po wysłaniu odpowiednich danych",
 	"lively-desc": "Specjaliści od świata online.",
 	"tuoglos-desc": "Grupa 133 portali łącząca Polaków w Polsce i na całym świecie",
 	"lively-dates": "marzec 2021 - teraz",

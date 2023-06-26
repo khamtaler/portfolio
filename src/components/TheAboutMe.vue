@@ -225,7 +225,7 @@ export default {
 	width: 100%;
 	object-fit: cover;
 	border-radius: 20px;
-	height: 250px;
+	height: 300px;
 }
 .light {
 	.tabs--tab,
@@ -297,7 +297,7 @@ export default {
 		margin: 0px auto 15px auto;
 	}
 	.hobbyTile--image {
-		max-height: 200px;
+		max-height: 300px;
 		border-radius: 50px;
 	}
 	.tab--experience-logo {

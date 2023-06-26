@@ -1,6 +1,6 @@
 {
 	"opening": "Hello there!",
-	"greetings": "My name is \n<b class=\"disableTransition\">Tomasz Sroka </b> and you are currently visiting my personal website. The idea behind the project was to make a simple single page website I could describe myself on. I've used Vue 3 to do so. I am a frontend developer gathering experience for over 2 years already. So far I was working mostly with wordpress. Not so long ago I started to learn Javasript frameworks and heres the current effect. You can toggle different colors in left menu, switch language between polish and english, check up on my projects, hobbies or get to know me better going trough other different tabs. You can also contact me via links included in contact tab. Enjoy your stay &#128512;",
+	"greetings": "My name is \n<b class=\"disableTransition\">Tomasz Sroka </b>, you are currently seeing my first personal website. The idea behind the project was to create a simple and clear portfolio site where I could introduce myself. I used Vue 3 for this purpose. As you know, this is not the best way when it comes to creating static pages, but the main reason for choosing it was to test my skills in this framework. I am a frontend developer gathering commercial experience for over 2 years, so far working mainly with javascript, html, css and many derivatives. In the projects tab you can find the most up-to-date works made by me and at least mostly look inside them thanks to github. The left menu (upper in the mobile view) is used to change the language or colors displayed on the page. Additional tabs are used to get to know my hobbies and learn something about me. In the contact tab there are basic contact details for me. Enjoy your stay &#128512;",
 	"contactHeader": "Contact:",
 	"livingPlace": "Currently living in: \n<b>Cracow</b>",
 	"contact-form-header": "Do You need any further information? \n<br /> Write your message bellow and send it directly to me &#128512;",
@@ -28,6 +28,8 @@
 	"spec": "Spec: Data Science",
 	"foodity":"recipe finder",
 	"foodity-desc":"Web application for finding recipes using Vue 3, Vuex, Vue router and Tailwind",
+	"users":"Users organizer",
+	"users-desc":"Small list design for user management, allows you to edit, delete and create new users. A free open API was used that retur real answers after sending the appropriate data",
 	"lively-desc": "Specialists in the online world.",
 	"tuoglos-desc": "A group of 133 websites uniting Poles in the country and abroad.",
 	"lively-dates": "March 2021 - now",

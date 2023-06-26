@@ -45,6 +45,19 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<BaseTile v-if="show === `menu.about`" id="About" class="about"> <TheAboutMe /></BaseTile>
 		<BaseTile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
+				:header="$t('users')"
+				:desc="$t('users-desc')"
+				link="https://sensational-haupia-e0a654.netlify.app/"
+				github="https://github.com/khamtaler/user_manager"
+				:inProgress="false"
+			>
+				<img
+					class="projectTile--image"
+					src="./assets/images/Users.webp"
+					alt="project picture"
+				/>
+			</ProjectTile>
+			<ProjectTile
 				:header="$t('foodity')"
 				:desc="$t('foodity-desc')"
 				link="https://glowing-malasada-0eb946.netlify.app/"
