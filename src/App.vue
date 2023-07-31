@@ -45,6 +45,19 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 		<BaseTile v-if="show === `menu.about`" id="About" class="about"> <TheAboutMe /></BaseTile>
 		<BaseTile v-if="show === `menu.projects`" id="Projects" class="projects">
 			<ProjectTile
+				:header="$t('shop')"
+				:desc="$t('shop-desc')"
+				link="https://effortless-stardust-bbbdff.netlify.app/"
+				github="https://github.com/khamtaler/nuxt-shop"
+				:inProgress="true"
+			>
+				<img
+					class="projectTile--image"
+					src="./assets/images/store.webp"
+					alt="project picture"
+				/>
+			</ProjectTile>
+			<ProjectTile
 				:header="$t('users')"
 				:desc="$t('users-desc')"
 				link="https://sensational-haupia-e0a654.netlify.app/"

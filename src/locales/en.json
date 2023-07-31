@@ -26,6 +26,8 @@
 	"res": "Renewable energy sources",
 	"it": "IT",
 	"spec": "Spec: Data Science",
+	"shop":"Simple store",
+	"shop-desc":"Store made using Nuxt 3, Pinia and tailwind. An open source 'factestore' API was used, from which products and categories are imported. In the future, a backend will be provided to handle user registration, adding/removing products and allow the apllication to be used like a real store.",
 	"foodity":"recipe finder",
 	"foodity-desc":"Web application for finding recipes using Vue 3, Vuex, Vue router and Tailwind",
 	"users":"Users organizer",
