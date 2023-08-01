@@ -9,11 +9,13 @@
 				class="contact--message"
 				v-model="message"
 				:placeholder="$t('contact-text-placeholder')"
+				disabled
 			/>
 			<input
 				class="contact--email"
 				v-model="email"
 				:placeholder="$t('contact-email-placeholder')"
+				disabled
 			/>
 			<button
 				type="button"
