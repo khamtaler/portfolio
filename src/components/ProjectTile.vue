@@ -1,6 +1,8 @@
 <script setup>
 import GithubIcon from './icons/GithubIcon.vue';
 import FollowIcon from './icons/FollowIcon.vue';
+
+
 </script>
 
 <template>
@@ -16,7 +18,9 @@ import FollowIcon from './icons/FollowIcon.vue';
 		<div class="projectTile--info">
 			<h3 class="projectTile--info-header">{{ header }}</h3>
 			<p v-if="inProgress" class="projectTile--info-addictionalInfo">&lt; In progress.. &gt;</p>
-
+			<div class="projectTile--info-tags" v-if="tags">
+				<span v-for="tag in tags" class="projectTile--info-tag">{{tag}}</span>
+			</div>
 			<div class="projectTile--info-githubContainer">
 				<a
 					class="projectTile--info-githubLink"
@@ -40,12 +44,14 @@ export default {
 		github: String,
 		inProgress: Boolean,
 		desc: String,
+		tags: Array
 	},
 	components: {
 		GithubIcon,
 		FollowIcon,
 	},
 };
+
 </script>
 
 <style lang="scss" scoped>
@@ -107,6 +113,19 @@ export default {
 	font-size: 20px;
 	height: 30px;
 	color: #272727;
+}
+.projectTile--info-tags{
+	padding: 10px 0px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.projectTile--info-tag{
+	background: rgba($color: #fff, $alpha: 0.2);
+	padding: 3px 10px;
+	border-radius: 10px;
 }
 .icon {
 	width: 16px;

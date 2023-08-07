@@ -27,7 +27,7 @@
 	"it": "Informatyka",
 	"spec": "Specjalizacja: Data science",
 	"shop":"Prosty sklep",
-	"shop-desc":"Sklep wykonany przy użyciu Nuxt 3, Pinia i tailwind. Wykorzystane zostało otwarte API 'fakestore', z którego importowane są produkty oraz kategorie. W przyszłości wykonany zostanie backend, który będzie obsługiwał rejestrację użytkowników, dodawanie/usuwanie produktów i umożliwi korzystanie z apliakcji jak prawdziwego sklepu.",
+	"shop-desc":"Sklep wykonany przy użyciu Nuxt 3, Pinia, vitest i tailwind. Wykorzystane zostało otwarte API 'fakestore', z którego importowane są produkty oraz kategorie. W przyszłości wykonany zostanie backend, który będzie obsługiwał rejestrację użytkowników, dodawanie/usuwanie produktów i umożliwi korzystanie z apliakcji jak prawdziwego sklepu.",
 	"foodity":"Wyszukiwarka przepisów",
 	"foodity-desc":"Aplikacja webowa do wyszukiwania przepisów na potrawy z wykorzystaniem Vue 3, Vuex, Vue router i Tailwind",
 	"users":"Zarządzanie użytkownikami",

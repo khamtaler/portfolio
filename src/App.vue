@@ -50,6 +50,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				link="https://effortless-stardust-bbbdff.netlify.app/"
 				github="https://github.com/khamtaler/nuxt-shop"
 				:inProgress="true"
+				:tags="['Vue 3', 'Nuxt 3', 'Pinia', 'Vitest', 'Tailwind', 'API']"
 			>
 				<img
 					class="projectTile--image"
@@ -63,6 +64,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				link="https://sensational-haupia-e0a654.netlify.app/"
 				github="https://github.com/khamtaler/user_manager"
 				:inProgress="false"
+				:tags="['Vue 3', 'Tailwind', 'API']"
 			>
 				<img
 					class="projectTile--image"
@@ -76,6 +78,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				link="https://glowing-malasada-0eb946.netlify.app/"
 				github="https://github.com/khamtaler/foodity"
 				:inProgress="false"
+				:tags="['Vue 3', 'Vuex', 'Vue router', 'Tailwind','API']"
 			>
 				<img
 					class="projectTile--image"
@@ -89,6 +92,7 @@ import HamburgerIcon from './components/icons/HamburgerIcon.vue';
 				link="https://imaginative-lollipop-f4535e.netlify.app/"
 				github="https://github.com/khamtaler/weatherApp"
 				:inProgress="false"
+				:tags="['Vue 3', 'Tailwind','API']"
 			>
 				<img
 					class="projectTile--image"
